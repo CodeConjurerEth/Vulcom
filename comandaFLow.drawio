@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-12T10:04:23.675Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="T7O4888wPBgz8YjudSsB" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-12T10:08:30.926Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="Hctel0pz6lOmXXERhM-J" version="15.7.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -8,11 +8,6 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="470" y="109" as="sourcePoint" />
             <mxPoint x="470" y="159" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="q8qoteSag4bHkMR6Cs9O-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="590" y="184" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-1" edge="1">
@@ -30,12 +25,6 @@
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-19" value="&lt;span&gt;Lumi verifica stocul in DB (des e incorect)&amp;nbsp;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="410" y="269" width="120" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="q8qoteSag4bHkMR6Cs9O-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-20" edge="1" target="q8qoteSag4bHkMR6Cs9O-68">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="580" y="404" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-20" target="q8qoteSag4bHkMR6Cs9O-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -92,18 +81,18 @@
         <mxCell id="q8qoteSag4bHkMR6Cs9O-52" value="NU" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;" parent="q8qoteSag4bHkMR6Cs9O-51" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="q8qoteSag4bHkMR6Cs9O-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-55" edge="1">
+        <mxCell id="q8qoteSag4bHkMR6Cs9O-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-55" edge="1" target="q8qoteSag4bHkMR6Cs9O-57">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="470" y="869" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-54" target="Afs2lG8B8gGuCiR9-58s-14">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="260" y="869" as="targetPoint" />
+            <mxPoint x="260" y="924" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-54" value="4 fise comanda (birou, strung, presa, debavurare)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="200" y="720" width="120" height="50" as="geometry" />
+          <mxGeometry x="200" y="749" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-55" value="3 fise comanda&lt;br&gt;(birou, presa, debavurare)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="410" y="749" width="120" height="50" as="geometry" />
@@ -117,14 +106,14 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-57" value="Presa - se trece in fisa de lucru" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="410" y="869" width="120" height="50" as="geometry" />
+          <mxGeometry x="410" y="890" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-61" value="Comanda in" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="420" y="9" width="100" height="100" as="geometry" />
         </mxCell>
         <UserObject label="Fisa de lucru" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/fisadeLucru_etMinus.jpg" id="q8qoteSag4bHkMR6Cs9O-64">
           <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-            <mxGeometry x="590" y="864" width="100" height="60" as="geometry" />
+            <mxGeometry x="590" y="885" width="100" height="60" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="Fisa de comanda" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/comandaInterna.jpg" id="q8qoteSag4bHkMR6Cs9O-66">
@@ -160,12 +149,7 @@
           </mxCell>
         </UserObject>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-11" value="cred ca aici&lt;br&gt;&amp;nbsp;se scrie la &lt;br&gt;debavurare cate &lt;br&gt;sunt rebuturi" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="590" y="1180" width="100" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Afs2lG8B8gGuCiR9-58s-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-14" target="Afs2lG8B8gGuCiR9-58s-19">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="899" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry x="590" y="1049" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-14" target="q8qoteSag4bHkMR6Cs9O-57">
           <mxGeometry relative="1" as="geometry">
@@ -173,10 +157,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-14" value="Se trimite desen la strung pentru matrita/parte metalica" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="200" y="809" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="840" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-15" value="Kingo/Iulia -&amp;gt; Desen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="130" y="779" width="120" height="20" as="geometry" />
+          <mxGeometry x="130" y="810" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-33" target="Afs2lG8B8gGuCiR9-58s-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -184,12 +168,12 @@
             <mxPoint x="480" y="789" as="targetPoint" />
             <Array as="points">
               <mxPoint x="760" y="629" />
-              <mxPoint x="750" y="1139" />
+              <mxPoint x="760" y="1139" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-19" value="Desen tehnic" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="40" y="809" width="100" height="60" as="geometry" />
+          <mxGeometry x="40" y="840" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-21" value="cum transmitem?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="325" y="820" width="110" height="20" as="geometry" />
@@ -216,15 +200,33 @@
         <mxCell id="Afs2lG8B8gGuCiR9-58s-27" value="Se scrie in bonul de predare cate produse au fost confectionate" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="410" y="1330" width="120" height="60" as="geometry" />
         </mxCell>
-        <UserObject label="Fisa de magazie" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/fisadeMagazie.jpg" id="Afs2lG8B8gGuCiR9-58s-31">
+        <UserObject label="Fisa de magazie&lt;br&gt;pentru fiecare reper" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/fisadeMagazie.jpg" id="Afs2lG8B8gGuCiR9-58s-31">
           <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-            <mxGeometry x="490" y="1460" width="100" height="60" as="geometry" />
+            <mxGeometry x="490" y="1460" width="100" height="70" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-26" target="Afs2lG8B8gGuCiR9-58s-31">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="480" y="1400" as="sourcePoint" />
             <mxPoint x="550" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-34" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-14" target="Afs2lG8B8gGuCiR9-58s-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="785" as="sourcePoint" />
+            <mxPoint x="140" y="894" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-35" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-20" target="q8qoteSag4bHkMR6Cs9O-68">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="530" as="sourcePoint" />
+            <mxPoint x="270" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-36" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-1" target="q8qoteSag4bHkMR6Cs9O-66">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="414" as="sourcePoint" />
+            <mxPoint x="600" y="414" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
