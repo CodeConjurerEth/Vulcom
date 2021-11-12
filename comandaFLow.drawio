@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-12T10:32:39.623Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="x3ZpjL3QPY_QgrDYUUUG" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-12T11:19:44.556Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="OlHk__CICqzZP2pE37ap" version="15.7.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1422" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -262,11 +262,65 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-44" value="New Bon de Predare" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="660" y="1750" width="120" height="60" as="geometry" />
+          <mxGeometry x="570" y="1900" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-46" value="Update fisa de magazie" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="300" y="1750" width="120" height="60" as="geometry" />
+          <mxGeometry x="390" y="1900" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-48" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-40" target="Afs2lG8B8gGuCiR9-58s-49">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="1740" as="sourcePoint" />
+            <mxPoint x="640" y="1780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Ticket Livrare" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticketLivrare .jpg" id="Afs2lG8B8gGuCiR9-58s-49">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+            <mxGeometry x="640" y="1750" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-50" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-31" target="Afs2lG8B8gGuCiR9-58s-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="1540" as="sourcePoint" />
+            <mxPoint x="690" y="1513" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-51" value="In teorie" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="610" y="1490" width="60" height="20" as="geometry" />
+        </mxCell>
+        <UserObject label="Ticket Magazie" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticketMagazie.jpg" id="Afs2lG8B8gGuCiR9-58s-52">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+            <mxGeometry x="680" y="1480" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-53" value="" style="endArrow=none;html=1;rounded=0;entryX=0.375;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="Afs2lG8B8gGuCiR9-58s-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="950" as="sourcePoint" />
+            <mxPoint x="240" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-54" value="in teorie" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="280" y="930" width="60" height="20" as="geometry" />
+        </mxCell>
+        <UserObject label="Ticket strung" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticketStrung.jpg" id="Afs2lG8B8gGuCiR9-58s-55">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+            <mxGeometry x="180" y="950" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ticket Duritate" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticketDuritate.jpg" id="Afs2lG8B8gGuCiR9-58s-56">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+            <mxGeometry x="70" y="1590" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ticket Duritate_2" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticketDuritate_2.jpg" id="Afs2lG8B8gGuCiR9-58s-57">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+            <mxGeometry x="70" y="1660" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ticket Semifabricat" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticketSemifabricat.jpg" id="Afs2lG8B8gGuCiR9-58s-58">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+            <mxGeometry x="70" y="1730" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
