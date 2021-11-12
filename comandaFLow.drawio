@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-12T09:08:15.928Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="J3Xgrs4umDlgKakje0my" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-12T09:14:21.676Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="_B7toBNGvAb_nGUlTwPp" version="15.7.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -74,7 +74,7 @@
         <mxCell id="q8qoteSag4bHkMR6Cs9O-36" value="DA" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=0;" parent="q8qoteSag4bHkMR6Cs9O-35" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="q8qoteSag4bHkMR6Cs9O-44" value="Are nevoie de matrita?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="q8qoteSag4bHkMR6Cs9O-44" value="Are nevoie de matrita/parte metalica?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="140" y="590" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-48" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-44" target="q8qoteSag4bHkMR6Cs9O-54" edge="1">
@@ -98,6 +98,11 @@
         <mxCell id="q8qoteSag4bHkMR6Cs9O-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-55" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="400" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="q8qoteSag4bHkMR6Cs9O-54" target="Afs2lG8B8gGuCiR9-58s-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="880" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="q8qoteSag4bHkMR6Cs9O-54" value="4 fise comanda (birou, strung, presa, debavurare)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -138,28 +143,28 @@
         <mxCell id="Afs2lG8B8gGuCiR9-58s-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-3" target="Afs2lG8B8gGuCiR9-58s-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Afs2lG8B8gGuCiR9-58s-3" value="Garnitura &lt;br&gt;cauciuc" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-3" value="Garnitura &lt;br&gt;cauciuc" style="shape=parallelogram;html=1;strokeWidth=1;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="350" y="1000" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-4" target="Afs2lG8B8gGuCiR9-58s-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Afs2lG8B8gGuCiR9-58s-4" value="Ticket spre debavurare (scris de?)" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="340" y="1130" width="120" height="60" as="geometry" />
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-4" value="Ticket spre debavurare (scris de?)" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=1;arcSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="1120" width="120" height="60" as="geometry" />
         </mxCell>
         <UserObject label="Ticket spre debavurare" link="https://github.com/VladMiu/Vulcom/blob/main/Poze Documente Vulcom/ticket_toDebavurare.jpg" id="Afs2lG8B8gGuCiR9-58s-6">
           <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-            <mxGeometry x="520" y="1130" width="100" height="60" as="geometry" />
+            <mxGeometry x="520" y="1120" width="100" height="60" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="Afs2lG8B8gGuCiR9-58s-10" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=40;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Afs2lG8B8gGuCiR9-58s-6">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="1150" as="sourcePoint" />
-            <mxPoint x="680" y="1160" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="Afs2lG8B8gGuCiR9-58s-11" value="cred ca aici&lt;br&gt;&amp;nbsp;se scrie la &lt;br&gt;debavurare cate &lt;br&gt;sunt rebuturi" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="640" y="1130" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-14" value="Se trimite desen la strung pentru matrita/parte metalica" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="130" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Afs2lG8B8gGuCiR9-58s-15" value="Kingo/Iulia -&amp;gt; Desen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="60" y="830" width="120" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
