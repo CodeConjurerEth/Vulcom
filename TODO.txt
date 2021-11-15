@@ -1,3 +1,6 @@
 TODO: DOWNLOAD PO-xx-x blah blah files from dropbox
       DOWNLOAD schemas from PO folders
       Look at them, update my schema, make multiple schemas
+
+ce sunt SDV-urile? schema flux fila 4-A3.doc
+ce sunt EMM-urile? PO VLC-105-05-2015.doc
