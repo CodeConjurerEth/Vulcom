@@ -3,5 +3,8 @@ TODO:  Look at PO-xx-x && schemas, update my schema, make multiple schemas
 ce sunt SDV-urile? schema flux fila 4-A3.doc
 ce sunt EMM-urile? PO VLC-105-05-2015.doc
 
-TODO: look into mongoDB C# app, it should work (at least in my head it makes sense)
--------firebase is only android && ios--------
+
+
+------------------------------------------MongoDB---------------------------------------------------
+
+-ALL USERS HAVE ACCESS FROM ANY IP CURRENTLY
