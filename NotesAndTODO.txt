@@ -8,3 +8,7 @@ ce sunt EMM-urile? PO VLC-105-05-2015.doc
 ------------------------------------------MongoDB---------------------------------------------------
 
 -ALL USERS HAVE ACCESS FROM ANY IP CURRENTLY
+
+-API Access IP is only Vulcom-Office CURRENTLY
+private API key for Unity Realm (owner access): f55d3cb0-d6c3-4bf2-a406-eca75ac95d28
+public key (above one): ugbsmogf

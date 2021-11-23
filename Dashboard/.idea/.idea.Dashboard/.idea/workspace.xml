@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Authentication.uxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Authentication.uxml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Leaderboard.uxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Leaderboard.uxml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/ScoreCard.uxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/ScoreCard.uxml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Stylesheet.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Stylesheet.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UIPanelSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UIPanelSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UIElements.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.PackageManager.UI.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.Debugger.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEngine.UIElements.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Database.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Database/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Button.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Button.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Legacy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Legacy/DatabaseConnection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Legacy/DatabaseConnection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Legacy/connectionString.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Legacy/connectionString.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmObject.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmObject.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Snappy/lib/linux/libsnappy64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Snappy/lib/osx/libsnappy64.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Snappy/lib/win/snappy32.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Snappy/lib/win/snappy64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Zstandard/lib/linux/libzstd.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Zstandard/lib/osx/libzstd.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Compression/Zstandard/lib/win/libzstd.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/DnsClient.1.4.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/net45/DnsClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/net45/DnsClient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/net471/DnsClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/net471/DnsClient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/netstandard1.3/DnsClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/netstandard1.3/DnsClient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/netstandard2.0/DnsClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/netstandard2.0/DnsClient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/netstandard2.1/DnsClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/DnsClient.1.4.0/lib/netstandard2.1/DnsClient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/MongoDB.Bson.signed.2.13.2.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/net452/MongoDB.Bson.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/net452/MongoDB.Bson.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/netstandard1.5/MongoDB.Bson.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/netstandard1.5/MongoDB.Bson.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/netstandard2.0/MongoDB.Bson.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/netstandard2.0/MongoDB.Bson.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/netstandard2.1/MongoDB.Bson.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/lib/netstandard2.1/MongoDB.Bson.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Bson.signed.2.13.2/packageIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/MongoDB.Libmongocrypt.1.2.3.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/build/MongoDB.Libmongocrypt.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/content/libmongocrypt.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/content/libmongocrypt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/content/mongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/net472/libmongocrypt.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/net472/libmongocrypt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/net472/mongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/netstandard2.0/libmongocrypt.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/netstandard2.0/libmongocrypt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/netstandard2.0/mongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/netstandard2.1/libmongocrypt.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/netstandard2.1/libmongocrypt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/contentFiles/any/netstandard2.1/mongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/lib/net472/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/lib/netstandard2.0/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/lib/netstandard2.1/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/runtimes/linux/native/libmongocrypt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/runtimes/osx/native/libmongocrypt.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.1.2.3/runtimes/win/native/mongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/MongoDB.Libmongocrypt.signed.1.2.2.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/lib/net452/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/lib/netstandard1.5/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/lib/netstandard2.0/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/MongoDB.Libmongocrypt.signed.1.2.2/lib/netstandard2.1/MongoDB.Libmongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/SharpCompress.0.23.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/lib/net35/SharpCompress.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/lib/net45/SharpCompress.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/lib/netstandard1.0/SharpCompress.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/lib/netstandard1.3/SharpCompress.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/SharpCompress.0.23.0/lib/netstandard2.0/SharpCompress.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/LICENSE.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/System.Buffers.4.5.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/net461/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/net461/System.Buffers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/netcoreapp2.0/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/netstandard1.1/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/netstandard1.1/System.Buffers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/netstandard2.0/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/netstandard2.0/System.Buffers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/lib/uap10.0.16299/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/net45/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/net45/System.Buffers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/netcoreapp2.0/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/netstandard1.1/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/netstandard1.1/System.Buffers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/netstandard2.0/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/netstandard2.0/System.Buffers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/ref/uap10.0.16299/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/useSharedDesignerContext.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Buffers.4.5.1/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/System.IO.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/net45/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/net462/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/portable-net45+win8+wp8+wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/win8/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/wp80/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/net45/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/net462/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/de/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/es/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/fr/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/it/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/ja/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/ko/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/ru/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/zh-hans/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netcore50/zh-hant/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/de/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/es/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/fr/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/it/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/ja/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/ko/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/ru/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/zh-hans/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.0/zh-hant/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/de/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/es/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/fr/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/it/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/ja/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/ko/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/ru/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/zh-hans/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.3/zh-hant/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/de/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/es/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/fr/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/it/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/ja/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/ko/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/ru/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/zh-hans/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/netstandard1.5/zh-hant/System.IO.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/portable-net45+win8+wp8+wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/win8/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/wp80/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.IO.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/System.Net.Http.4.3.4.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/Xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/monoandroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/monotouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/net45/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/net46/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/portable-net45+win8+wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/win8/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/Xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/monoandroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/monotouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/net45/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/net46/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/netcore50/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/netstandard1.1/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/netstandard1.3/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/portable-net45+win8+wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/win8/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/runtimes/unix/lib/netstandard1.6/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/runtimes/win/lib/net46/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/runtimes/win/lib/netcore50/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Net.Http.4.3.4/runtimes/win/lib/netstandard1.3/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/System.Runtime.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/net45/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/net462/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/portable-net45+win8+wp80+wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/win8/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/wp80/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/net45/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/net462/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/de/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/es/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/fr/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/it/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/ja/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/ko/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/ru/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/zh-hans/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netcore50/zh-hant/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/de/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/es/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/fr/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/it/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/ja/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/ko/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/ru/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/zh-hans/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.0/zh-hant/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/de/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/es/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/fr/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/it/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/ja/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/ko/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/ru/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/zh-hans/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.2/zh-hant/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/de/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/es/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/fr/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/it/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/ja/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/ko/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/ru/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/zh-hans/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.3/zh-hant/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/de/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/es/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/fr/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/it/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/ja/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/ko/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/ru/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/zh-hans/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/netstandard1.5/zh-hant/System.Runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/portable-net45+win8+wp80+wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/win8/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/wp80/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/wpa81/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/LICENSE.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/System.Runtime.CompilerServices.Unsafe.5.0.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/net45/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/net45/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/net461/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/net461/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/useSharedDesignerContext.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.CompilerServices.Unsafe.5.0.0/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/win8/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/wpa81/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/runtimes/aot/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/runtimes/win/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/System.Security.Cryptography.Algorithms.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/net46/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/net461/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/net463/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/net46/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/net461/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/net463/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/netstandard1.3/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/netstandard1.4/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/osx/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/win/lib/net46/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/win/lib/net463/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/win/lib/netcore50/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Algorithms.4.3.0/runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/System.Security.Cryptography.Encoding.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/net46/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/net46/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/de/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/es/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/fr/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/it/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/ja/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/ko/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/ru/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/zh-hans/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/netstandard1.3/zh-hant/System.Security.Cryptography.Encoding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/runtimes/win/lib/net46/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Encoding.4.3.0/runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/System.Security.Cryptography.Primitives.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/net46/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/netstandard1.3/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/net46/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/netstandard1.3/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.Primitives.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/System.Security.Cryptography.X509Certificates.4.3.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ThirdPartyNotices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/dotnet_library_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/net46/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/net461/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/net46/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/net461/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/de/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/es/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/fr/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/it/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/ja/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/ko/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/ru/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/zh-hans/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.3/zh-hant/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/de/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/es/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/fr/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/it/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/ja/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/ko/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/ru/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/zh-hans/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/netstandard1.4/zh-hant/System.Security.Cryptography.X509Certificates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/runtimes/win/lib/net46/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/runtimes/win/lib/netcore50/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.Security.Cryptography.X509Certificates.4.3.0/runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/LICENSE.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/System.ValueTuple.4.5.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/net461/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/net461/System.ValueTuple.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/net47/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/net47/System.ValueTuple.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/netcoreapp2.0/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/netstandard1.0/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/netstandard1.0/System.ValueTuple.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/netstandard2.0/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/uap10.0.16299/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/lib/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/MonoAndroid10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/MonoTouch10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/net461/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/net47/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/netcoreapp2.0/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/netstandard2.0/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/uap10.0.16299/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/xamarinios10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/xamarinmac20/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/xamarintvos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/ref/xamarinwatchos10/_._" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/useSharedDesignerContext.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/System.ValueTuple.4.5.0/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmongocrypt.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmongocrypt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongocrypt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NotesAndTODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../NotesAndTODO.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Packages/manifest.json" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="21JdMe8RE5A8yEvPo1K9I9EhbqZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="" />
+      <created>1637663078807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637663078807</updated>
+      <workItem from="1637663082682" duration="1053000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
