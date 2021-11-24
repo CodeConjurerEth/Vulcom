@@ -11,13 +11,10 @@ using UnityEngine.UI;
 
 public class RealmController : MonoBehaviour
 {
-    private VisualTreeAsset leaderboardUXMLVisualTree;
-    private VisualTreeAsset scoreCardUXMLVisualTree;
     private VisualTreeAsset authenticationUXMLVisualTree;
-    private string uiToolKitPath = "Assets/Scripts/realm-tutorial-unity/UnityProjectScripts/UI ToolKit/";
+    private string uiToolKitPath = "Assets/Scripts/UI ToolKit/";
     private static Realm realm;
     private static int runTime; // total amount of time you've been playing during this playthrough/run (losing/winning resets runtime)
-    private static int bonusPoints = 0; // start with 0 bonus points and at the end of the game we add bonus points based on how long you played
 
     private static Player currentPlayer; // the Player object for the current playthrough
     public static Stat currentStat; // the Stat object for the current playthrough
@@ -26,49 +23,6 @@ public class RealmController : MonoBehaviour
     public static User syncUser; // (Part 2 Sync): syncUser represents the realmApp's currently logged in user
 
     #region PublicMethods
-    // CollectToken() performs a write transaction to update the current
-    // playthrough Stat object's TokensCollected count
-    public static void CollectToken()
-    {
-        // DONE: within a write transaction, increment the number of token's collected in the current playthrough/run's stat
-        realm.Write(() =>
-        {
-            currentStat.TokensCollected += 1;
-        });
-
-    }
-
-    // DefeatEnemy() performs a write transaction to update the current
-    // playthrough Stat object's enemiesDefeated count
-    public static void DefeatEnemy()
-    {
-        // DONE: within a write transaction, increment the number of enemies
-        // defeated in the current playthrough/run's stat
-        
-        realm.Write(() =>
-        {
-            currentStat.EnemiesDefeated += 1;
-        });
-
-    }
-
-    // DeleteCurrentStat() performs a write transaction to delete the current
-    // playthrough Stat object and remove it from the current Player object's
-    // Stats' list
-    public static void DeleteCurrentStat()
-    {
-        ScoreCardManager.UnRegisterListener();
-        // DONE: within a write transaction, delete the current Stat object, and
-        // its reference in the current Player object
-        
-        realm.Write(() =>
-        {
-            realm.Remove(currentStat);
-            currentPlayer.Stats.Remove(currentStat);
-        });
-
-    }
-    
     // LogOut() logs out and reloads the scene
     public static void LogOut()
     {
@@ -84,38 +38,6 @@ public class RealmController : MonoBehaviour
     }
 
 
-
-
-    // PlayerWon() calculates and returns the final score for the current
-    // playthrough once the player has won the game
-    public static int PlayerWon()
-    {
-        if (runTime <= 30) // if the game is won in less than or equal to 30 seconds, +80 bonus points
-        {
-            bonusPoints = 80;
-        }
-        else if (runTime <= 60) // if the game is won in less than or equal to 1 min, +70 bonus points
-        {
-            bonusPoints = 70;
-        }
-        else if (runTime <= 90) // if the game is won in less than or equal to 1 min 30 seconds, +60 bonus points
-        {
-            bonusPoints = 60;
-        }
-        else if (runTime <= 120) // if the game is won in less than or equal to 2 mins, +50 bonus points
-        {
-            bonusPoints = 50;
-        }
-
-        var finalScore = (currentStat.EnemiesDefeated + 1) * (currentStat.TokensCollected + 1) + bonusPoints;
-        realm.Write(() =>
-        {
-            currentStat.Score = finalScore;
-        });
-
-        return finalScore;
-    }
-
     // RestartGame() creates a new plathrough Stat object and shares this new
     // Stat object with the ScoreCardManager to update in the UI and listen for
     // changes to it
@@ -129,8 +51,8 @@ public class RealmController : MonoBehaviour
             currentPlayer.Stats.Add(currentStat);
         });
 
-        ScoreCardManager.SetCurrentStat(currentStat); // call `SetCurrentStat()` to set the current stat in the UI using ScoreCardManager
-        ScoreCardManager.WatchForChangesToCurrentStats(); // call `WatchForChangesToCurrentStats()` to register a listener on the new score in the ScoreCardManager
+        // ScoreCardManager.SetCurrentStat(currentStat); // call `SetCurrentStat()` to set the current stat in the UI using ScoreCardManager
+        // ScoreCardManager.WatchForChangesToCurrentStats(); // call `WatchForChangesToCurrentStats()` to register a listener on the new score in the ScoreCardManager
 
         StartGame(); // start the game by resetting the timer and officially starting a new run/playthrough
     }
@@ -210,18 +132,6 @@ public class RealmController : MonoBehaviour
                 uiDocument.name = "Authentication";
                 uiDocument.visualTreeAsset = authenticationUXMLVisualTree;
                 break;
-            case "Leaderboard":
-                {
-                    gameObject.AddComponent<LeaderboardManager>();
-                    uiDocument.name = "Leaderboard";
-                    uiDocument.visualTreeAsset = leaderboardUXMLVisualTree;
-                }
-                break;
-            case "ScoreCard":
-                gameObject.AddComponent<ScoreCardManager>();
-                uiDocument.name = "ScoreCard";
-                uiDocument.visualTreeAsset = scoreCardUXMLVisualTree;
-                break;
         }
 
         // Attach the UI Document as a child of the Canvas
@@ -254,8 +164,6 @@ public class RealmController : MonoBehaviour
     private void Start()
     {
         // Load UXML Assets
-        leaderboardUXMLVisualTree = EditorGUIUtility.Load(uiToolKitPath + "Leaderboard.uxml") as VisualTreeAsset;
-        scoreCardUXMLVisualTree = EditorGUIUtility.Load(uiToolKitPath + "ScoreCard.uxml") as VisualTreeAsset;
         authenticationUXMLVisualTree = EditorGUIUtility.Load(uiToolKitPath + "Authentication.uxml") as VisualTreeAsset;
 
         // Create canvas as a container to hold UIDocuments
@@ -270,8 +178,6 @@ public class RealmController : MonoBehaviour
 
         // Generate Authentication, Leaderboard, and Scorecard UI Objects
         GenerateUIObjects(canvasGameObject, "Authentication");
-        GenerateUIObjects(canvasGameObject, "Leaderboard");
-        GenerateUIObjects(canvasGameObject, "ScoreCard");
     }
 
     #endregion

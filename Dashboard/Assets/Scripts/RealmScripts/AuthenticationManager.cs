@@ -42,8 +42,8 @@ public class AuthenticationManager : MonoBehaviour
             {
                 HideAuthenticationUI();
             }
-            ScoreCardManager.SetLoggedInUser(currentPlayer.Name);
-            LeaderboardManager.Instance.SetLoggedInUser(currentPlayer.Name);
+            // ScoreCardManager.SetLoggedInUser(currentPlayer.Name);
+            // LeaderboardManager.Instance.SetLoggedInUser(currentPlayer.Name);
         }
         catch (Exception ex)
         {
@@ -79,8 +79,8 @@ public class AuthenticationManager : MonoBehaviour
             {
                 HideAuthenticationUI();
             }
-            ScoreCardManager.SetLoggedInUser(currentPlayer.Name);
-            LeaderboardManager.Instance.SetLoggedInUser(currentPlayer.Name);
+            // ScoreCardManager.SetLoggedInUser(currentPlayer.Name);
+            // LeaderboardManager.Instance.SetLoggedInUser(currentPlayer.Name);
 
         }
         catch (Exception ex)
