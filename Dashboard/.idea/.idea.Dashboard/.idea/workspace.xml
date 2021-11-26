@@ -5,22 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UnityDefaultRuntimeTheme.tss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UnityDefaultRuntimeTheme.tss.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AmestecModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AuthenticationManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AuthenticationManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RealmController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RealmController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StocModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StocModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserOnClicks.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserOnClicks.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewAssemblyReference.asmref" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewAssemblyReference.asmref.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/AuthenticationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/AuthenticationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/LeaderboardManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/LeaderboardManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/RealmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/ScoreCardManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/ScoreCardManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/AuthenticationManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/AuthenticationManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/Constants.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AmestecModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/PlayerModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/RealmController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/RealmController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/StatModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmScripts/StatModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Authentication.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Authentication.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Leaderboard.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Leaderboard.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/ScoreCard.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/ScoreCard.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Stylesheet.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/Stylesheet.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UIPanelSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UIPanelSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UnityDefaultRuntimeTheme.tss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI ToolKit/UnityDefaultRuntimeTheme.tss.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UIElements.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.PackageManager.UI.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.Debugger.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEngine.UIElements.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" beforeDir="false" afterPath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +61,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ui@1.0.0-preview.18/Core/GameObjects/PanelSettings.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -64,6 +101,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
@@ -97,7 +135,11 @@
       <option name="presentableId" value="Default" />
       <updated>1637663078807</updated>
       <workItem from="1637663082682" duration="4664000" />
-      <workItem from="1637748945404" duration="1491000" />
+      <workItem from="1637748945404" duration="2081000" />
+      <workItem from="1637829214704" duration="1876000" />
+      <workItem from="1637832140206" duration="6041000" />
+      <workItem from="1637909391685" duration="2987000" />
+      <workItem from="1637918096926" duration="5685000" />
     </task>
     <servers />
   </component>

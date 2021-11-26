@@ -1,15 +1,11 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Realms;
-public class Player : RealmObject
+public class Stoc : RealmObject
 {
     [PrimaryKey]
     [MapTo("_id")]
     [Required]
     public string Id { get; set; }
-
-
-    [MapTo("stats")]
-    public IList<Stat> Stats { get; }
 
     [MapTo("name")]
     [Required]
