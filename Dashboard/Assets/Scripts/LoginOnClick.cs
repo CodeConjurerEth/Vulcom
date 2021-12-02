@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-public class LoginRegisterOnClicks : MonoBehaviour
+public class LoginOnClick : MonoBehaviour
 {
     [SerializeField]
     private TMP_InputField userInput;
@@ -14,13 +14,8 @@ public class LoginRegisterOnClicks : MonoBehaviour
         AuthenticationManager.LoginUser(userInput.text, passInput.text);
     }
 
-    public void RunRegister()
-    {
-        AuthenticationManager.RegisterUser(userInput.text, passInput.text);
-    }
-
-    public void RunLogout()
-    {
-        RealmController.LogOutBackend();
-    }
+    // public void RunLogout()
+    // {
+    //     RealmController.LogOutBackend();
+    // }
 }
