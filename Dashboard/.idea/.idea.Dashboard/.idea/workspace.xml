@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RegisterOnClick.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RegisterOnClick.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/View.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/View.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmestecModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmestecModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AuthenticationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AuthenticationManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealmController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StocModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/StocModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StocModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/StocModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserOnClicks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoginOnClick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserOnClicks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoginOnClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoginOnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/LoginOnClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoginOnClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/LoginOnClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RegisterOnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/RegisterOnClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RegisterOnClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/RegisterOnClick.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" beforeDir="false" afterPath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +106,8 @@
       <workItem from="1637909391685" duration="2987000" />
       <workItem from="1637918096926" duration="6501000" />
       <workItem from="1638444208708" duration="941000" />
+      <workItem from="1638449012460" duration="639000" />
+      <workItem from="1638776401990" duration="7674000" />
     </task>
     <servers />
   </component>

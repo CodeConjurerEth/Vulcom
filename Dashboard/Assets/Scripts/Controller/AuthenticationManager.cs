@@ -17,10 +17,11 @@ public static class AuthenticationManager
             try
             {
                 var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
-                // if (currentPlayer != null)
-                // {
-                    // HideAuthenticationUI();
-                // }
+                if (currentUser != null)
+                {
+                    HideAuthenticationUI();
+                    ShowStocUI();
+                }
             }
             catch (Exception ex)
             {
@@ -34,14 +35,30 @@ public static class AuthenticationManager
         try
         {
             var currentUser = await RealmController.OnPressRegister(_userInput, _passInput);
-            // if (currentPlayer != null)
-            // {
-            //     HideAuthenticationUI();
-            // }
+            if (currentUser != null)
+            {
+                HideAuthenticationUI();
+                ShowStocUI();
+            }
         }
         catch (Exception ex)
         {
             Debug.Log("an exception was thrown:" + ex.Message);
         }
+    }
+
+    private static void HideAuthenticationUI()
+    {   
+        if (RealmController.syncUser != null) {
+            UIController.Instance.RegisterPanel.SetActive(false);
+            UIController.Instance.LoginPanel.SetActive(true);
+            UIController.Instance.AuthenticationPanel.SetActive(false);
+        }
+        //else show wrong input message/ no existing account
+    }
+
+    private static void ShowStocUI()
+    {
+        UIController.Instance.StocPanel.SetActive(true);
     }
 }

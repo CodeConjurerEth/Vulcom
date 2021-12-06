@@ -7,7 +7,13 @@ public class Amestec : RealmObject
     [Required]
     public string Id { get; set; }
 
-    [MapTo("name")]
+    [MapTo("amestec")]
     [Required]
     public string Name { get; set; }
+    
+    [MapTo("CantitateKg")]
+    public float CantitateKg { get; set; }
+
+    [MapTo("CantitateM")]
+    public float CantitateM { get; set; }
 }
