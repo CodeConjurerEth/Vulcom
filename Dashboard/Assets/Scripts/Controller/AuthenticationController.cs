@@ -6,28 +6,25 @@ using Realms.Sync;
 using TMPro;
 using UnityEngine.UI;
 
-public static class AuthenticationManager  
+public class AuthenticationController  
 {
-    private static App realmApp = App.Create(Constants.Realm.AppId);
-    private static Realm realm;
+    // private static App realmApp = App.Create(Constants.Realm.AppId);
+    // private static Realm realm;
 
     public static async void LoginUser(string _userInput, string _passInput)
     {
+        try
         {
-            try
-            {
-                var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
-                if (currentUser != null)
-                {
-                    HideAuthenticationUI();
-                    ShowStocUI();
-                }
+            var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
+            if (currentUser != null) {
+                HideAuthenticationUI();
+                ShowStocUI();
             }
-            catch (Exception ex)
-            {
-                Debug.Log("an exception was thrown:" + ex.Message);
-            }
-        }   
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("an exception was thrown:" + ex.Message);
+        }
     }
     
     public static async void RegisterUser(string _userInput, string _passInput)
@@ -35,8 +32,7 @@ public static class AuthenticationManager
         try
         {
             var currentUser = await RealmController.OnPressRegister(_userInput, _passInput);
-            if (currentUser != null)
-            {
+            if (currentUser != null) {
                 HideAuthenticationUI();
                 ShowStocUI();
             }
@@ -49,7 +45,7 @@ public static class AuthenticationManager
 
     private static void HideAuthenticationUI()
     {   
-        if (RealmController.syncUser != null) {
+        if (RealmController.SyncUser != null) {
             UIController.Instance.RegisterPanel.SetActive(false);
             UIController.Instance.LoginPanel.SetActive(true);
             UIController.Instance.AuthenticationPanel.SetActive(false);
@@ -59,6 +55,6 @@ public static class AuthenticationManager
 
     private static void ShowStocUI()
     {
-        UIController.Instance.StocPanel.SetActive(true);
+        UIController.Instance.InventarPanel.SetActive(true);
     }
 }

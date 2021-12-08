@@ -1,21 +1,27 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoginOnClick : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_InputField userInput;
-    [SerializeField]
-    private TMP_InputField passInput;
-    
-    public void RunLogin()
+    [SerializeField] private Button loginBtn;
+    [SerializeField] private TMP_InputField userInput;
+    [SerializeField] private TMP_InputField passInput;
+
+
+    private void OnEnable()
     {
-        AuthenticationManager.LoginUser(userInput.text, passInput.text);
+        if (loginBtn == null && !gameObject.TryGetComponent(out loginBtn))
+            throw new Exception("Assign a button to " + this);
+        else {
+            loginBtn.onClick.AddListener(RunLogin);
+        }
     }
 
-    // public void RunLogout()
-    // {
-    //     RealmController.LogOutBackend();
-    // }
+    private void RunLogin()
+    {
+        AuthenticationController.LoginUser(userInput.text, passInput.text);
+    }
+    
 }

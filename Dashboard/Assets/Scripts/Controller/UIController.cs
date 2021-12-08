@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour
     public GameObject AuthenticationPanel;
     public GameObject LoginPanel;
     public GameObject RegisterPanel;
-    public GameObject StocPanel;
+    public GameObject InventarPanel;
     
 
     private void Awake()
@@ -19,10 +19,10 @@ public class UIController : MonoBehaviour
             //if Instance already exists, destroy old one and assign new one to Instance
             Destroy(Instance);
             Instance = this;
-            Debug.Log("Old UIController Instance destroyed, replaced with current one");
+            Debug.Log("Too many UIControllers, removing old one and instantiating on " + gameObject);
         }
 
-        StocPanel.SetActive(false);
+        InventarPanel.SetActive(false);
         AuthenticationPanel.SetActive(true);
     }
 

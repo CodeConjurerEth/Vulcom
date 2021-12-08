@@ -1,21 +1,24 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RegisterOnClick : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_InputField userInput;
-    [SerializeField]
-    private TMP_InputField passInput;
+    [SerializeField] private Button registerBtn;
+    [SerializeField] private TMP_InputField userInput;
+    [SerializeField] private TMP_InputField passInput;
 
-    public void RunRegister()
+    private void OnEnable()
     {
-        AuthenticationManager.RegisterUser(userInput.text, passInput.text);
+        if (registerBtn == null && !gameObject.TryGetComponent(out registerBtn))
+            throw new Exception("Assign a button to " + this);
+        registerBtn.onClick.AddListener(RunRegister);
     }
 
-    // public void RunLogout()
-    // {
-    //     RealmController.LogOutBackend();
-    // }
+    private void RunRegister()
+    {
+        AuthenticationController.RegisterUser(userInput.text, passInput.text);
+    }
+    
 }
