@@ -144,6 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3297418652120750641}
   - component: {fileID: 3297418652120750646}
+  - component: {fileID: 6097819122159743059}
   m_Layer: 5
   m_Name: AmestecHorizontal
   m_TagString: Untagged
@@ -200,6 +201,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6097819122159743059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297418652120750640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec466028a4948e18ebdb3f3d29fb142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3297418652728568687
 GameObject:
   m_ObjectHideFlags: 0

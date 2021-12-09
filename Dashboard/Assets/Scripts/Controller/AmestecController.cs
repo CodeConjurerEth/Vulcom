@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Realms;
@@ -8,41 +9,52 @@ using TMPro;
 
 public class AmestecController : MonoBehaviour
 {
-    public List<AmestecView> AmestecViews; //TODO: this becomes factory? gets created by factory
+    [SerializeField] private GameObject amestecViewPrefab;
+    [SerializeField] private Transform amestecElemParent;
 
-    private static Realm realm;
-    private List<Amestec> Amestecuri;
-    
-    
+    private static Realm _realm;
+    private List<AmestecView> _amestecViews;
+    private List<Amestec> _amestecuri;
+
     private async void OnEnable()
     {
-        realm = await RealmController.GetRealm(RealmController.SyncUser);
-        GetAmestecList();
-        var currAmestec = Amestecuri[0];
-        var currView = AmestecViews[0];
+        _realm = await RealmController.GetRealm(RealmController.SyncUser);
+        _amestecViews = new List<AmestecView>();
+        _amestecuri = new List<Amestec>();
 
-        currView.SetAmestecValues(currAmestec.Id, currAmestec.Name, currAmestec.CantitateKg, currAmestec.CantitateM);
+        GetAmestecList();   //get amestecList from realm ->
+        GenerateViewObjects(_amestecuri.Count); //generate the nr of amestecuri we get from realm
     }
 
+    private void GenerateViewObjects(int nrAmestecuri)
+    {
+        for (int index = 0; index < nrAmestecuri; index++) {
+            var newPrefab = Instantiate(amestecViewPrefab, amestecElemParent);
+            AmestecView amestecView;
+            if (!newPrefab.TryGetComponent(out amestecView))
+                throw new Exception("No AmestecView Component is on the prefab GameObject");
+            else {
+                amestecView.SetAmestecValues(_amestecuri[index]);
+                _amestecViews.Add(amestecView);
+            }
+        }
+    }
+    
     private void GetAmestecList() //not async .. yet?
     {
-        var amestecuri = realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
-        Amestecuri = new List<Amestec>();
+        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
         for (int index = 0; index < amestecuri.Count(); index++) {
-            Amestecuri.Add(amestecuri.ElementAt(index));
+            _amestecuri.Add(amestecuri.ElementAt(index));
         }
     }
 
-    public void AddAmestecToRealm(string id, string name, float cantitateKg) //TODO: cantitateM
+    public void AddAmestecToRealm(string id, string name, float cantitateKg)
     {
         AmestecFactory amestecFactory = new AmestecFactory();
-        var newAmestec = amestecFactory.CreateRandomAmestec();
-        newAmestec.Id = id;
-        newAmestec.Name = name;
-        newAmestec.CantitateKg = cantitateKg;
+        var newAmestec = amestecFactory.CreateAmestec(id, name, cantitateKg);
 
-        realm.Write(() => {
-            realm.Add(newAmestec);
+        _realm.Write(() => {
+            _realm.Add(newAmestec);
         });
     }
 }

@@ -13,19 +13,25 @@ public class AmestecView : MonoBehaviour
 
     private void OnEnable()
     {
-        assignChildTextToPrivateFields();
+        AssignChildTextToPrivateFields();
     }
 
-    public void SetAmestecValues(string id, string amestecName, float cantitateKg, float cantitateM)
+    public void SetAmestecValues(string id, string amestecName, float cantitateKg)
     {
          _idText.text = id;
          _amestecNameText.text = amestecName;
          _cantitateKgText.text = cantitateKg.ToString();
-         _cantitateMText.text = cantitateM.ToString();
+    }
+
+    public void SetAmestecValues(Amestec amestec)
+    {
+        _idText.text = amestec.Id;
+        _amestecNameText.text = amestec.Name;
+        _cantitateKgText.text = amestec.CantitateKg.ToString();
     }
     
 
-    private void assignChildTextToPrivateFields()
+    public void AssignChildTextToPrivateFields()
     {
         if (!transform.GetChild(0).TryGetComponent(out _idText)) {
             throw new Exception("Cannot find ID GameObject or TMP_Text Component");
@@ -35,9 +41,6 @@ public class AmestecView : MonoBehaviour
         }
         if (!transform.GetChild(2).TryGetComponent(out _cantitateKgText)) {
             throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
-        }
-        if (!transform.GetChild(3).TryGetComponent(out _cantitateMText)) {
-            throw new Exception("Cannot find cantitateM GameObject or TMP_Text Component");
         }
     }
 }

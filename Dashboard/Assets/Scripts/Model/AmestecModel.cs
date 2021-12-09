@@ -14,16 +14,12 @@ public class Amestec : RealmObject
     [MapTo("CantitateKg")]
     public float CantitateKg { get; set; }
 
-    [MapTo("CantitateM")]
-    public float CantitateM { get; set; }
-
     public Amestec() { }
     
-    public Amestec(string id, string name, float cantitateKg, float cantitateM)
+    public Amestec(string id, string name, float cantitateKg)
     {
         Id = id;
         Name = name;
         CantitateKg = cantitateKg;
-        CantitateM = cantitateM;
     }
 }
