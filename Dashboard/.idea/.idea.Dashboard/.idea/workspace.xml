@@ -5,21 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AddAmestecBtn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AddAmestecBtn.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Factories.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AmestecObjCreator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AmestecObjCreator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AmestecHorizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AmestecHorizontal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmestecFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/AmestecFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmestecFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/AmestecFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/Factory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/Factory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" beforeDir="false" afterPath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +104,7 @@
       <workItem from="1638786993621" duration="6520000" />
       <workItem from="1638865769752" duration="11897000" />
       <workItem from="1638954140561" duration="11427000" />
-      <workItem from="1639038468255" duration="9301000" />
+      <workItem from="1639038468255" duration="9891000" />
     </task>
     <servers />
   </component>
