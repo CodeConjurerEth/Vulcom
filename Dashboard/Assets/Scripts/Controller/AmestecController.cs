@@ -13,42 +13,18 @@ public class AmestecController : MonoBehaviour
     [SerializeField] private Transform amestecElemParent;
 
     private static Realm _realm;
-    private List<AmestecView> _amestecViews;
+    private List<AmestecView> _amestecViews; 
     private List<Amestec> _amestecuri;
 
     private async void OnEnable()
     {
         _realm = await RealmController.GetRealm(RealmController.SyncUser);
         _amestecViews = new List<AmestecView>();
-        _amestecuri = new List<Amestec>();
-
-        GetAmestecList();   //get amestecList from realm ->
-        GenerateViewObjects(_amestecuri.Count); //generate the nr of amestecuri we get from realm
-    }
-
-    private void GenerateViewObjects(int nrAmestecuri)
-    {
-        for (int index = 0; index < nrAmestecuri; index++) {
-            var newPrefab = Instantiate(amestecViewPrefab, amestecElemParent);
-            AmestecView amestecView;
-            if (!newPrefab.TryGetComponent(out amestecView))
-                throw new Exception("No AmestecView Component is on the prefab GameObject");
-            else {
-                amestecView.SetAmestecValues(_amestecuri[index]);
-                _amestecViews.Add(amestecView);
-            }
-        }
+        
+        GenerateViewObjects(); //generate the nr of amestecuri we get from realm
     }
     
-    private void GetAmestecList() //not async .. yet?
-    {
-        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
-        for (int index = 0; index < amestecuri.Count(); index++) {
-            _amestecuri.Add(amestecuri.ElementAt(index));
-        }
-    }
-
-    public void AddAmestecToRealm(string id, string name, float cantitateKg)
+    public void AddAmestecToDB(string id, string name, float cantitateKg)
     {
         AmestecFactory amestecFactory = new AmestecFactory();
         var newAmestec = amestecFactory.CreateAmestec(id, name, cantitateKg);
@@ -57,4 +33,76 @@ public class AmestecController : MonoBehaviour
             _realm.Add(newAmestec);
         });
     }
+
+    public async void RemoveAmestecFromDB(string id)
+    {
+        _amestecuri = await GetAmestecListFromDB();
+        foreach (var currentAmestec in _amestecuri)
+            if (currentAmestec.Id == id) {
+                
+                _amestecuri.Remove(currentAmestec);
+                _realm.Write(() => {
+                    _realm.Remove(currentAmestec);
+                });
+            }
+    }
+    
+    public async void GenerateViewObjects() //it was private, better public I think!
+    {
+        ClearExistingViewObj();
+        _amestecuri = await GetAmestecListFromDB();
+        
+        foreach(var currentAmestec in _amestecuri) {
+            var newPrefab = Instantiate(amestecViewPrefab, amestecElemParent);
+            AmestecView amestecView;
+            if (!newPrefab.TryGetComponent(out amestecView))
+                throw new Exception("No AmestecView Component is on the prefab GameObject");
+            else {
+                amestecView.SetAmestecValues(currentAmestec);
+                _amestecViews.Add(amestecView);
+            }
+        }
+    }
+    
+    private async Task<List<Amestec>> GetAmestecListFromDB()
+    {
+        _realm = await RealmController.GetRealm(RealmController.SyncUser); //sync 
+        var amestecList = new List<Amestec>();
+        
+        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
+        for (int index = 0; index < amestecuri.Count(); index++) {
+            amestecList.Add(amestecuri.ElementAt(index));
+        }
+
+        return amestecList;
+    }
+
+    
+    private void ClearExistingViewObj()
+    {
+        _amestecViews.Clear();
+        ClearChildrenOf(amestecElemParent);
+    }
+    
+    private void ClearChildrenOf(Transform parentObj)
+    {
+        int i = 0;
+        
+        //Array to hold all child obj
+        GameObject[] allChildren = new GameObject[parentObj.childCount];
+
+        //Find all child obj and store to that array
+        foreach (Transform child in parentObj)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+
+        //Now destroy them
+        foreach (GameObject child in allChildren)
+        {
+            DestroyImmediate(child.gameObject);
+        }
+    }
+
 }
