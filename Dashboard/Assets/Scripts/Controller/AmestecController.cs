@@ -26,8 +26,7 @@ public class AmestecController : MonoBehaviour
     
     public void AddAmestecToDB(string id, string name, float cantitateKg)
     {
-        AmestecFactory amestecFactory = new AmestecFactory();
-        var newAmestec = amestecFactory.CreateAmestec(id, name, cantitateKg);
+        Amestec newAmestec = new Amestec(id, name, cantitateKg);
 
         _realm.Write(() => {
             _realm.Add(newAmestec);

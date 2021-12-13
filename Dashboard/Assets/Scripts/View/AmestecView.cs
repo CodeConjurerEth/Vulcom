@@ -9,7 +9,6 @@ public class AmestecView : MonoBehaviour
     private TMP_Text _idText;
     private TMP_Text _amestecNameText;
     private TMP_Text _cantitateKgText;
-    private TMP_Text _cantitateMText;
 
     private void OnEnable()
     {

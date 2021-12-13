@@ -1,48 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Realms;
 using Realms.Sync;
-using System.Linq;
-using UnityEngine.SceneManagement;
+using UnityEngine;
+using TMPro;
 
-public class RealmController
+ public class DBController //:MonoBehaviour
 {
-    public static User SyncUser;
-    private static App realmApp = App.Create(Constants.Realm.AppId);
+    public static DBController Instance;
     private static Realm _realm;
 
-    public static async Task<User> SetLoggedInUser(string userInput, string passInput)
+    private async void OnEnable()
     {
-        SyncUser = await realmApp.LogInAsync(Credentials.EmailPassword(userInput, passInput));
-        if (SyncUser != null) {
-            _realm = await GetRealm(SyncUser);
-        }
-        return SyncUser;
+        // if (Instance == null) {
+        //     Instance = this;
+        // }
+        // else {
+        //     Destroy(Instance);
+        //     Instance = this;
+        //     Debug.Log("There can't be 2 DBControllers in a Scene! Current one is on " + this.gameObject + " old one has been destroyed!");
+        // }
+        _realm = await RealmController.GetRealm(RealmController.SyncUser);
     }
     
-    public static async Task<User> OnPressRegister(string userInput, string passInput)
-    {
-        await realmApp.EmailPasswordAuth.RegisterUserAsync(userInput, passInput);
-        SyncUser = await realmApp.LogInAsync(Credentials.EmailPassword(userInput, passInput));
-        _realm = await GetRealm(SyncUser);
-        
-        return SyncUser;
-    }
-    
-    public static async void LogOutBackend()
-    {
-        await SyncUser.LogOutAsync();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    
-    public static async Task<Realm> GetRealm(User loggedInUser)
-    {
-        var syncConfiguration = new SyncConfiguration("UnityTutorialPartition", loggedInUser);
-        return await Realm.GetInstanceAsync(syncConfiguration);
-    }
-    
-     public void AddToDB(Amestec amestec)
+    public void AddToDB(Amestec amestec)
     {
         _realm.Write(() => {
             _realm.Add(amestec);
@@ -62,6 +45,7 @@ public class RealmController
             _realm.Add(alama);
         });
     }
+
 
     public async void RemoveAmestecFromDB(string id)
     {
@@ -104,7 +88,7 @@ public class RealmController
 
     public async Task<List<Amestec>> GetAmestecListFromDB()
     {
-        _realm = await GetRealm(SyncUser); //sync 
+        _realm = await RealmController.GetRealm(RealmController.SyncUser); //sync 
         var amestecList = new List<Amestec>();
         
         var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
@@ -117,7 +101,7 @@ public class RealmController
 
     public async Task<List<Bara>> GetBaraListFromDB()
     {
-        _realm = await GetRealm(SyncUser); //sync 
+        _realm = await RealmController.GetRealm(RealmController.SyncUser); //sync 
         var baraList = new List<Bara>();
         
         var bare = _realm.All<Bara>().OrderBy(bara => bara.LungimeCm);
@@ -130,7 +114,7 @@ public class RealmController
     
     public async Task<List<Alama>> GetAlamaListFromDB()
     {
-        _realm = await GetRealm(SyncUser); //sync 
+        _realm = await RealmController.GetRealm(RealmController.SyncUser); //sync 
         var alamaList = new List<Alama>();
         
         var alamuri = _realm.All<Alama>().OrderBy(alama => alama.LungimeTotalaCm);
@@ -140,4 +124,5 @@ public class RealmController
 
         return alamaList;
     }
+    
 }

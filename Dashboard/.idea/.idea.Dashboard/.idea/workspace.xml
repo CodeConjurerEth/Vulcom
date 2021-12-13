@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/DBController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/DBController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AlamaModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AlamaModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AddAmestecBtn.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AddAmestecBtn.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/AmestecFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/StocFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/AmestecFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/StocFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/Factory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/Factory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardUML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/DashboardUML.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NotesAndTODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../NotesAndTODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" beforeDir="false" afterPath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,6 +124,8 @@
       <workItem from="1639124539466" duration="6783000" />
       <workItem from="1639140684928" duration="34000" />
       <workItem from="1639140766612" duration="203000" />
+      <workItem from="1639380307867" duration="2376000" />
+      <workItem from="1639386196166" duration="8031000" />
     </task>
     <servers />
   </component>
