@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson;
 using Realms;
 public class Amestec : RealmObject
 {
     [PrimaryKey]
     [MapTo("_id")]
-    [Required]
-    public string Id { get; set; }
+    public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
+    
+    [MapTo("DashboardPartition")]
+    public string partitionKey { get; set; } = 
 
     [MapTo("numeAmestec")]
     [Required]
@@ -15,10 +18,9 @@ public class Amestec : RealmObject
     public float CantitateKg { get; set; }
 
     public Amestec() { }
-    
-    public Amestec(string id, string name, float cantitateKg)
+     
+    public Amestec(string name, float cantitateKg)
     {
-        Id = id;
         Name = name;
         CantitateKg = cantitateKg;
     }

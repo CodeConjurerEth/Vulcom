@@ -51,7 +51,7 @@ using TMPro;
     {
         var amestecs = await GetAmestecListFromDB();
         foreach (var currentAmestec in amestecs)
-            if (currentAmestec.Id == id) {
+            if (currentAmestec.Id.ToString() == id) {
                 
                 amestecs.Remove(currentAmestec);
                 _realm.Write(() => {
@@ -64,7 +64,7 @@ using TMPro;
     {
         var bare = await GetBaraListFromDB();
         foreach (var currentBara in bare)
-            if (currentBara.Id == id) {
+            if (currentBara.Id.ToString() == id) {
                 
                 bare.Remove(currentBara);
                 _realm.Write(() => {
@@ -77,7 +77,7 @@ using TMPro;
     {
         var alamuri = await GetAlamaListFromDB();
         foreach (var currentAlama in alamuri)
-            if (currentAlama.Id == id) {
+            if (currentAlama.Id.ToString() == id) {
                 
                 alamuri.Remove(currentAlama);
                 _realm.Write(() => {

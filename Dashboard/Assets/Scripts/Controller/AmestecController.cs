@@ -11,45 +11,20 @@ public class AmestecController : MonoBehaviour
 {
     [SerializeField] private GameObject amestecViewPrefab;
     [SerializeField] private Transform amestecElemParent;
-
-    private static Realm _realm;
+    
     private List<AmestecView> _amestecViews; 
     private List<Amestec> _amestecuri;
 
-    private async void OnEnable()
+    private void OnEnable()
     {
-        _realm = await RealmController.GetRealm(RealmController.SyncUser);
-        _amestecViews = new List<AmestecView>();
-        
+        _amestecViews = new List<AmestecView>(); 
         GenerateViewObjects(); //generate the nr of amestecuri we get from realm
     }
-    
-    public void AddAmestecToDB(string id, string name, float cantitateKg)
-    {
-        Amestec newAmestec = new Amestec(id, name, cantitateKg);
 
-        _realm.Write(() => {
-            _realm.Add(newAmestec);
-        });
-    }
-
-    public async void RemoveAmestecFromDB(string id)
-    {
-        _amestecuri = await GetAmestecListFromDB();
-        foreach (var currentAmestec in _amestecuri)
-            if (currentAmestec.Id == id) {
-                
-                _amestecuri.Remove(currentAmestec);
-                _realm.Write(() => {
-                    _realm.Remove(currentAmestec);
-                });
-            }
-    }
-    
     public async void GenerateViewObjects() //it was private, better public I think!
     {
         ClearExistingViewObj();
-        _amestecuri = await GetAmestecListFromDB();
+        _amestecuri = await RealmController.GetAmestecListFromDB();
         
         foreach(var currentAmestec in _amestecuri) {
             var newPrefab = Instantiate(amestecViewPrefab, amestecElemParent);
@@ -57,26 +32,12 @@ public class AmestecController : MonoBehaviour
             if (!newPrefab.TryGetComponent(out amestecView))
                 throw new Exception("No AmestecView Component is on the prefab GameObject");
             else {
-                amestecView.SetAmestecValues(currentAmestec);
+                amestecView.SetAmestecValuesInView(currentAmestec);
                 _amestecViews.Add(amestecView);
             }
         }
     }
-    
-    private async Task<List<Amestec>> GetAmestecListFromDB()
-    {
-        _realm = await RealmController.GetRealm(RealmController.SyncUser); //sync 
-        var amestecList = new List<Amestec>();
-        
-        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
-        for (int index = 0; index < amestecuri.Count(); index++) {
-            amestecList.Add(amestecuri.ElementAt(index));
-        }
 
-        return amestecList;
-    }
-
-    
     private void ClearExistingViewObj()
     {
         _amestecViews.Clear();

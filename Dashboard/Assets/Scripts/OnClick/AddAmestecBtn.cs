@@ -29,7 +29,8 @@ public class AddAmestecBtn : MonoBehaviour
         if (!parseOK)
             throw new Exception("Cannot parse cantitateKg: (InputField.text) to Float");
         else {
-            _amestecController.AddAmestecToDB(idInput.text, nameInput.text, cantitateKg);
+            Amestec amestec = new Amestec(nameInput.text, cantitateKg);
+            RealmController.AddToDB(amestec);
             _amestecController.GenerateViewObjects();
         }
         

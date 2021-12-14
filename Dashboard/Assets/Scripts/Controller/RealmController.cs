@@ -42,32 +42,32 @@ public class RealmController
         return await Realm.GetInstanceAsync(syncConfiguration);
     }
     
-     public void AddToDB(Amestec amestec)
+     public static void AddToDB(Amestec amestec)
     {
         _realm.Write(() => {
             _realm.Add(amestec);
         });
     }
     
-    public void AddToDB(Bara bara)
+    public static void AddToDB(Bara bara)
     {
         _realm.Write(() => {
             _realm.Add(bara);
         });
     }
-
-    public void AddToDB(Alama alama)
+    
+    public static void AddToDB(Alama alama)
     {
         _realm.Write(() => {
             _realm.Add(alama);
         });
     }
-
-    public async void RemoveAmestecFromDB(string id)
+    
+    public static async void RemoveAmestecFromDB(string id)
     {
         var amestecs = await GetAmestecListFromDB();
         foreach (var currentAmestec in amestecs)
-            if (currentAmestec.Id == id) {
+            if (currentAmestec.Id.ToString() == id) {
                 
                 amestecs.Remove(currentAmestec);
                 _realm.Write(() => {
@@ -76,11 +76,11 @@ public class RealmController
             }
     }
     
-    public async void RemoveBaraFromDB(string id)
+    public static async void RemoveBaraFromDB(string id)
     {
         var bare = await GetBaraListFromDB();
         foreach (var currentBara in bare)
-            if (currentBara.Id == id) {
+            if (currentBara.Id.ToString() == id) {
                 
                 bare.Remove(currentBara);
                 _realm.Write(() => {
@@ -89,11 +89,11 @@ public class RealmController
             }
     }
     
-    public async void RemoveAlamaFromDB(string id)
+    public static async void RemoveAlamaFromDB(string id)
     {
         var alamuri = await GetAlamaListFromDB();
         foreach (var currentAlama in alamuri)
-            if (currentAlama.Id == id) {
+            if (currentAlama.Id.ToString() == id) {
                 
                 alamuri.Remove(currentAlama);
                 _realm.Write(() => {
@@ -101,8 +101,8 @@ public class RealmController
                 });
             }
     }
-
-    public async Task<List<Amestec>> GetAmestecListFromDB()
+    
+    public static async Task<List<Amestec>> GetAmestecListFromDB()
     {
         _realm = await GetRealm(SyncUser); //sync 
         var amestecList = new List<Amestec>();
@@ -111,11 +111,11 @@ public class RealmController
         for (int index = 0; index < amestecuri.Count(); index++) {
             amestecList.Add(amestecuri.ElementAt(index));
         }
-
+    
         return amestecList;
     }
-
-    public async Task<List<Bara>> GetBaraListFromDB()
+    
+    public static async Task<List<Bara>> GetBaraListFromDB()
     {
         _realm = await GetRealm(SyncUser); //sync 
         var baraList = new List<Bara>();
@@ -124,11 +124,11 @@ public class RealmController
         for (int index = 0; index < bare.Count(); index++) {
             baraList.Add(bare.ElementAt(index));
         }
-
+    
         return baraList;
     }
     
-    public async Task<List<Alama>> GetAlamaListFromDB()
+    public static async Task<List<Alama>> GetAlamaListFromDB()
     {
         _realm = await GetRealm(SyncUser); //sync 
         var alamaList = new List<Alama>();
@@ -137,7 +137,7 @@ public class RealmController
         for (int index = 0; index < alamuri.Count(); index++) {
             alamaList.Add(alamuri.ElementAt(index));
         }
-
+    
         return alamaList;
     }
 }

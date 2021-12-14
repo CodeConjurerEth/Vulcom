@@ -14,23 +14,24 @@ public class AmestecView : MonoBehaviour
     {
         AssignChildTextToPrivateFields();
     }
-
-    public void SetAmestecValues(string id, string amestecName, float cantitateKg)
+    
+    /**
+    public void SetAmestecValuesInView(string id, string amestecName, float cantitateKg)
     {
          _idText.text = id;
          _amestecNameText.text = amestecName;
          _cantitateKgText.text = cantitateKg.ToString();
-    }
+    }*/
 
-    public void SetAmestecValues(Amestec amestec)
+    public void SetAmestecValuesInView(Amestec amestec)
     {
-        _idText.text = amestec.Id;
+        _idText.text = amestec.Id.ToString();
         _amestecNameText.text = amestec.Name;
         _cantitateKgText.text = amestec.CantitateKg.ToString();
     }
     
 
-    public void AssignChildTextToPrivateFields()
+    private void AssignChildTextToPrivateFields()
     {
         if (!transform.GetChild(0).TryGetComponent(out _idText)) {
             throw new Exception("Cannot find ID GameObject or TMP_Text Component");

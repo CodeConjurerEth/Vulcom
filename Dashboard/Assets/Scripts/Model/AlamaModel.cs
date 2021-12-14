@@ -1,32 +1,30 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using MongoDB.Bson;
 using Realms;
 public class Alama : RealmObject
 {
     [PrimaryKey]
     [MapTo("_id")]
-    [Required]
-    public string Id { get; set; }
+    public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
 
     [MapTo("Name")]
     [Required]
     public string Name { get; set; }
     
     [MapTo("Bara")]
-    [Required]
-    public Bara Bara { get; set; }
+    [Backlink(nameof(Bara.TipAlama))]
+    public IQueryable<Bara> Bare { get;}
     
     [MapTo("LungimeTotalaCM")]
-    [Required]
     public float LungimeTotalaCm { get; set; }
-
-
+    
     public Alama() { }
     
-    public Alama(string id, string name, Bara bara, float lungimeTotalaCm) //chip example
+    public Alama(string name, IQueryable<Bara> bare, float lungimeTotalaCm) //chip example
     {
-        Id = id;
-        Name = name;
-        Bara = bara;
+        Name = name; 
+        Bare = bare;
         LungimeTotalaCm = lungimeTotalaCm;
     }
 }
