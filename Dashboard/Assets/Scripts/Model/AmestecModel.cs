@@ -6,9 +6,6 @@ public class Amestec : RealmObject
     [PrimaryKey]
     [MapTo("_id")]
     public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
-    
-    [MapTo("DashboardPartition")]
-    public string partitionKey { get; set; } = 
 
     [MapTo("numeAmestec")]
     [Required]

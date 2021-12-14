@@ -12,16 +12,16 @@ public class Alama : RealmObject
     [Required]
     public string Name { get; set; }
     
-    [MapTo("Bara")]
+    [MapTo("Bars")]
     [Backlink(nameof(Bara.TipAlama))]
     public IQueryable<Bara> Bare { get;}
     
     [MapTo("LungimeTotalaCM")]
-    public float LungimeTotalaCm { get; set; }
+    public double LungimeTotalaCm { get; set; }
     
     public Alama() { }
     
-    public Alama(string name, IQueryable<Bara> bare, float lungimeTotalaCm) //chip example
+    public Alama(string name, IQueryable<Bara> bare, double lungimeTotalaCm)
     {
         Name = name; 
         Bare = bare;

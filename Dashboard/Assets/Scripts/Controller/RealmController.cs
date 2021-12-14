@@ -63,6 +63,7 @@ public class RealmController
         });
     }
     
+    /**    USE SOMETHING ELSE THAN ID TO DELETE
     public static async void RemoveAmestecFromDB(string id)
     {
         var amestecs = await GetAmestecListFromDB();
@@ -101,6 +102,7 @@ public class RealmController
                 });
             }
     }
+    */
     
     public static async Task<List<Amestec>> GetAmestecListFromDB()
     {
@@ -120,7 +122,7 @@ public class RealmController
         _realm = await GetRealm(SyncUser); //sync 
         var baraList = new List<Bara>();
         
-        var bare = _realm.All<Bara>().OrderBy(bara => bara.LungimeCm);
+        var bare = _realm.All<Bara>().OrderBy(bara => bara.Kg);
         for (int index = 0; index < bare.Count(); index++) {
             baraList.Add(bare.ElementAt(index));
         }

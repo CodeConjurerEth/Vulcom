@@ -15,17 +15,17 @@ public class Bara : RealmObject
     public Alama TipAlama { get; set; }
     
     [MapTo("Diametru")]
-    public float Diametru { get; set; }
+    public double Diametru { get; set; }
 
-    [MapTo("LungimeCM")]
-    public float LungimeCm { get; set; }
+    [MapTo("Kg")]
+    public double Kg { get; set; }
     
     public Bara() { }
     
-    public Bara(string name, float diametru, float lungimeCm)
+    public Bara(string name, double diametru, double kg)
     {
         Name = name;
         Diametru = diametru;
-        LungimeCm = lungimeCm;
+        Kg = kg;
     }
 }

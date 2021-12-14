@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/StocController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/StocController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Oteluri.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Oteluri.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DBController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/DBController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AlamaModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AlamaModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DashboardUML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/DashboardUML.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" beforeDir="false" afterPath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +32,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599fd848fd9040f0a59e4106e4838256113400/0f/ab8f6ea6/SyncConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Model/AmestecModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Model/AmestecModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
