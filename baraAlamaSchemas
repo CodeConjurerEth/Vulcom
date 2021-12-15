@@ -75,3 +75,28 @@
     "is_list": true
   }
 }
+
+========================================================
+{
+  "title": "Amestec",
+  "bsonType": "object",
+  "required": [
+    "_id",
+    "DashboardPartition",
+    "numeAmestec"
+  ],
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "DashboardPartition": {
+      "bsonType": "string"
+    },
+    "numeAmestec": {
+      "bsonType": "string"
+    },
+    "Kg": {
+      "bsonType": "double"
+    }
+  }
+}

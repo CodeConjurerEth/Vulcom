@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using UnityEngine;
 using Realms;
@@ -19,6 +22,18 @@ public class AuthenticationController
             if (currentUser != null) {
                 HideAuthenticationUI();
                 ShowStocUI();
+                //--------------------------------
+                // var alama = new Metal("Alama", 1d, 1d);
+                // var bara = new Bara("Bara", alama, 10d, 0.5d);
+                //
+                // RealmController.AddToDB(bara);
+                // RealmController.AddToDB(alama);
+
+                var metalList = RealmController.GetMetalListFromDB();
+                Debug.Log("ayy");
+                Debug.Log(metalList.Result[0].Bare.Count());
+
+                //--------------------------------
             }
         }
         catch (Exception ex)

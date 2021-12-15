@@ -49,19 +49,19 @@ public class RealmController
         });
     }
     
-    // public static void AddToDB(Bara bara)
-    // {
-    //     _realm.Write(() => {
-    //         _realm.Add(bara);
-    //     });
-    // }
-    //
-    // public static void AddToDB(Alama alama)
-    // {
-    //     _realm.Write(() => {
-    //         _realm.Add(alama);
-    //     });
-    // }
+    public static void AddToDB(Bara bara)
+    {
+        _realm.Write(() => {
+            _realm.Add(bara);
+        });
+    }
+    
+    public static void AddToDB(Metal metal)
+    {
+        _realm.Write(() => {
+            _realm.Add(metal);
+        });
+    }
     
     /**    USE SOMETHING ELSE THAN ID TO DELETE
     public static async void RemoveAmestecFromDB(string id)
@@ -90,15 +90,15 @@ public class RealmController
             }
     }
     
-    public static async void RemoveAlamaFromDB(string id)
+    public static async void RemoveMetalFromDB(string id)
     {
-        var alamuri = await GetAlamaListFromDB();
-        foreach (var currentAlama in alamuri)
-            if (currentAlama.Id.ToString() == id) {
+        var alamuri = await GetMetalListFromDB();
+        foreach (var currentMetal in alamuri)
+            if (currentMetal.Id.ToString() == id) {
                 
-                alamuri.Remove(currentAlama);
+                alamuri.Remove(currentMetal);
                 _realm.Write(() => {
-                    _realm.Remove(currentAlama);
+                    _realm.Remove(currentMetal);
                 });
             }
     }
@@ -117,29 +117,29 @@ public class RealmController
         return amestecList;
     }
     
-    // public static async Task<List<Bara>> GetBaraListFromDB()
-    // {
-    //     _realm = await GetRealm(SyncUser); //sync 
-    //     var baraList = new List<Bara>();
-    //     
-    //     var bare = _realm.All<Bara>().OrderBy(bara => bara.Kg);
-    //     for (int index = 0; index < bare.Count(); index++) {
-    //         baraList.Add(bare.ElementAt(index));
-    //     }
-    //
-    //     return baraList;
-    // }
-    //
-    // public static async Task<List<Alama>> GetAlamaListFromDB()
-    // {
-    //     _realm = await GetRealm(SyncUser); //sync 
-    //     var alamaList = new List<Alama>();
-    //     
-    //     var alamuri = _realm.All<Alama>().OrderBy(alama => alama.Kg);
-    //     for (int index = 0; index < alamuri.Count(); index++) {
-    //         alamaList.Add(alamuri.ElementAt(index));
-    //     }
-    //
-    //     return alamaList;
-    // }
+    public static async Task<List<Bara>> GetBaraListFromDB()
+    {
+        _realm = await GetRealm(SyncUser); //sync 
+        var baraList = new List<Bara>();
+        
+        var bare = _realm.All<Bara>().OrderBy(bara => bara.Kg);
+        for (int index = 0; index < bare.Count(); index++) {
+            baraList.Add(bare.ElementAt(index));
+        }
+    
+        return baraList;
+    }
+    
+    public static async Task<List<Metal>> GetMetalListFromDB()
+    {
+        _realm = await GetRealm(SyncUser); //sync 
+        var metalList = new List<Metal>();
+        
+        var metale = _realm.All<Metal>().OrderBy(metal => metal.Kg);
+        for (int index = 0; index < metale.Count(); index++) {
+            metalList.Add(metale.ElementAt(index));
+        }
+    
+        return metalList;
+    }
 }
