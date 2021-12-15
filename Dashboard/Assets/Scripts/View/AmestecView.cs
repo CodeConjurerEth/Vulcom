@@ -27,7 +27,7 @@ public class AmestecView : MonoBehaviour
     {
         _idText.text = amestec.Id.ToString();
         _amestecNameText.text = amestec.Name;
-        _cantitateKgText.text = amestec.CantitateKg.ToString();
+        _cantitateKgText.text = amestec.Kg.ToString();
     }
     
 

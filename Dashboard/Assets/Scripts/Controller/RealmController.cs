@@ -49,19 +49,19 @@ public class RealmController
         });
     }
     
-    public static void AddToDB(Bara bara)
-    {
-        _realm.Write(() => {
-            _realm.Add(bara);
-        });
-    }
-    
-    public static void AddToDB(Alama alama)
-    {
-        _realm.Write(() => {
-            _realm.Add(alama);
-        });
-    }
+    // public static void AddToDB(Bara bara)
+    // {
+    //     _realm.Write(() => {
+    //         _realm.Add(bara);
+    //     });
+    // }
+    //
+    // public static void AddToDB(Alama alama)
+    // {
+    //     _realm.Write(() => {
+    //         _realm.Add(alama);
+    //     });
+    // }
     
     /**    USE SOMETHING ELSE THAN ID TO DELETE
     public static async void RemoveAmestecFromDB(string id)
@@ -109,7 +109,7 @@ public class RealmController
         _realm = await GetRealm(SyncUser); //sync 
         var amestecList = new List<Amestec>();
         
-        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.CantitateKg);
+        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.Kg);
         for (int index = 0; index < amestecuri.Count(); index++) {
             amestecList.Add(amestecuri.ElementAt(index));
         }
@@ -117,29 +117,29 @@ public class RealmController
         return amestecList;
     }
     
-    public static async Task<List<Bara>> GetBaraListFromDB()
-    {
-        _realm = await GetRealm(SyncUser); //sync 
-        var baraList = new List<Bara>();
-        
-        var bare = _realm.All<Bara>().OrderBy(bara => bara.Kg);
-        for (int index = 0; index < bare.Count(); index++) {
-            baraList.Add(bare.ElementAt(index));
-        }
-    
-        return baraList;
-    }
-    
-    public static async Task<List<Alama>> GetAlamaListFromDB()
-    {
-        _realm = await GetRealm(SyncUser); //sync 
-        var alamaList = new List<Alama>();
-        
-        var alamuri = _realm.All<Alama>().OrderBy(alama => alama.LungimeTotalaCm);
-        for (int index = 0; index < alamuri.Count(); index++) {
-            alamaList.Add(alamuri.ElementAt(index));
-        }
-    
-        return alamaList;
-    }
+    // public static async Task<List<Bara>> GetBaraListFromDB()
+    // {
+    //     _realm = await GetRealm(SyncUser); //sync 
+    //     var baraList = new List<Bara>();
+    //     
+    //     var bare = _realm.All<Bara>().OrderBy(bara => bara.Kg);
+    //     for (int index = 0; index < bare.Count(); index++) {
+    //         baraList.Add(bare.ElementAt(index));
+    //     }
+    //
+    //     return baraList;
+    // }
+    //
+    // public static async Task<List<Alama>> GetAlamaListFromDB()
+    // {
+    //     _realm = await GetRealm(SyncUser); //sync 
+    //     var alamaList = new List<Alama>();
+    //     
+    //     var alamuri = _realm.All<Alama>().OrderBy(alama => alama.Kg);
+    //     for (int index = 0; index < alamuri.Count(); index++) {
+    //         alamaList.Add(alamuri.ElementAt(index));
+    //     }
+    //
+    //     return alamaList;
+    // }
 }

@@ -1,0 +1,77 @@
+{
+  "title": "Bara",
+  "bsonType": "object",
+  "required": [
+    "_id",
+    "DashboardPartition",
+    "Name"
+  ],
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "DashboardPartition": {
+      "bsonType": "string"
+    },
+    "Name": {
+      "bsonType": "string"
+    },
+    "TipAlama": {
+      "bsonType": "objectId"
+    },
+    "Diametru": {
+      "bsonType": "double"
+    },
+    "Kg": {
+      "bsonType": "double"
+    }
+  }
+}
+
+{
+  "TipAlama": {
+    "ref": "#/relationship/mongodb-atlas/DashboardDB/Alama",
+    "foreign_key": "_id",
+    "is_list": false
+  }
+}
+
+--------------------------------------------------------------------------------
+
+{
+  "title": "Alama",
+  "bsonType": "object",
+  "required": [
+    "_id",
+    "DashboardPartition",
+    "Name"
+  ],
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "DashboardPartition": {
+      "bsonType": "string"
+    },
+    "Name": {
+      "bsonType": "string"
+    },
+    "Bars": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "objectId"
+      }
+    },
+    "Kg": {
+      "bsonType": "double"
+    }
+  }
+}
+
+{
+  "Bars": {
+    "ref": "#/relationship/mongodb-atlas/DashboardDB/Bara",
+    "foreign_key": "_id",
+    "is_list": true
+  }
+}

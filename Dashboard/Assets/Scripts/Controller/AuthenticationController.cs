@@ -19,9 +19,6 @@ public class AuthenticationController
             if (currentUser != null) {
                 HideAuthenticationUI();
                 ShowStocUI();
-                //
-                
-                //
             }
         }
         catch (Exception ex)
