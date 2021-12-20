@@ -15,14 +15,6 @@ public class AmestecView : MonoBehaviour
         AssignChildTextToPrivateFields();
     }
     
-    /**
-    public void SetAmestecValuesInView(string id, string amestecName, float cantitateKg)
-    {
-         _idText.text = id;
-         _amestecNameText.text = amestecName;
-         _cantitateKgText.text = cantitateKg.ToString();
-    }*/
-
     public void SetAmestecValuesInView(Amestec amestec)
     {
         _idText.text = amestec.Id.ToString();

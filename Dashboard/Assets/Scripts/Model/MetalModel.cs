@@ -12,7 +12,7 @@ public class Metal : RealmObject
     [Required]
     public string Name { get; set; }
     
-    [MapTo("Bars")]
+    [MapTo("Bare")]
     [Backlink(nameof(Bara.TipMetal))]
     public IQueryable<Bara> Bare { get; }
     

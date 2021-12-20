@@ -22,18 +22,26 @@ public class AuthenticationController
             if (currentUser != null) {
                 HideAuthenticationUI();
                 ShowStocUI();
-                //--------------------------------
-                // var alama = new Metal("Alama", 1d, 1d);
-                // var bara = new Bara("Bara", alama, 10d, 0.5d);
-                //
-                // RealmController.AddToDB(bara);
-                // RealmController.AddToDB(alama);
+                
+                /*
+                --------------------------------
+                */
+                // var _realm = await RealmController.GetRealm(RealmController.SyncUser);
+                // var alamaFromRealm = _realm.All<Metal>().First();
+                /*
+                var alama = new Metal("Alamaaa", 1d, 1d);
+                var bara = new Bara("BaraTest", alama, 100d){
+                    Forma = (int)Bara.Forme.Cerc
+                };
 
-                var metalList = RealmController.GetMetalListFromDB();
-                Debug.Log("ayy");
-                Debug.Log(metalList.Result[0].Bare.Count());
-
-                //--------------------------------
+                RealmController.AddToDB(alama);
+                RealmController.AddToDB(bara);
+                
+                /*
+               
+                */
+                // --------------------------------
+                
             }
         }
         catch (Exception ex)

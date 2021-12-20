@@ -5,17 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/MetalModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DBController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/DBController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AlamaModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AlamaModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/MetalModel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/StocController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/StocController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/OteluriModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/OteluriModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../baraAlamaSchemas" beforeDir="false" afterPath="$PROJECT_DIR$/../baraAlamaSchemas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../realm-backend/realm-tutorial-backend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/MetalModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/MetalModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../randomText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../randomText.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +129,10 @@
       <workItem from="1639380307867" duration="2376000" />
       <workItem from="1639386196166" duration="8031000" />
       <workItem from="1639465916443" duration="5152000" />
-      <workItem from="1639559444826" duration="9203000" />
+      <workItem from="1639559444826" duration="10178000" />
+      <workItem from="1639640187602" duration="7296000" />
+      <workItem from="1639732263175" duration="1148000" />
+      <workItem from="1639986753133" duration="11170000" />
     </task>
     <servers />
   </component>

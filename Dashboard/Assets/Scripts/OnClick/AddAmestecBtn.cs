@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class AddAmestecBtn : MonoBehaviour
 {
     [SerializeField] private AmestecController _amestecController;
-    [SerializeField] private TMP_InputField idInput;
     [SerializeField] private TMP_InputField nameInput;
     [SerializeField] private TMP_InputField cantitateKgInput;
     private Button _thisBtn;

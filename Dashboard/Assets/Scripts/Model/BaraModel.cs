@@ -1,6 +1,11 @@
 ﻿using System.Collections.Generic;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Realms;
+using UnityEngine;
+
 public class Bara : RealmObject
 {
     [PrimaryKey]
@@ -13,21 +18,27 @@ public class Bara : RealmObject
 
     [MapTo("TipMetal")]
     public Metal TipMetal { get; set; }
-    
-    [MapTo("Forma")]
-    public long Forma { get; set; }
+
+    [MapTo("Forma")] 
+    public long Forma { get; set; } = -1;
     
     [MapTo("Diametru")]
     public double Diametru { get; set; }
     
-    [MapTo("Latura")]
-    public double Latura { get; set; }
+    [MapTo("LungimeBara")]
+    public double LungimeBara { get; set; }
     
-    [MapTo("Lungime")]
-    public double Lungime { get; set; }
+    [MapTo("LaturaSuprafataPatrat")]
+    public double LaturaSuprafataPatrat { get; set; }
+
+    [MapTo("LungimeSuprafata")]
+    public double LungimeSuprafata { get; set; }
     
-    [MapTo("Latime")]
-    public double Latime { get; set; }
+    [MapTo("LatimeSuprafata")]
+    public double LatimeSuprafata { get; set; }
+    
+    [MapTo("LaturaHexagon")]
+    public double LaturaHexagon { get; set; }
 
     [MapTo("Kg")]
     public double Kg { get; set; }
@@ -39,17 +50,42 @@ public class Bara : RealmObject
         Dreptunghi = 4,
         Hexagon = 6
     }
-    
+
+
+   public static double GetAriaCerc(double raza)
+   {
+       return Mathf.PI * raza * raza;
+   }
+   
+   public static double GetAriaPatrat(double latura)
+   {
+       return latura * latura;
+   }
+
+   public static double GetAriaDreptunghi(double lungimeSuprafata, double latimeSuprafata)
+   {
+       return lungimeSuprafata * latimeSuprafata;
+   }
+
+   public static double GetAriaHexagon(double latura)
+   {
+       return 3d * Mathf.Sqrt(3) / 2d * (latura * latura);
+   }
+   
+   public static double GetGreutate(double ariaSectiunii, double lungimeBara, double densitate)
+   {
+       return ariaSectiunii * lungimeBara * densitate;
+   }
+   
     public Bara() { }
     
-    public Bara(string name, Metal tipMetal, double diametru, double kg)
+    public Bara(string name, Metal tipMetal, long forma)
     {
         Name = name;
         TipMetal = tipMetal;
-        Diametru = diametru;
-        Kg = kg;
+        Forma = forma;
     }
-    //
+
     // public Bara(string name, Metal tipMetal, double latura)
     // {
     //     Name = name;

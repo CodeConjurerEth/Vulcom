@@ -1,1 +1,80 @@
+{
+  "title": "Bara",
+  "bsonType": "object",
+  "required": [
+    "_id",
+    "DashboardPartition",
+    "Name",
+    "Forma",
+    "Kg"
+  ],
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "DashboardPartition": {
+      "bsonType": "string"
+    },
+    "Name": {
+      "bsonType": "string"
+    },
+    "Diametru": {
+      "bsonType": "double"
+    },
+    "Kg": {
+      "bsonType": "double"
+    },
+    "TipMetal": {
+      "bsonType": "objectId"
+    },
+    "Latura": {
+      "bsonType": "double"
+    },
+    "Lungime": {
+      "bsonType": "double"
+    },
+    "Latime": {
+      "bsonType": "double"
+    }
+  }
+}
 
+{
+  "TipMetal": {
+    "ref": "#/relationship/mongodb-atlas/DashboardDB/Metal",
+    "foreign_key": "_id",
+    "is_list": false
+  }
+}
+
+-----------------------------------------------
+Metal
+
+{
+  "title": "Metal",
+  "bsonType": "object",
+  "required": [
+    "_id",
+    "DashboardPartition",
+    "Name",
+    "Kg",
+    "Densitate"
+  ],
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "DashboardPartition": {
+      "bsonType": "string"
+    },
+    "Name": {
+      "bsonType": "string"
+    },
+    "Kg": {
+      "bsonType": "double"
+    },
+    "Densitate": {
+      "bsonType": "double"
+    }
+  }
+}
