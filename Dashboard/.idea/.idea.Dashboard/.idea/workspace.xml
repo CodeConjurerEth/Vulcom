@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BaraController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BaraController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AmestecHorizontal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AmestecHorizontal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +116,7 @@
       <workItem from="1639640187602" duration="7296000" />
       <workItem from="1639732263175" duration="1148000" />
       <workItem from="1639986753133" duration="11170000" />
-      <workItem from="1640072983927" duration="6692000" />
+      <workItem from="1640072983927" duration="7296000" />
     </task>
     <servers />
   </component>
