@@ -144,12 +144,12 @@ public class RealmController
         return metalList;
     }
 
-    public static async void PrintFirstMetalBaraNameFromDB()
-    {
-        _realm = await GetRealm(SyncUser);
-
-        var metal = _realm.All<Metal>().First();
-        var firstbaraName = metal.Bare.First().Name;
-        Debug.Log(firstbaraName);
-    }
+    // public static async void PrintFirstMetalBaraNameFromDB()
+    // {
+    //     _realm = await GetRealm(SyncUser);
+    //
+    //     var metal = _realm.All<Metal>().First();
+    //     var firstbaraName = metal.Bare.First().Name;
+    //     Debug.Log(firstbaraName);
+    // }
 }

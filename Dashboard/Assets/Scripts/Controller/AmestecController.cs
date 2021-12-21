@@ -21,7 +21,7 @@ public class AmestecController : MonoBehaviour
         GenerateViewObjects(); //generate the nr of amestecuri we get from realm
     }
 
-    public async void GenerateViewObjects() //it was private, better public I think!
+    public async void GenerateViewObjects() 
     {
         ClearExistingViewObj();
         _amestecuri = await RealmController.GetAmestecListFromDB();

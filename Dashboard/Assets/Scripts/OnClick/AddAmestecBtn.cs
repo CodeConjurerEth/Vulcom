@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AddAmestecBtn : MonoBehaviour
 {
-    [SerializeField] private AmestecController _amestecController;
+    [SerializeField] private AmestecController _amestecController; //ADD SINGLETON?
     [SerializeField] private TMP_InputField nameInput;
     [SerializeField] private TMP_InputField cantitateKgInput;
     private Button _thisBtn;

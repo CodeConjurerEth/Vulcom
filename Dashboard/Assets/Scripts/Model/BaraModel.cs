@@ -79,11 +79,12 @@ public class Bara : RealmObject
    
     public Bara() { }
     
-    public Bara(string name, Metal tipMetal, long forma)
+    public Bara(string name, Metal tipMetal, long forma, double lungimeBara)
     {
         Name = name;
         TipMetal = tipMetal;
         Forma = forma;
+        LungimeBara = lungimeBara;
     }
 
     // public Bara(string name, Metal tipMetal, double latura)

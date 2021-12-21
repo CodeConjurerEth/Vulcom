@@ -7,41 +7,41 @@ using Realms.Sync;
 using UnityEngine;
 using TMPro;
 
-public class MetalController : MonoBehaviour
+public class BaraController : MonoBehaviour
 {
-    [SerializeField] private GameObject metalViewPrefab;
-    [SerializeField] private Transform metalElemParent;
+    [SerializeField] private GameObject baraViewPrefab;
+    [SerializeField] private Transform baraElemParent;
     
-    private List<MetalView> _metalViews; 
-    private List<Metal> _metale;
+    private List<BaraView> _baraViews; 
+    private List<Bara> _bare;
 
     private void OnEnable()
     {
-        _metalViews = new List<MetalView>(); 
-        GenerateViewObjects(); //generate the nr of metale we get from realm
+        _baraViews = new List<BaraView>(); 
+        GenerateViewObjects(); //generate the nr of bare we get from realm
     }
 
     private async void GenerateViewObjects() //better public I think?
     {
         ClearExistingViewObj();
-        _metale = await RealmController.GetMetalListFromDB();
+        _bare = await RealmController.GetBaraListFromDB();
         
-        foreach(var currentMetal in _metale) {
-            var newPrefab = Instantiate(metalViewPrefab, metalElemParent);
-            MetalView metalView;
-            if (!newPrefab.TryGetComponent(out metalView))
-                throw new Exception("No MetalView Component is on the prefab GameObject");
+        foreach(var currentBara in _bare) {
+            var newPrefab = Instantiate(baraViewPrefab, baraElemParent);
+            BaraView baraView;
+            if (!newPrefab.TryGetComponent(out baraView))
+                throw new Exception("No BaraView Component is on the prefab GameObject");
             else {
-                metalView.SetMetalValuesInView(currentMetal);
-                _metalViews.Add(metalView);
+                baraView.SetValuesInView(currentBara);
+                _baraViews.Add(baraView);
             }
         }
     }
 
     private void ClearExistingViewObj()
     {
-        _metalViews.Clear();
-        ClearChildrenOf(metalElemParent);
+        _baraViews.Clear();
+        ClearChildrenOf(baraElemParent);
     }
     
     private void ClearChildrenOf(Transform parentObj)

@@ -9,7 +9,6 @@ public class BaraView : MonoBehaviour
     private TMP_Text _idText;
     private TMP_Text _baraNameText;
     private TMP_Text _formaText;
-    
     private TMP_Text _diametruText;
     private TMP_Text _lungimeBaraText;
     private TMP_Text _laturaSuprafataText;
@@ -55,9 +54,11 @@ public class BaraView : MonoBehaviour
             default:
                 throw new Exception("Bara " + bara.Name + " does not have a Forma assigned");
         }
+        
         _idText.text = bara.Id.ToString();
         _baraNameText.text = bara.Name;
-        if (Math.Abs(aria - (-1d)) > 0.00000000001d) {              // 11 
+        _lungimeBaraText.text = bara.LungimeBara.ToString();
+        if (Math.Abs(aria - (-1d)) > 0.00000000001d) {              // 11 decimals
             var kg = aria * bara.LungimeBara * bara.TipMetal.Densitate;
             _kgText.text =  kg.ToString();
         }
@@ -74,6 +75,27 @@ public class BaraView : MonoBehaviour
         }
         if (!transform.GetChild(2).TryGetComponent(out _formaText)) {
             throw new Exception("Cannot find forma GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(3).TryGetComponent(out _diametruText)) {
+            throw new Exception("Cannot find diametru GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(4).TryGetComponent(out _lungimeBaraText)) {
+            throw new Exception("Cannot find lungimeBara GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(5).TryGetComponent(out _laturaSuprafataText)) {
+            throw new Exception("Cannot find laturaSuprafata GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(6).TryGetComponent(out _lungimeSuprafataText)) {
+            throw new Exception("Cannot find lungimeSuprafata GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(7).TryGetComponent(out _latimeSuprafataText)) {
+            throw new Exception("Cannot find latimeSuprafata GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(8).TryGetComponent(out _laturaHexagonText)) {
+            throw new Exception("Cannot find laturaHexagon GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(9).TryGetComponent(out _kgText)) {
+            throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
     }
 }

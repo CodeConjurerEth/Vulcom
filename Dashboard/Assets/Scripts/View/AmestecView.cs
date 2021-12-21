@@ -4,8 +4,10 @@ using UnityEngine;
 using Realms;
 using Realms.Sync;
 
-public class AmestecView : MonoBehaviour
+public class AmestecView : MonoBehaviour 
 {
+    
+    [Header("ONLY ADD THIS TO PREFAB AMESTECVIEW")]
     private TMP_Text _idText;
     private TMP_Text _amestecNameText;
     private TMP_Text _cantitateKgText;
