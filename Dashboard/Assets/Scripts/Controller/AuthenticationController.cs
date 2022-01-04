@@ -26,20 +26,21 @@ public class AuthenticationController
                 /*
                 --------------------------------
                 */
-                // var _realm = await RealmController.GetRealm(RealmController.SyncUser);
-                // var alamaFromRealm = _realm.All<Metal>().First();
                 /*
-                var alama = new Metal("Alamaaa", 1d, 1d);
-                var bara = new Bara("BaraTest", alama, 100d){
+                
+                var _realm = await RealmController.GetRealm(RealmController.SyncUser);
+                // var alamaFromRealm = _realm.All<Metal>().First();
+                
+                var alama = new Metal("Alama", 1d, 1d);
+                var bara = new Bara("BaraTest", alama, 0,100d){
                     Forma = (int)Bara.Forme.Cerc
                 };
-
+                
+                
                 RealmController.AddToDB(alama);
                 RealmController.AddToDB(bara);
                 
-                /*
-               
-                */
+                /**/
                 // --------------------------------
                 
             }

@@ -21,7 +21,7 @@ public class BaraController : MonoBehaviour
         GenerateViewObjects(); //generate the nr of bare we get from realm
     }
 
-    private async void GenerateViewObjects() //better public I think?
+    public async void GenerateViewObjects()
     {
         ClearExistingViewObj();
         _bare = await RealmController.GetBaraListFromDB();

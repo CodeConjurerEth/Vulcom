@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using Realms;
@@ -7,34 +8,54 @@ using Realms.Sync;
 
 public class MetalView : MonoBehaviour
 {
-    private TMP_Text _idText;
-    private TMP_Text _metalNameText;
-    private List<BaraView> _bareView;
-    // private TMP_Text 
+    [SerializeField] private GameObject _baraViewPrefab;
+    // private TMP_Text _idText;
+    [SerializeField] private TMP_Text _metalNameText;
+    [SerializeField] private TMP_Text _densitate;
+    [SerializeField] private TMP_Text _kg;
+    [SerializeField] private Transform _bareViewParentObj;
+    [SerializeField] private GameObject plusBtnPrefab; //TODO: Add menu
 
     private void OnEnable()
     {
         AssignChildTextToPrivateFields();
     }
     
-    public void SetMetalValuesInView(Metal metal)
+    public async void SetMetalValuesInView(Metal metal)
     {
-        _idText.text = metal.Id.ToString();
+        // _idText.text = metal.Id.ToString();
         _metalNameText.text = metal.Name;
-        // _bareObj.text = metal.Kg.ToString();
+        _densitate.text = "Densitate: " + metal.Densitate.ToString();
+        _kg.text = "KG: " + metal.Kg.ToString();
+
+        var realm = await RealmController.GetRealm(RealmController.SyncUser);
+        var realmCurrMetal = realm.Find<Metal>(metal.Id);
+        var bareFromMetal = realm.All<Bara>().Where(thisbara => thisbara.TipMetal == realmCurrMetal); //TODO: fix
+        
+        foreach (var currBara in bareFromMetal) {
+            var newObj = Instantiate(_baraViewPrefab, _bareViewParentObj); //instantiate as a child of _bareViewParentObj
+            newObj.GetComponent<BaraView>().SetValuesInView(currBara);;
+        }
+        Instantiate(plusBtnPrefab, _bareViewParentObj);
     }
     
 
     private void AssignChildTextToPrivateFields()
     {
-        if (!transform.GetChild(0).TryGetComponent(out _idText)) {
-            throw new Exception("Cannot find ID GameObject or TMP_Text Component");
-        }
-        if (!transform.GetChild(1).TryGetComponent(out _metalNameText)) {
-            throw new Exception("Cannot find metalName GameObject or TMP_Text Component");
-        }
-        // if (!transform.GetChild(2).TryGetComponent(out _bareObj)) {
-        //     throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
+        // if (!transform.GetChild(0).TryGetComponent(out _idText)) {
+        //     throw new Exception("Cannot find ID GameObject or TMP_Text Component");
+        // }
+        // if (!transform.GetChild(1).TryGetComponent(out _metalNameText)) {
+        //     throw new Exception("Cannot find metalName GameObject or TMP_Text Component");
+        // }
+        // if (!transform.GetChild(2).TryGetComponent(out _densitate)) {
+        //     throw new Exception("Cannot find densitate GameObject or TMP_Text Component");
+        // }
+        // if (!transform.GetChild(3).TryGetComponent(out _kg)) {
+        //     throw new Exception("Cannot find kg GameObject or TMP_Text Component");
+        // }
+        // if (!transform.GetChild(4).TryGetComponent(out _bareViewParentObj)) {
+        //     throw new Exception("Cannot find bareView GameObject or TMP_Text Component");
         // }
     }
 }

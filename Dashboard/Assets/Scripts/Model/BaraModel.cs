@@ -25,7 +25,7 @@ public class Bara : RealmObject
     [MapTo("Diametru")]
     public double Diametru { get; set; }
     
-    [MapTo("LungimeBara")]
+    [MapTo("LungimeBara")] //TODO: add LungimeInitiala, data intrarii, fiecarei iesiri
     public double LungimeBara { get; set; }
     
     [MapTo("LaturaSuprafataPatrat")]
