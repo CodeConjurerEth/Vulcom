@@ -24,7 +24,7 @@ public class AmestecController : MonoBehaviour
     public async void GenerateViewObjects() 
     {
         ClearExistingViewObj();
-        AddTMPTitleText("Amestecuri");
+        // AddTMPTitleText("Amestecuri");
         GenerateAmestecViews();
     }
     
