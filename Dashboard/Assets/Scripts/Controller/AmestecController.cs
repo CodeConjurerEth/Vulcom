@@ -24,6 +24,23 @@ public class AmestecController : MonoBehaviour
     public async void GenerateViewObjects() 
     {
         ClearExistingViewObj();
+        AddTMPTitleText("Amestecuri");
+        GenerateAmestecViews();
+    }
+    
+    private void AddTMPTitleText(string text)
+    {
+        var textObj = new GameObject();
+        var tmpUGUI = textObj.AddComponent<TextMeshProUGUI>();
+        tmpUGUI.SetText(text);
+        tmpUGUI.alignment = TextAlignmentOptions.Center;
+        tmpUGUI.alignment = TextAlignmentOptions.Midline;
+        Instantiate(textObj, amestecElemParent);
+    }
+
+    // Instantiate AmestecView prefab for each amestec from DB, as children of amestecElemParent
+    private async void GenerateAmestecViews()
+    {
         _amestecuri = await RealmController.GetAmestecListFromDB();
         
         foreach(var currentAmestec in _amestecuri) {
@@ -36,8 +53,8 @@ public class AmestecController : MonoBehaviour
                 _amestecViews.Add(amestecView);
             }
         }
-    }
-
+    } 
+    
     private void ClearExistingViewObj()
     {
         _amestecViews.Clear();
@@ -64,5 +81,6 @@ public class AmestecController : MonoBehaviour
             DestroyImmediate(child.gameObject);
         }
     }
+    
 
 }

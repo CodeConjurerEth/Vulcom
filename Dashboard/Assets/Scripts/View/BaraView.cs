@@ -6,6 +6,7 @@ using Realms.Sync;
 
 public class BaraView : MonoBehaviour
 {
+    [Header("ONLY ADD THIS TO PREFAB BARAVIEW")]
     // private TMP_Text _idText;
     private TMP_Text _baraNameText;
     private TMP_Text _formaText;

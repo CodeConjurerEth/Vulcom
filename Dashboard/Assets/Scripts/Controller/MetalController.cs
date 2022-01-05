@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class MetalController : MonoBehaviour
 {
-
+    [Header("Add this to MetalController GameObj MetalView")]
     public List<Metal> _metale;
 
     [SerializeField] private Button backBtn;
@@ -74,7 +74,7 @@ public class MetalController : MonoBehaviour
     }
 
     /*
-     
+
     private void ClearExistingViewObj()
     {
         _metalViews.Clear();
