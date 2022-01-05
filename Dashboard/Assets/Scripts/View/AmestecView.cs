@@ -11,7 +11,8 @@ public class AmestecView : MonoBehaviour
     // private TMP_Text _idText;
     private TMP_Text _amestecNameText;
     private TMP_Text _cantitateKgText;
-    private int maxStringLength = 9;
+    
+    private int maxStringLength = 9; //
 
     private void OnEnable()
     {
@@ -22,7 +23,7 @@ public class AmestecView : MonoBehaviour
     {
         // _idText.text = amestec.Id.ToString();
         _amestecNameText.text = amestec.Name;
-        var kgstring = amestec.Kg.ToString();
+        var kgstring = "Kg: " + amestec.Kg.ToString();
         if (kgstring.Length > maxStringLength)
             kgstring = kgstring.Substring(0, maxStringLength);
         _cantitateKgText.text = kgstring;

@@ -17,7 +17,7 @@ public class BaraView : MonoBehaviour
     private TMP_Text _latimeSuprafataText;
     private TMP_Text _laturaHexagonText;
     private TMP_Text _kgText;
-    
+
     private void OnEnable()
     {
         AssignChildTextToPrivateFields();

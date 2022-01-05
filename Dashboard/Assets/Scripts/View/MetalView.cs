@@ -15,18 +15,21 @@ public class MetalView : MonoBehaviour
     [SerializeField] private TMP_Text _kg;
     [SerializeField] private Transform _bareViewParentObj;
     [SerializeField] private GameObject plusBtnPrefab; //TODO: Add menu
-
+    
     private void OnEnable()
     {
-        AssignChildTextToPrivateFields();
+        // AssignChildTextToPrivateFields();
     }
     
     public async void SetMetalValuesInView(Metal metal)
     {
         // _idText.text = metal.Id.ToString();
         _metalNameText.text = metal.Name;
-        _densitate.text = "Densitate: " + metal.Densitate.ToString();
-        _kg.text = "KG: " + metal.Kg.ToString();
+        var densitateTxt = "Densitate: " + metal.Densitate.ToString();
+        var kgTxt = "KG: " + metal.Kg.ToString();
+
+        _densitate.text = densitateTxt;
+        _kg.text = kgTxt;
 
         var realm = await RealmController.GetRealm(RealmController.SyncUser);
         var realmCurrMetal = realm.Find<Metal>(metal.Id);
@@ -40,8 +43,8 @@ public class MetalView : MonoBehaviour
     }
     
 
-    private void AssignChildTextToPrivateFields()
-    {
+    // private void AssignChildTextToPrivateFields()
+    // {
         // if (!transform.GetChild(0).TryGetComponent(out _idText)) {
         //     throw new Exception("Cannot find ID GameObject or TMP_Text Component");
         // }
@@ -57,5 +60,5 @@ public class MetalView : MonoBehaviour
         // if (!transform.GetChild(4).TryGetComponent(out _bareViewParentObj)) {
         //     throw new Exception("Cannot find bareView GameObject or TMP_Text Component");
         // }
-    }
+    // }
 }

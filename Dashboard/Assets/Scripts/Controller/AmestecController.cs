@@ -24,18 +24,7 @@ public class AmestecController : MonoBehaviour
     public async void GenerateViewObjects() 
     {
         ClearExistingViewObj();
-        // AddTMPTitleText("Amestecuri");
         GenerateAmestecViews();
-    }
-    
-    private void AddTMPTitleText(string text)
-    {
-        var textObj = new GameObject();
-        var tmpUGUI = textObj.AddComponent<TextMeshProUGUI>();
-        tmpUGUI.SetText(text);
-        tmpUGUI.alignment = TextAlignmentOptions.Center;
-        tmpUGUI.alignment = TextAlignmentOptions.Midline;
-        Instantiate(textObj, amestecElemParent);
     }
 
     // Instantiate AmestecView prefab for each amestec from DB, as children of amestecElemParent

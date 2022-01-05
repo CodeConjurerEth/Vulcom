@@ -11,10 +11,10 @@ using UnityEngine.UI;
 public class MetalController : MonoBehaviour
 {
     [Header("Add this to MetalController GameObj MetalView")]
-    public List<Metal> _metale;
-
     [SerializeField] private Button backBtn;
     [SerializeField] private Button forwardBtn;
+    
+    private List<Metal> _metale;
     private MetalView _metalView;
     private int indexMetal;
 
