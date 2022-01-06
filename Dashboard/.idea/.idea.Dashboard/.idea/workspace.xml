@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/AddBaraPanel.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/AddBaraPanel.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AddMetalPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AddMetalPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,10 +74,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8104">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8104" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -126,6 +131,7 @@
       <workItem from="1641197160361" duration="6747000" />
       <workItem from="1641299694370" duration="5998000" />
       <workItem from="1641366278286" duration="7692000" />
+      <workItem from="1641454901909" duration="14605000" />
     </task>
     <servers />
   </component>

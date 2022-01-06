@@ -14,9 +14,9 @@ public class MetalController : MonoBehaviour
     [SerializeField] private Button backBtn;
     [SerializeField] private Button forwardBtn;
     
-    private List<Metal> _metale;
+    private List<Metal> _metale; //public?
     private MetalView _metalView;
-    private int indexMetal;
+    private int indexMetal; //public?
 
 
     private void OnEnable()

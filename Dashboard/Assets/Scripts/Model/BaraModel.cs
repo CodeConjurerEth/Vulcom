@@ -86,21 +86,5 @@ public class Bara : RealmObject
         Forma = forma;
         LungimeBara = lungimeBara;
     }
-
-    // public Bara(string name, Metal tipMetal, double latura)
-    // {
-    //     Name = name;
-    //     TipMetal = tipMetal;
-    //     Latime = latura;
-    // }
-    //
-    // public Bara(string name, Metal tipMetal, double lungime, double latime)
-    // {
-    //     Name = name;
-    //     TipMetal = tipMetal;
-    //     Lungime = lungime;
-    //     Latime = latime;
-    // }
-    //
-    // +HEXAGONAL
+    
 }
