@@ -1773,11 +1773,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bed01981c04260a1e1d6c666d52d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baraController: {fileID: 0}
   _dropdownForma: {fileID: 8720089767881798925}
-  _dropdownSelectMetal: {fileID: 0}
   _gridLayoutGroup: {fileID: 2340928270407456605}
-  addButton: {fileID: 3420239329913665550}
-  closeButton: {fileID: 3420239330245734973}
+  _addButton: {fileID: 3420239329913665550}
+  _closeButton: {fileID: 3420239330245734973}
 --- !u!1 &3420239330230802546
 GameObject:
   m_ObjectHideFlags: 0

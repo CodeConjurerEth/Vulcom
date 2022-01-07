@@ -9,39 +9,48 @@ using TMPro;
 
 public class BaraController : MonoBehaviour
 {
+    public static BaraController Instance;
     [SerializeField] private GameObject baraViewPrefab;
-    [SerializeField] private Transform baraElemParent;
+    [SerializeField] private Transform bareViewParentTransform;
     
     private List<BaraView> _baraViews; 
     private List<Bara> _bare;
 
+    public Transform GetBaraViewParent() { return bareViewParentTransform; }
+    
     private void OnEnable()
     {
-        _baraViews = new List<BaraView>(); 
-        GenerateViewObjects(); //generate the nr of bare we get from realm
+        _baraViews = new List<BaraView>();
+        if (Instance != null) {
+            Destroy(Instance);
+            Debug.Log("Destroyed BaraController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE BaraController in a scene!");
+        }
+        Instance = this;
     }
 
-    public async void GenerateViewObjects()
+    private void OnDisable()
+    {
+        Instance = null;
+    }
+
+    public async Task GenerateViewObjects(Metal metal)
     {
         ClearExistingViewObj();
-        _bare = await RealmController.GetBaraListFromDB();
         
-        foreach(var currentBara in _bare) {
-            var newPrefab = Instantiate(baraViewPrefab, baraElemParent);
-            BaraView baraView;
-            if (!newPrefab.TryGetComponent(out baraView))
-                throw new Exception("No BaraView Component is on the prefab GameObject");
-            else {
-                baraView.SetValuesInView(currentBara);
-                _baraViews.Add(baraView);
-            }
+        var realm = await RealmController.GetRealm(RealmController.SyncUser);
+        var realmCurrMetal = realm.Find<Metal>(metal.Id);
+        var bareFromMetal = realm.All<Bara>().Where(thisbara => thisbara.TipMetal == realmCurrMetal); //TODO: fix
+        
+        foreach (var currBara in bareFromMetal) {
+            var newObj = Instantiate(baraViewPrefab, bareViewParentTransform); //instantiate as a child of _bareViewParentObj
+            newObj.GetComponent<BaraView>().SetValuesInView(currBara);;
         }
     }
 
     private void ClearExistingViewObj()
     {
         _baraViews.Clear();
-        ClearChildrenOf(baraElemParent);
+        ClearChildrenOf(bareViewParentTransform);
     }
     
     private void ClearChildrenOf(Transform parentObj)

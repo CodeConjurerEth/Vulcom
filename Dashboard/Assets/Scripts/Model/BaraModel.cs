@@ -67,9 +67,9 @@ public class Bara : RealmObject
        return lungimeSuprafata * latimeSuprafata;
    }
 
-   public static double GetAriaHexagon(double latura)
+   public static double GetAriaHexagon(double laturaHexagon)
    {
-       return 3d * Mathf.Sqrt(3) / 2d * (latura * latura);
+       return 3d * Mathf.Sqrt(3) / 2d * (laturaHexagon * laturaHexagon);
    }
    
    public static double GetGreutate(double ariaSectiunii, double lungimeBara, double densitate)

@@ -9,8 +9,8 @@ public class AddBaraMenuView : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown _dropdownForma;
     [SerializeField] private GameObject _gridLayoutGroup;
-    [SerializeField] private Button addButton;
-    [SerializeField] private Button closeButton;
+    [SerializeField] private Button _addButton;
+    [SerializeField] private Button _closeButton;
     private TMP_InputField _nameInputField;
     private TMP_InputField _lungimeBaraInputField;
     private TMP_InputField _diametruInputField;
@@ -20,7 +20,7 @@ public class AddBaraMenuView : MonoBehaviour
     private TMP_InputField _laturaHexagonInputField;
 
     public Metal MetalBeingAddedTo;
-    public Button GetCloseBtn() { return closeButton; }
+    public Button GetCloseBtn() { return _closeButton; }
     
     public enum FormaOrderDropdown
     {
@@ -30,12 +30,15 @@ public class AddBaraMenuView : MonoBehaviour
         Hexagon = 3
     }
     
+    //TODO: add menu when fields aren't completed
+    
     private void OnEnable()
     {
         AssignChildTextToPrivateFields(_gridLayoutGroup.transform);
         disableFormaInputFields();
         _diametruInputField.gameObject.SetActive(true); //default is cerc so have diametru field available as default
         _dropdownForma.onValueChanged.AddListener(changeInputFieldsByForma);
+        _addButton.onClick.AddListener(AddOnClick);
     }
 
     private void OnDisable()
@@ -44,7 +47,13 @@ public class AddBaraMenuView : MonoBehaviour
         _dropdownForma.onValueChanged.RemoveListener(changeInputFieldsByForma);
     }
 
-    private void AddBaraToCurrentMetal()  //TODO: add bara on metal we are currently on
+    private async void AddOnClick() // make TASK?
+    {
+        AddBaraToCurrentMetal();
+        await BaraController.Instance.GenerateViewObjects(MetalBeingAddedTo);
+    }
+
+    private void AddBaraToCurrentMetal()  //add bara on metal we are currently on
     {
         if (MetalBeingAddedTo == null) {
             throw new Exception("No Metal assigned to AddBaraMenuView");
@@ -58,22 +67,36 @@ public class AddBaraMenuView : MonoBehaviour
             switch (_dropdownForma.value){
                 case (int)FormaOrderDropdown.Cerc:
                     var diametru = Double.Parse(_diametruInputField.text);
-                    RealmController.AddToDB(new Bara(name, tipMetal, 0, lungimeBara){
+                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Cerc, lungimeBara){
                         Diametru = diametru,
                         Kg = Bara.GetGreutate(Bara.GetAriaCerc(diametru/2), lungimeBara, tipMetal.Densitate)
                     });
                     break;
             
                 case (int)FormaOrderDropdown.Patrat:
-                    //TODO: check cerc and continue for the rest
+                    var laturaSupraf = Double.Parse(_laturaSuprafInputField.text);
+                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Patrat, lungimeBara){
+                        LaturaSuprafataPatrat = laturaSupraf,
+                        Kg = Bara.GetGreutate(Bara.GetAriaPatrat(laturaSupraf), lungimeBara, tipMetal.Densitate)
+                    });
                     break;
             
                 case (int)FormaOrderDropdown.Dreptunghi:
-
+                    var lungime = Double.Parse(_lungimeSuprafInputField.text);
+                    var latime = Double.Parse(_latimeSuprafInputField.text);
+                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Dreptunghi, lungimeBara){
+                        LungimeSuprafata = lungime,
+                        LatimeSuprafata = latime,
+                        Kg = Bara.GetGreutate(Bara.GetAriaDreptunghi(lungime, latime), lungimeBara, tipMetal.Densitate)
+                    });
                     break;
             
                 case (int)FormaOrderDropdown.Hexagon:
-
+                    var laturaHexagon = Double.Parse(_laturaHexagonInputField.text);
+                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Hexagon, lungimeBara){
+                        LaturaHexagon = laturaHexagon,
+                        Kg = Bara.GetGreutate(Bara.GetAriaHexagon(laturaHexagon), lungimeBara, tipMetal.Densitate)
+                    });
                     break;
             }
         }

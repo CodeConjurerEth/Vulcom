@@ -72,7 +72,7 @@ public class BaraView : MonoBehaviour
         _lungimeBaraText.SetText("lungimeBara: " + bara.LungimeBara.ToString());
         if (Math.Abs(aria - (-1d)) > 0.00000000001d) {              // 11 decimals
             var kg = aria * bara.LungimeBara * bara.TipMetal.Densitate;
-            _kgText.SetText("Kg: " + kg.ToString());
+            _kgText.SetText("Kg: " + kg.ToString("n2"));
         }
     }
     
@@ -110,4 +110,5 @@ public class BaraView : MonoBehaviour
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
     }
+    
 }

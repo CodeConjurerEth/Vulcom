@@ -10,21 +10,33 @@ using UnityEngine.UI;
 
 public class MetalController : MonoBehaviour
 {
+    public static MetalController Instance;
     [Header("Add this to MetalController GameObj MetalView")]
     [SerializeField] private Button backBtn;
     [SerializeField] private Button forwardBtn;
     
     private List<Metal> _metale; //public?
     private MetalView _metalView;
-    private int indexMetal; //public?
+    private int _indexMetal; //public?
 
 
     private void OnEnable()
     {
+        if (Instance != null) {
+            Destroy(Instance);
+            Debug.Log("Destroyed MetalController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE MetalController in a scene!");
+        }
+        Instance = this;
+        
         if(!transform.TryGetComponent(out _metalView))
             throw new Exception("The MetalController GameObject does not have a metalView Component");
         
         InitialSetup();
+    }
+
+    private void OnDisable()
+    {
+        Instance = null;
     }
 
     private async void InitialSetup()
@@ -35,11 +47,11 @@ public class MetalController : MonoBehaviour
         
         _metale = await RealmController.GetMetalListFromDB();
         if (_metale.Count > 0) {
-            indexMetal = 0;
-            _metalView.SetMetalValuesInView(_metale[indexMetal]);
+            _indexMetal = 0;
+            _metalView.SetMetalValuesInView(_metale[_indexMetal]);
             
             backBtn.gameObject.SetActive(false); //disable back button
-            if(_metale.Count - 1 == indexMetal)
+            if(_metale.Count - 1 == _indexMetal)
                 forwardBtn.gameObject.SetActive(false); //disable forward button
         }
 
@@ -47,11 +59,11 @@ public class MetalController : MonoBehaviour
 
     private void BackBtnOnClick()
     {
-        if (indexMetal >= 1) {
-            indexMetal--;
-            _metalView.SetMetalValuesInView(_metale[indexMetal]);
+        if (_indexMetal >= 1) {
+            _indexMetal--;
+            _metalView.SetMetalValuesInView(_metale[_indexMetal]);
             
-            if (indexMetal == 0) {
+            if (_indexMetal == 0) {
                 forwardBtn.gameObject.SetActive(true);
                 backBtn.gameObject.SetActive(false);
             }
@@ -62,11 +74,11 @@ public class MetalController : MonoBehaviour
     private void ForwardBtnOnClick()
     {
 
-        if (indexMetal < _metale.Count - 2) {
-            indexMetal++;
-            _metalView.SetMetalValuesInView(_metale[indexMetal]);
+        if (_indexMetal < _metale.Count - 2) {
+            _indexMetal++;
+            _metalView.SetMetalValuesInView(_metale[_indexMetal]);
 
-            if (indexMetal == _metale.Count - 1) {
+            if (_indexMetal == _metale.Count - 1) {
                 backBtn.gameObject.SetActive(true);
                 forwardBtn.gameObject.SetActive(false);
             }
