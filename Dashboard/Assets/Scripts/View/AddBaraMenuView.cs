@@ -38,7 +38,7 @@ public class AddBaraMenuView : MonoBehaviour
         disableFormaInputFields();
         _diametruInputField.gameObject.SetActive(true); //default is cerc so have diametru field available as default
         _dropdownForma.onValueChanged.AddListener(changeInputFieldsByForma);
-        _addButton.onClick.AddListener(AddOnClick);
+        _addButton.onClick.AddListener(addOnClick);
     }
 
     private void OnDisable()
@@ -47,13 +47,13 @@ public class AddBaraMenuView : MonoBehaviour
         _dropdownForma.onValueChanged.RemoveListener(changeInputFieldsByForma);
     }
 
-    private async void AddOnClick() // make TASK?
+    private async void addOnClick() // make TASK?
     {
-        AddBaraToCurrentMetal();
+        addBaraToCurrentMetal();
         await BaraController.Instance.GenerateViewObjects(MetalBeingAddedTo);
     }
 
-    private void AddBaraToCurrentMetal()  //add bara on metal we are currently on
+    private void addBaraToCurrentMetal()  //add bara on metal we are currently on
     {
         if (MetalBeingAddedTo == null) {
             throw new Exception("No Metal assigned to AddBaraMenuView");

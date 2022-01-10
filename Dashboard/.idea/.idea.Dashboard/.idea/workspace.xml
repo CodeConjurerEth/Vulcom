@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/Factory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/Factory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/StocFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/StocFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DashboardUML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/DashboardUML.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,8 @@
       <workItem from="1641299694370" duration="5998000" />
       <workItem from="1641366278286" duration="7692000" />
       <workItem from="1641454901909" duration="14605000" />
-      <workItem from="1641541992256" duration="9673000" />
+      <workItem from="1641541992256" duration="9752000" />
+      <workItem from="1641805407472" duration="682000" />
     </task>
     <servers />
   </component>
