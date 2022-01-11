@@ -31,6 +31,7 @@ public class AddAmestecBtn : MonoBehaviour
             Amestec amestec = new Amestec(nameInput.text, cantitateKg);
             RealmController.AddToDB(amestec);
             _amestecController.GenerateViewObjects();
+            // _amestecController
         }
         
     }

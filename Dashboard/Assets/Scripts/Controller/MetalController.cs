@@ -10,14 +10,15 @@ using UnityEngine.UI;
 
 public class MetalController : MonoBehaviour
 {
-    public static MetalController Instance;
     [Header("Add this to MetalController GameObj MetalView")]
     [SerializeField] private Button backBtn;
     [SerializeField] private Button forwardBtn;
+
+    [HideInInspector] public static MetalController Instance;
+    [HideInInspector] public List<Metal> Metale;
+    [HideInInspector] public int IndexMetal;
     
-    private List<Metal> _metale; //public?
     private MetalView _metalView;
-    private int _indexMetal; //public?
 
 
     private void OnEnable()
@@ -45,13 +46,13 @@ public class MetalController : MonoBehaviour
         backBtn.onClick.AddListener(BackBtnOnClick);
         forwardBtn.onClick.AddListener(ForwardBtnOnClick);
         
-        _metale = await RealmController.GetMetalListFromDB();
-        if (_metale.Count > 0) {
-            _indexMetal = 0;
-            _metalView.SetMetalValuesInView(_metale[_indexMetal]);
+        Metale = await RealmController.GetMetalListFromDB();
+        if (Metale.Count > 0) {
+            IndexMetal = 0;
+            _metalView.SetMetalValuesInView(Metale[IndexMetal]);
             
             backBtn.gameObject.SetActive(false); //disable back button
-            if(_metale.Count - 1 == _indexMetal)
+            if(Metale.Count - 1 == IndexMetal)
                 forwardBtn.gameObject.SetActive(false); //disable forward button
         }
 
@@ -59,11 +60,11 @@ public class MetalController : MonoBehaviour
 
     private void BackBtnOnClick()
     {
-        if (_indexMetal >= 1) {
-            _indexMetal--;
-            _metalView.SetMetalValuesInView(_metale[_indexMetal]);
+        if (IndexMetal >= 1) {
+            IndexMetal--;
+            _metalView.SetMetalValuesInView(Metale[IndexMetal]);
             
-            if (_indexMetal == 0) {
+            if (IndexMetal == 0) {
                 forwardBtn.gameObject.SetActive(true);
                 backBtn.gameObject.SetActive(false);
             }
@@ -74,11 +75,11 @@ public class MetalController : MonoBehaviour
     private void ForwardBtnOnClick()
     {
 
-        if (_indexMetal < _metale.Count - 2) {
-            _indexMetal++;
-            _metalView.SetMetalValuesInView(_metale[_indexMetal]);
+        if (IndexMetal < Metale.Count - 2) {
+            IndexMetal++;
+            _metalView.SetMetalValuesInView(Metale[IndexMetal]);
 
-            if (_indexMetal == _metale.Count - 1) {
+            if (IndexMetal == Metale.Count - 1) {
                 backBtn.gameObject.SetActive(true);
                 forwardBtn.gameObject.SetActive(false);
             }

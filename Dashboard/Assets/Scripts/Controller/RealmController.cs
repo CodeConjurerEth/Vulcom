@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Realms;
 using Realms.Sync;
 using System.Linq;
+using MongoDB.Bson;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -64,46 +65,31 @@ public class RealmController
         });
     }
     
-    /**    USE SOMETHING ELSE THAN ID TO DELETE
-    public static async void RemoveAmestecFromDB(string id)
+    
+    public static void RemoveAmestecFromDB(ObjectId id)
     {
-        var amestecs = await GetAmestecListFromDB();
-        foreach (var currentAmestec in amestecs)
-            if (currentAmestec.Id.ToString() == id) {
-                
-                amestecs.Remove(currentAmestec);
-                _realm.Write(() => {
-                    _realm.Remove(currentAmestec);
-                });
-            }
+        var amestec = _realm.Find<Amestec>(id);
+        _realm.Write(() => {
+            _realm.Remove(amestec);
+        });
     }
     
-    public static async void RemoveBaraFromDB(string id)
+    public static void RemoveBaraFromDB(ObjectId id)
     {
-        var bare = await GetBaraListFromDB();
-        foreach (var currentBara in bare)
-            if (currentBara.Id.ToString() == id) {
-                
-                bare.Remove(currentBara);
-                _realm.Write(() => {
-                    _realm.Remove(currentBara);
-                });
-            }
+        var bara = _realm.Find<Bara>(id);
+        _realm.Write(() => {
+            _realm.Remove(bara);
+        });
     }
     
-    public static async void RemoveMetalFromDB(string id)
+    public static void RemoveMetalFromDB(ObjectId id)
     {
-        var alamuri = await GetMetalListFromDB();
-        foreach (var currentMetal in alamuri)
-            if (currentMetal.Id.ToString() == id) {
-                
-                alamuri.Remove(currentMetal);
-                _realm.Write(() => {
-                    _realm.Remove(currentMetal);
-                });
-            }
+        var metal = _realm.Find<Metal>(id);
+        _realm.Write(() => {
+            _realm.Remove(metal);
+        });
     }
-    */
+    //
     
     public static async Task<List<Amestec>> GetAmestecListFromDB()
     {
@@ -143,13 +129,5 @@ public class RealmController
     
         return metalList;
     }
-
-    // public static async void PrintFirstMetalBaraNameFromDB()
-    // {
-    //     _realm = await GetRealm(SyncUser);
-    //
-    //     var metal = _realm.All<Metal>().First();
-    //     var firstbaraName = metal.Bare.First().Name;
-    //     Debug.Log(firstbaraName);
-    // }
+    
 }

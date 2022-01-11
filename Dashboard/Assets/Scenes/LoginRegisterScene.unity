@@ -295,7 +295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &133808650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2363,6 +2363,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 497946718}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 388641212}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533143008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3168,7 +3192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &820063029
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3358,6 +3382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backBtn: {fileID: 1229044179}
   forwardBtn: {fileID: 972503885}
+  IndexMetal: 0
 --- !u!114 &864158749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3370,8 +3395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a974ffaf2544bf9897e3eda4c147a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plusBtnPrefab: {fileID: 1561965369204001017, guid: 52e17cf9eee5a414cb5dc0e73b750922, type: 3}
-  addBaraPrefab: {fileID: 3420239330206251720, guid: 2401ac6691ef30b47b1a5844c2eaa983, type: 3}
+  openAddBaraMenuBtnPrefab: {fileID: 1561965369204001017, guid: 52e17cf9eee5a414cb5dc0e73b750922, type: 3}
+  addBaraPanelPrefab: {fileID: 3420239330206251720, guid: 2401ac6691ef30b47b1a5844c2eaa983, type: 3}
   metalNameText: {fileID: 1110237653}
   densitate: {fileID: 925811371}
   kg: {fileID: 1644767861}
@@ -5734,7 +5759,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1502376852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 851797264}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 533143005}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1502376852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5823,7 +5872,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000061035156}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -834, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1517222096
 MonoBehaviour:
@@ -6145,7 +6194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1634896085
 RectTransform:
   m_ObjectHideFlags: 0

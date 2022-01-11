@@ -6,6 +6,7 @@ using Realms;
 using Realms.Sync;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class BaraController : MonoBehaviour
 {
@@ -20,12 +21,13 @@ public class BaraController : MonoBehaviour
     
     private void OnEnable()
     {
-        _baraViews = new List<BaraView>();
         if (Instance != null) {
             Destroy(Instance);
             Debug.Log("Destroyed BaraController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE BaraController in a scene!");
         }
         Instance = this;
+
+        _baraViews = new List<BaraView>();
     }
 
     private void OnDisable()
@@ -33,7 +35,7 @@ public class BaraController : MonoBehaviour
         Instance = null;
     }
 
-    public async Task GenerateViewObjects(Metal metal)
+    public async Task GenerateViewObjectsTask(Metal metal)
     {
         ClearExistingViewObj();
         

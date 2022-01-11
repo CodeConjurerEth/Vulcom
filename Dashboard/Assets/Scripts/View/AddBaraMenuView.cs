@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,10 +8,10 @@ using UnityEngine.UI;
 
 public class AddBaraMenuView : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown _dropdownForma;
-    [SerializeField] private GameObject _gridLayoutGroup;
-    [SerializeField] private Button _addButton;
-    [SerializeField] private Button _closeButton;
+    [SerializeField] private TMP_Dropdown dropdownForma;
+    [SerializeField] private GameObject gridLayoutGroup;
+    [SerializeField] private Button addBaraButton;
+    [SerializeField] private Button closeButton;
     private TMP_InputField _nameInputField;
     private TMP_InputField _lungimeBaraInputField;
     private TMP_InputField _diametruInputField;
@@ -19,8 +20,8 @@ public class AddBaraMenuView : MonoBehaviour
     private TMP_InputField _latimeSuprafInputField;
     private TMP_InputField _laturaHexagonInputField;
 
-    public Metal MetalBeingAddedTo;
-    public Button GetCloseBtn() { return _closeButton; }
+    public Button GetCloseBtn() { return closeButton; }
+    public Button GetAddBaraBtn() { return addBaraButton; }
     
     public enum FormaOrderDropdown
     {
@@ -34,37 +35,42 @@ public class AddBaraMenuView : MonoBehaviour
     
     private void OnEnable()
     {
-        AssignChildTextToPrivateFields(_gridLayoutGroup.transform);
+        AssignChildTextToPrivateFields(gridLayoutGroup.transform);
         disableFormaInputFields();
         _diametruInputField.gameObject.SetActive(true); //default is cerc so have diametru field available as default
-        _dropdownForma.onValueChanged.AddListener(changeInputFieldsByForma);
-        _addButton.onClick.AddListener(addOnClick);
+        dropdownForma.onValueChanged.AddListener(changeInputFieldsByForma);
+        addBaraButton.onClick.AddListener(addOnClick);
     }
 
     private void OnDisable()
     {
         disableFormaInputFields();
-        _dropdownForma.onValueChanged.RemoveListener(changeInputFieldsByForma);
+        dropdownForma.onValueChanged.RemoveListener(changeInputFieldsByForma);
+        addBaraButton.onClick.RemoveListener(addOnClick);
     }
 
     private async void addOnClick() // make TASK?
     {
         addBaraToCurrentMetal();
-        await BaraController.Instance.GenerateViewObjects(MetalBeingAddedTo);
+        var metalController = MetalController.Instance;
+        await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
+        MetalView.Instance.InstantiateOpenBaraMenuBtn();
     }
 
     private void addBaraToCurrentMetal()  //add bara on metal we are currently on
     {
-        if (MetalBeingAddedTo == null) {
+        var metalController = MetalController.Instance;
+        var metalBeingAddedTo = metalController.Metale[metalController.IndexMetal];
+        if (metalBeingAddedTo == null) {
             throw new Exception("No Metal assigned to AddBaraMenuView");
         }
         else {
             var name = _nameInputField.text;
-            var tipMetal = MetalBeingAddedTo;
+            var tipMetal = metalBeingAddedTo;
             // long forma = -1;
             var lungimeBara = Double.Parse(_lungimeBaraInputField.text);
             
-            switch (_dropdownForma.value){
+            switch (dropdownForma.value){
                 case (int)FormaOrderDropdown.Cerc:
                     var diametru = Double.Parse(_diametruInputField.text);
                     RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Cerc, lungimeBara){
@@ -107,7 +113,7 @@ public class AddBaraMenuView : MonoBehaviour
     
     private void changeInputFieldsByForma(int formaInt)
     {
-        if (_dropdownForma.options.Count != 4)
+        if (dropdownForma.options.Count != 4)
             throw new Exception("Not enough forma options for bara dropdown menu, make sure you have Cerc, Patrat, Dreptunghi, Hexagon");
         else {
             switch (formaInt) {

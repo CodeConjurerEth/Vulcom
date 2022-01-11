@@ -3,10 +3,13 @@ using TMPro;
 using UnityEngine;
 using Realms;
 using Realms.Sync;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class BaraView : MonoBehaviour
 {
     [Header("ONLY ADD THIS TO PREFAB BARAVIEW")]
+    private Bara _bara;
     // private TMP_Text _idText;
     private TMP_Text _baraNameText;
     private TMP_Text _formaText;
@@ -17,14 +20,42 @@ public class BaraView : MonoBehaviour
     private TMP_Text _latimeSuprafataText;
     private TMP_Text _laturaHexagonText;
     private TMP_Text _kgText;
+    private Button _deleteFromDBBtn;
 
     private void OnEnable()
     {
         AssignChildTextToPrivateFields();
+        if (_deleteFromDBBtn != null) {
+            _deleteFromDBBtn.onClick.AddListener(DeleteCurrentBaraFromDB);
+            _deleteFromDBBtn.onClick.AddListener(async delegate { 
+                var metalController = MetalController.Instance;
+               await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]); 
+               MetalView.Instance.InstantiateOpenBaraMenuBtn();
+               });
+        }
+    }
+
+    private void OnDisable(){
+        _deleteFromDBBtn.onClick.RemoveListener(DeleteCurrentBaraFromDB);
+        _deleteFromDBBtn.onClick.RemoveListener(async delegate { 
+                var metalController = MetalController.Instance;
+                await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
+                MetalView.Instance.InstantiateOpenBaraMenuBtn();
+                 });
+    }
+
+    private void DeleteCurrentBaraFromDB()
+    {
+        if (_bara == null) {
+            throw new Exception("bara we're trying to delete is not assigned");
+        }
+        else
+            RealmController.RemoveBaraFromDB(_bara.Id);
     }
     
     public void SetValuesInView(Bara bara)
     {
+        _bara = bara;
         _diametruText.gameObject.SetActive(false);
         _laturaSuprafataText.gameObject.SetActive(false);
         _lungimeSuprafataText.gameObject.SetActive(false);
@@ -108,6 +139,9 @@ public class BaraView : MonoBehaviour
         }
         if (!transform.GetChild(8).TryGetComponent(out _kgText)) {
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(9).TryGetComponent(out _deleteFromDBBtn)) {
+            throw new Exception("Cannot find deleteFromDBBtn GameObject or Button Component");
         }
     }
     

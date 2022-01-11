@@ -11,8 +11,6 @@ using UnityEngine.UI;
 
 public class AuthenticationController  
 {
-    // private static App realmApp = App.Create(Constants.Realm.AppId);
-    // private static Realm realm;
 
     public static async void LoginUser(string _userInput, string _passInput)
     {
@@ -21,28 +19,14 @@ public class AuthenticationController
             var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
             if (currentUser != null) {
                 HideAuthenticationUI();
-                ShowStocUI();
+                ShowInventarPanel();
                 
                 /*
                 --------------------------------
+                
+                
+                 --------------------------------
                 */
-                /*
-                
-                var _realm = await RealmController.GetRealm(RealmController.SyncUser);
-                // var alamaFromRealm = _realm.All<Metal>().First();
-                
-                var alama = new Metal("Alama", 1d, 1d);
-                var bara = new Bara("BaraTest", alama, 0,100d){
-                    Forma = (int)Bara.Forme.Cerc
-                };
-                
-                
-                RealmController.AddToDB(alama);
-                RealmController.AddToDB(bara);
-                
-                /**/
-                // --------------------------------
-                
             }
         }
         catch (Exception ex)
@@ -58,7 +42,7 @@ public class AuthenticationController
             var currentUser = await RealmController.OnPressRegister(_userInput, _passInput);
             if (currentUser != null) {
                 HideAuthenticationUI();
-                ShowStocUI();
+                ShowInventarPanel();
             }
         }
         catch (Exception ex)
@@ -77,7 +61,7 @@ public class AuthenticationController
         //else show wrong input message/ no existing account
     }
 
-    private static void ShowStocUI()
+    private static void ShowInventarPanel()
     {
         UIController.Instance.InventarPanel.SetActive(true);
     }

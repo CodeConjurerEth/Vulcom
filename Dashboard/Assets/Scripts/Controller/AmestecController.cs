@@ -9,6 +9,7 @@ using TMPro;
 
 public class AmestecController : MonoBehaviour
 {
+    [HideInInspector] public static AmestecController Instance;
     [SerializeField] private GameObject amestecViewPrefab;
     [SerializeField] private Transform amestecElemParent;
     
@@ -18,17 +19,22 @@ public class AmestecController : MonoBehaviour
     private void OnEnable()
     {
         _amestecViews = new List<AmestecView>(); 
+        if (Instance != null) {
+            Destroy(Instance);
+            Debug.Log("Destroyed AmestecController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE BaraController in a scene!");
+        }
+        Instance = this;
         GenerateViewObjects(); //generate the nr of amestecuri we get from realm
     }
 
     public async void GenerateViewObjects() 
     {
         ClearExistingViewObj();
-        GenerateAmestecViews();
+        await GenerateAmestecViews();
     }
 
     // Instantiate AmestecView prefab for each amestec from DB, as children of amestecElemParent
-    private async void GenerateAmestecViews()
+    private async Task GenerateAmestecViews()
     {
         _amestecuri = await RealmController.GetAmestecListFromDB();
         

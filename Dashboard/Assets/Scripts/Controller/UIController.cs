@@ -5,6 +5,7 @@ public class UIController : MonoBehaviour
 {
     public static UIController Instance;
     
+    //TODO: maybe serialize these?
     public GameObject AuthenticationPanel;
     public GameObject LoginPanel;
     public GameObject RegisterPanel;

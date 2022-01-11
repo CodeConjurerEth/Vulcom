@@ -10,49 +10,103 @@ using UnityEngine.UI;
 
 public class MetalView : MonoBehaviour
 {
-    [SerializeField] private GameObject plusBtnPrefab;
-    [SerializeField] private GameObject addBaraPrefab;
-    // [SerializeField] private GameObject _baraViewPrefab;  
-    // [SerializeField] private Transform _bareViewParentObj;
+    public static MetalView Instance;
+    [SerializeField] private GameObject openAddBaraMenuBtnPrefab;
+    [SerializeField] private GameObject addBaraPanelPrefab;
     [SerializeField] private TMP_Text metalNameText;
     [SerializeField] private TMP_Text densitate;
     [SerializeField] private TMP_Text kg;
 
-    private Metal _metalWeOn; //maybe public?
     private GameObject _addMenuObjInstance; 
-    private GameObject _plusBtnObjInstance;
+    private GameObject _addMenuBtnObjInstance;
+
     private void OnEnable()
     {
-        // AssignChildTextToPrivateFields();
+        //  instantiate from Controller --> SetMetalValuesInView(Metal metal)
+         if (Instance != null) {
+            Destroy(Instance);
+            Debug.Log("Destroyed MetalView Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE MetalView in a scene!");
+        }
+        Instance = this;
     }
 
     private void OnDisable()
     {
-        // Button plusBtn;
-        // if(!_plusBtnPrefab.TryGetComponent(out plusBtn)) {
-        //     plusBtn.onClick.AddListener(instantiateAddMenu);
-        // }
-        // else {
-        //     plusBtn.onClick.RemoveAllListeners();
-        // }
         
         AddBaraMenuView addBaraMenuView;
-        if (!addBaraPrefab.TryGetComponent(out addBaraMenuView)) {
-            throw new Exception("No addBaraView on addMenuPrefab");
+        if (!addBaraPanelPrefab.TryGetComponent(out addBaraMenuView)) {
+            throw new Exception("No addBaraView on addPanelPrefab");
         }
         else {
-            addBaraMenuView.GetCloseBtn().onClick.RemoveAllListeners();
+            var closeBtn = addBaraMenuView.GetCloseBtn();
+            var addBtn = addBaraMenuView.GetAddBaraBtn();
+            closeBtn.onClick.RemoveListener(destroyOpenAddMenu);
+            closeBtn.onClick.RemoveListener(InstantiateOpenBaraMenuBtn);
+            addBtn.onClick.RemoveListener(destroyOpenAddMenu);
+            addBtn.onClick.RemoveListener(async delegate{
+                 var metalController = MetalController.Instance;
+                 await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
+                 });
+            addBtn.onClick.RemoveListener(InstantiateOpenBaraMenuBtn);
         }
     }
 
     public async void SetMetalValuesInView(Metal metal)
     {
         // _idText.text = metal.Id.ToString();
-        _metalWeOn = metal;
         assignText(metal); 
-        await BaraController.Instance.GenerateViewObjects(metal); 
-        instantiatePlusBtn();   //TODO: change class that does this (last 4 func), last 2 private obj up top
-        
+        await BaraController.Instance.GenerateViewObjectsTask(metal); 
+        InstantiateOpenBaraMenuBtn();
+    }
+    
+    public void InstantiateOpenBaraMenuBtn()
+    {
+        Button addBaraMenuBtnTest;
+        if(!openAddBaraMenuBtnPrefab.TryGetComponent(out addBaraMenuBtnTest)) {
+            throw new Exception("No Button Component on addBtnPrefab!");
+        }
+        else {
+            _addMenuBtnObjInstance = Instantiate(openAddBaraMenuBtnPrefab, BaraController.Instance.GetBaraViewParent()); //add addBtn at the end
+            var openMenuButton = _addMenuBtnObjInstance.GetComponent<Button>();
+            openMenuButton.onClick.AddListener(instantiateAddMenu);
+            openMenuButton.onClick.AddListener(destroyAddMenuBtn);
+        }
+    }
+    
+    private void instantiateAddMenu()
+    {
+        var contentPanelTransform = BaraController.Instance.GetBaraViewParent().parent.parent; //TODO: careful with this
+        AddBaraMenuView addBaraMenuViewTest;
+        if (!addBaraPanelPrefab.TryGetComponent(out addBaraMenuViewTest)) {
+            throw new Exception("No addBaraView on addBaraPanelPrefab");
+        }
+        else {
+            _addMenuObjInstance = Instantiate(addBaraPanelPrefab, contentPanelTransform);
+            var addBaraMenuView = _addMenuObjInstance.GetComponent<AddBaraMenuView>();
+           
+            var closeBtn = addBaraMenuView.GetCloseBtn();
+            closeBtn.onClick.AddListener(destroyOpenAddMenu); //assign destroyAddMenu onclick close btn
+            closeBtn.onClick.AddListener(InstantiateOpenBaraMenuBtn);
+            
+            //when we add bara we destroy addMenuPanel, refresh bara Objects from DB and add the button to open menu again at the end
+            //we add the Bara to DB in AddBaraMenuView
+            var addBaraBtn = addBaraMenuView.GetAddBaraBtn();
+            addBaraBtn.onClick.AddListener(destroyOpenAddMenu);
+        }
+    }
+
+    private void destroyOpenAddMenu()
+    {
+        if (_addMenuObjInstance != null) {
+            Destroy(_addMenuObjInstance);
+        }
+    }
+
+    private void destroyAddMenuBtn()
+    {
+        if (_addMenuBtnObjInstance != null) {
+            Destroy(_addMenuBtnObjInstance);
+        }
     }
 
     private void assignText(Metal metal)
@@ -64,52 +118,4 @@ public class MetalView : MonoBehaviour
         densitate.text = densitateTxt;
         kg.text = kgTxt;
     }
-    
-    private void instantiatePlusBtn()
-    {
-        Button plusBtnTest;
-        if(!plusBtnPrefab.TryGetComponent(out plusBtnTest)) {
-            throw new Exception("No Button Component on plusBtnPrefab!");
-        }
-        else {
-            _plusBtnObjInstance = Instantiate(plusBtnPrefab, BaraController.Instance.GetBaraViewParent()); //add plusBtn at the end
-            var plusButton = _plusBtnObjInstance.GetComponent<Button>();
-            plusButton.onClick.AddListener(instantiateAddMenu);
-            plusButton.onClick.AddListener(destroyPlusBtn);
-        }
-    }
-    
-    private void instantiateAddMenu()
-    {
-        var contentPanelTransform = BaraController.Instance.GetBaraViewParent().parent.parent; //TODO: careful with this
-        AddBaraMenuView addBaraMenuViewTest;
-        if (!addBaraPrefab.TryGetComponent(out addBaraMenuViewTest)) {
-            throw new Exception("No addBaraView on addMenuPrefab");
-        }
-        else {
-            _addMenuObjInstance = Instantiate(addBaraPrefab, contentPanelTransform);
-            var addBaraMenuView = _addMenuObjInstance.GetComponent<AddBaraMenuView>();
-            var closeBtn = addBaraMenuView.GetCloseBtn();
-
-            addBaraMenuView.MetalBeingAddedTo = _metalWeOn;
-            closeBtn.onClick.AddListener(destroyAddMenu); //assign destroyAddMenu onclick close btn
-            closeBtn.onClick.AddListener(instantiatePlusBtn);
-        }
-    }
-
-    private void destroyAddMenu()
-    {
-        if (_addMenuObjInstance != null) {
-            Destroy(_addMenuObjInstance);
-        }
-    }
-
-    private void destroyPlusBtn()
-    {
-        if (_plusBtnObjInstance != null) {
-            Destroy(_plusBtnObjInstance);
-        }
-    }
-    
-
 }
