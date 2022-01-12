@@ -140,8 +140,8 @@ public class BaraView : MonoBehaviour
         if (!transform.GetChild(8).TryGetComponent(out _kgText)) {
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(9).TryGetComponent(out _deleteFromDBBtn)) {
-            throw new Exception("Cannot find deleteFromDBBtn GameObject or Button Component");
+        if (!transform.parent.GetChild(1).TryGetComponent(out _deleteFromDBBtn)) {
+            throw new Exception("Cannot find deleteFromDBBtn GameObject or Button Component as the 2nd child of: " + transform.parent.ToString());
         }
     }
     
