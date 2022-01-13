@@ -66,42 +66,41 @@ public class AddBaraMenuView : MonoBehaviour
         }
         else {
             var name = _nameInputField.text;
-            var tipMetal = metalBeingAddedTo;
             // long forma = -1;
             var lungimeBara = Double.Parse(_lungimeBaraInputField.text);
             
             switch (dropdownForma.value){
                 case (int)FormaOrderDropdown.Cerc:
                     var diametru = Double.Parse(_diametruInputField.text);
-                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Cerc, lungimeBara){
+                    RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Cerc, lungimeBara){
                         Diametru = diametru,
-                        Kg = Bara.GetGreutate(Bara.GetAriaCerc(diametru/2), lungimeBara, tipMetal.Densitate)
+                        Kg = Bara.GetGreutate(Bara.GetAriaCerc(diametru/2), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             
                 case (int)FormaOrderDropdown.Patrat:
                     var laturaSupraf = Double.Parse(_laturaSuprafInputField.text);
-                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Patrat, lungimeBara){
+                    RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Patrat, lungimeBara){
                         LaturaSuprafataPatrat = laturaSupraf,
-                        Kg = Bara.GetGreutate(Bara.GetAriaPatrat(laturaSupraf), lungimeBara, tipMetal.Densitate)
+                        Kg = Bara.GetGreutate(Bara.GetAriaPatrat(laturaSupraf), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             
                 case (int)FormaOrderDropdown.Dreptunghi:
                     var lungime = Double.Parse(_lungimeSuprafInputField.text);
                     var latime = Double.Parse(_latimeSuprafInputField.text);
-                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Dreptunghi, lungimeBara){
+                    RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Dreptunghi, lungimeBara){
                         LungimeSuprafata = lungime,
                         LatimeSuprafata = latime,
-                        Kg = Bara.GetGreutate(Bara.GetAriaDreptunghi(lungime, latime), lungimeBara, tipMetal.Densitate)
+                        Kg = Bara.GetGreutate(Bara.GetAriaDreptunghi(lungime, latime), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             
                 case (int)FormaOrderDropdown.Hexagon:
                     var laturaHexagon = Double.Parse(_laturaHexagonInputField.text);
-                    RealmController.AddToDB(new Bara(name, tipMetal, (int)Bara.Forme.Hexagon, lungimeBara){
+                    RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Hexagon, lungimeBara){
                         LaturaHexagon = laturaHexagon,
-                        Kg = Bara.GetGreutate(Bara.GetAriaHexagon(laturaHexagon), lungimeBara, tipMetal.Densitate)
+                        Kg = Bara.GetGreutate(Bara.GetAriaHexagon(laturaHexagon), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             }

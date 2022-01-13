@@ -5,13 +5,14 @@ public class UIController : MonoBehaviour
 {
     public static UIController Instance;
     
-    //TODO: maybe serialize these?
-    public GameObject AuthenticationPanel;
-    public GameObject LoginPanel;
-    public GameObject RegisterPanel;
-    public GameObject InventarPanel;
+    [SerializeField] private GameObject authenticationPanel;
+    [SerializeField] private GameObject loginPanel;
+    [SerializeField] private GameObject registerPanel;
+    [SerializeField] private GameObject inventarPanel;
+    [SerializeField] private GameObject stocSelecterPanel;
+    [SerializeField] private GameObject amestecPanel;
+    [SerializeField] private GameObject metalPanel;
     
-
     private void Awake()
     {
         if (Instance == null)
@@ -23,31 +24,68 @@ public class UIController : MonoBehaviour
             Debug.Log("Too many UIControllers, removing old one and instantiating on " + gameObject);
         }
 
-        InventarPanel.SetActive(false);
-        AuthenticationPanel.SetActive(true);
+        inventarPanel.SetActive(false);
+        StocSelecterOn();
+        authenticationPanel.SetActive(true);
     }
 
     public void SwitchBetweenLoginRegisterPanels()
     {
-        if (!LoginPanel.activeSelf && !RegisterPanel.activeSelf) {
+        if (!loginPanel.activeSelf && !registerPanel.activeSelf) {
             throw new Exception("Login Panel and Register Panel are disabled, cannot switch between them!");
         }
         else {
-            if (LoginPanel.activeSelf) {
+            if (loginPanel.activeSelf) {
                 //Switch to Register UI
-                LoginPanel.SetActive(false);
-                RegisterPanel.SetActive(true);
+                loginPanel.SetActive(false);
+                registerPanel.SetActive(true);
             }
-            else if (RegisterPanel.activeSelf) {
+            else if (registerPanel.activeSelf) {
                 //Switch to Login UI
-                RegisterPanel.SetActive(false);
-                LoginPanel.SetActive(true);
+                registerPanel.SetActive(false);
+                loginPanel.SetActive(true);
             }
         }
     }
     
-    public void RunLogout()
+    public void HideAuthenticationUIOnLogin()
+    {   
+        if (RealmController.SyncUser != null) {
+            registerPanel.SetActive(false);
+            loginPanel.SetActive(true);
+            authenticationPanel.SetActive(false);
+        }
+        //else show wrong input message/ no existing account
+    }
+
+    public void ShowInventarPanel()
     {
-        RealmController.LogOutBackend();
+        inventarPanel.SetActive(true);
+    }
+
+    public void AmestecPanelOn()
+    {
+        stocSelecterPanel.SetActive(false);
+        metalPanel.SetActive(false);
+        amestecPanel.SetActive(true);
+    }
+
+    public void MetalPanelOn()
+    {
+        stocSelecterPanel.SetActive(false);
+        amestecPanel.SetActive(false);
+        metalPanel.SetActive(true);
+    }
+
+    public void StocSelecterOn()
+    {
+        DisableStocPanels();
+        stocSelecterPanel.SetActive(true);
+    }
+
+    private void DisableStocPanels()
+    {
+        amestecPanel.SetActive(false);
+        metalPanel.SetActive(false);
     }
 }

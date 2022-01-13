@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AmestecView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AmestecView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +131,7 @@
       <workItem from="1641805407472" duration="9484000" />
       <workItem from="1641895515718" duration="4000" />
       <workItem from="1641981567319" duration="1194000" />
+      <workItem from="1642060132090" duration="2882000" />
     </task>
     <servers />
   </component>

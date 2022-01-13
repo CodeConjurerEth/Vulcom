@@ -14,12 +14,12 @@ public class AuthenticationController
 
     public static async void LoginUser(string _userInput, string _passInput)
     {
-        try
-        {
+        try {
+            var uiController = UIController.Instance;
             var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
             if (currentUser != null) {
-                HideAuthenticationUI();
-                ShowInventarPanel();
+                uiController.HideAuthenticationUIOnLogin();
+                uiController.ShowInventarPanel();
                 
                 /*
                 --------------------------------
@@ -39,10 +39,11 @@ public class AuthenticationController
     {
         try
         {
+            var uiController = UIController.Instance;
             var currentUser = await RealmController.OnPressRegister(_userInput, _passInput);
             if (currentUser != null) {
-                HideAuthenticationUI();
-                ShowInventarPanel();
+                uiController.HideAuthenticationUIOnLogin();
+                uiController.ShowInventarPanel();
             }
         }
         catch (Exception ex)
@@ -51,18 +52,5 @@ public class AuthenticationController
         }
     }
 
-    private static void HideAuthenticationUI()
-    {   
-        if (RealmController.SyncUser != null) {
-            UIController.Instance.RegisterPanel.SetActive(false);
-            UIController.Instance.LoginPanel.SetActive(true);
-            UIController.Instance.AuthenticationPanel.SetActive(false);
-        }
-        //else show wrong input message/ no existing account
-    }
-
-    private static void ShowInventarPanel()
-    {
-        UIController.Instance.InventarPanel.SetActive(true);
-    }
+    
 }
