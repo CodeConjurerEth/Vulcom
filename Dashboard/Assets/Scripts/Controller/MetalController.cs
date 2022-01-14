@@ -23,7 +23,7 @@ public class MetalController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Instance != null) {
+        if (Instance != null && Instance != this) {
             Destroy(Instance);
             Debug.Log("Destroyed MetalController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE MetalController in a scene!");
         }

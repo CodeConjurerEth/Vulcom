@@ -35,6 +35,7 @@ public class RealmController
     public static async void LogOutBackend()
     {
         await SyncUser.LogOutAsync();
+        SyncUser = null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     

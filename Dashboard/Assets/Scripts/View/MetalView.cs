@@ -23,7 +23,7 @@ public class MetalView : MonoBehaviour
     private void OnEnable()
     {
         //  instantiate from Controller --> SetMetalValuesInView(Metal metal)
-         if (Instance != null) {
+         if (Instance != null && Instance != this) {
             Destroy(Instance);
             Debug.Log("Destroyed MetalView Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE MetalView in a scene!");
         }

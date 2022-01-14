@@ -9,7 +9,7 @@ using TMPro;
 
 public class AmestecController : MonoBehaviour
 {
-    [HideInInspector] public static AmestecController Instance;
+    public static AmestecController Instance;
     [SerializeField] private GameObject amestecViewPrefab;
     [SerializeField] private Transform amestecElemParent;
     

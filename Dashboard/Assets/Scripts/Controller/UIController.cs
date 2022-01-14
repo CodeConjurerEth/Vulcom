@@ -17,7 +17,8 @@ public class UIController : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        else {
+        else if(Instance != this)
+        {
             //if Instance already exists, destroy old one and assign new one to Instance
             Destroy(Instance);
             Instance = this;
@@ -56,6 +57,17 @@ public class UIController : MonoBehaviour
             authenticationPanel.SetActive(false);
         }
         //else show wrong input message/ no existing account
+    }
+
+    public void LogoutBackendGoToLogin()
+    {
+        if (RealmController.SyncUser != null) {
+            RealmController.LogOutBackend();
+         
+            inventarPanel.SetActive(false);
+            StocSelecterOn();
+            authenticationPanel.SetActive(true);
+        }
     }
 
     public void ShowInventarPanel()
