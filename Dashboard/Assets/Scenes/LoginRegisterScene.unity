@@ -3561,9 +3561,9 @@ GameObject:
   m_Component:
   - component: {fileID: 877552166}
   - component: {fileID: 877552168}
-  - component: {fileID: 877552167}
   - component: {fileID: 877552170}
   - component: {fileID: 877552169}
+  - component: {fileID: 877552167}
   m_Layer: 5
   m_Name: Vertical Layout Group
   m_TagString: Untagged
@@ -3585,8 +3585,8 @@ RectTransform:
   m_Father: {fileID: 796755210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3626,9 +3626,9 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!114 &877552169
 MonoBehaviour:
