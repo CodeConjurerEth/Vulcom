@@ -31,7 +31,7 @@ public class AddBaraMenuView : MonoBehaviour
         Hexagon = 3
     }
     
-    //TODO: add menu when fields aren't completed
+    //TODO: add error when fields aren't completed
     
     private void OnEnable()
     {
@@ -52,8 +52,11 @@ public class AddBaraMenuView : MonoBehaviour
     private async void addOnClick() // make TASK?
     {
         addBaraToCurrentMetal();
+        
+        //refresh bara view
         var metalController = MetalController.Instance;
         await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
+        
         MetalView.Instance.InstantiateOpenBaraMenuBtn();
     }
 

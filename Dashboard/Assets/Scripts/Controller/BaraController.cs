@@ -41,7 +41,7 @@ public class BaraController : MonoBehaviour
         
         var realm = await RealmController.GetRealm(RealmController.SyncUser);
         var realmCurrMetal = realm.Find<Metal>(metal.Id);
-        var bareFromMetal = realm.All<Bara>().Where(thisbara => thisbara.TipMetal == realmCurrMetal); //TODO: fix
+        var bareFromMetal = realm.All<Bara>().Where(thisbara => thisbara.TipMetal == realmCurrMetal);
         
         foreach (var currBara in bareFromMetal) {
             var newObj = Instantiate(baraViewPrefab, bareViewParentTransform); //instantiate as a child of _bareViewParentObj

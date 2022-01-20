@@ -19,14 +19,20 @@ public class AmestecController : MonoBehaviour
     private void OnEnable()
     {
         _amestecViews = new List<AmestecView>(); 
-        if (Instance != null) {
+        if (Instance != null && Instance != this) {
             Destroy(Instance);
-            Debug.Log("Destroyed AmestecController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE BaraController in a scene!");
+            Debug.Log("Destroyed AmestecController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE AmestecController in a scene!");
         }
         Instance = this;
         GenerateViewObjects(); //generate the nr of amestecuri we get from realm
     }
 
+    public async Task GenerateViewObjectsTask() 
+    {
+        ClearExistingViewObj();
+        await GenerateAmestecViews();
+    }
+    
     public async void GenerateViewObjects() 
     {
         ClearExistingViewObj();

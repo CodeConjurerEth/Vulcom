@@ -17,6 +17,8 @@ public class AmestecView : MonoBehaviour
 
     private int maxStringLength = 9; //
 
+    public Amestec GetAmestec() { return _amestec; }
+
     private void OnEnable()
     {
         AssignChildTextToPrivateFields();
@@ -59,7 +61,7 @@ public class AmestecView : MonoBehaviour
         if (!transform.GetChild(1).TryGetComponent(out _cantitateKgText)) {
             throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {
+        if (!transform.GetChild(3).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find DeleteFromDBBtn GameObject or Button Component");
         }
     }

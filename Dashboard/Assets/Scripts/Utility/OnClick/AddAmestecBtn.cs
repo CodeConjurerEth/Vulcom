@@ -21,7 +21,7 @@ public class AddAmestecBtn : MonoBehaviour
         }
     }
 
-    private void SendAmestecToRealm()
+    private async void SendAmestecToRealm()
     {
         float cantitateKg;
         var parseOK = float.TryParse(cantitateKgInput.text, out cantitateKg);
@@ -30,8 +30,7 @@ public class AddAmestecBtn : MonoBehaviour
         else {
             Amestec amestec = new Amestec(nameInput.text, cantitateKg);
             RealmController.AddToDB(amestec);
-            _amestecController.GenerateViewObjects();
-            // _amestecController
+            await _amestecController.GenerateViewObjectsTask();
         }
         
     }

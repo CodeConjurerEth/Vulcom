@@ -22,6 +22,8 @@ public class BaraView : MonoBehaviour
     private TMP_Text _kgText;
     private Button _deleteFromDBBtn;
 
+    public Bara GetBara() { return _bara; }
+
     private void OnEnable()
     {
         AssignChildTextToPrivateFields();
@@ -125,19 +127,25 @@ public class BaraView : MonoBehaviour
         if (!transform.GetChild(3).TryGetComponent(out _lungimeBaraText)) {
             throw new Exception("Cannot find lungimeBara GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(4).TryGetComponent(out _laturaSuprafataText)) {
+        // else {
+        //     if (!transform.GetChild(3).GetChild(0).TryGetComponent(out _lungimeBaraInputField)) {
+        //         throw new Exception(
+        //             "Cannot find lungimeBaraInputField GameObject or TMP_Text Component on LungimeBara GameObject (found)");
+        //     }  
+        // }
+        if (!transform.GetChild(5).TryGetComponent(out _laturaSuprafataText)) {
             throw new Exception("Cannot find laturaSuprafata GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(5).TryGetComponent(out _lungimeSuprafataText)) {
+        if (!transform.GetChild(6).TryGetComponent(out _lungimeSuprafataText)) {
             throw new Exception("Cannot find lungimeSuprafata GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(6).TryGetComponent(out _latimeSuprafataText)) {
+        if (!transform.GetChild(7).TryGetComponent(out _latimeSuprafataText)) {
             throw new Exception("Cannot find latimeSuprafata GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(7).TryGetComponent(out _laturaHexagonText)) {
+        if (!transform.GetChild(8).TryGetComponent(out _laturaHexagonText)) {
             throw new Exception("Cannot find laturaHexagon GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(8).TryGetComponent(out _kgText)) {
+        if (!transform.GetChild(9).TryGetComponent(out _kgText)) {
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
         if (!transform.parent.GetChild(1).TryGetComponent(out _deleteFromDBBtn)) {

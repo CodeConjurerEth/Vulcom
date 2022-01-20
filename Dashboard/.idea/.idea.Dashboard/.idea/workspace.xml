@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AmestecView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AmestecView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bar View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bar View.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginRegisterScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/MetalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BaraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BaraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/AddAmestecBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/AddAmestecBtn.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/AddAmestecBtn.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/LoginOnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/LoginOnClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/LoginOnClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/LoginOnClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/RegisterOnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/RegisterOnClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OnClick/RegisterOnClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/RegisterOnClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardUML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/DashboardUML.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +152,9 @@
       <workItem from="1642060132090" duration="3813000" />
       <workItem from="1642065223882" duration="96000" />
       <workItem from="1642158139547" duration="2021000" />
+      <workItem from="1642587568290" duration="5044000" />
+      <workItem from="1642675660642" duration="4843000" />
+      <workItem from="1642683845684" duration="221000" />
     </task>
     <servers />
   </component>
