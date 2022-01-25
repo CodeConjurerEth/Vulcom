@@ -100,7 +100,7 @@ public class MetalView : MonoBehaviour
             //we add the Bara to DB in AddBaraMenuView
             var addBaraBtn = addBaraMenuView.GetAddBaraBtn();
             addBaraBtn.onClick.AddListener(destroyOpenAddMenu);
-            addBaraBtn.onClick.AddListener(InstantiateOpenBaraMenuBtnOnAdd);
+            // InstantiateOpenBaraMenuBtnOnAdd is happening in addBaraMenuView addOnClick()
         }
     }
 

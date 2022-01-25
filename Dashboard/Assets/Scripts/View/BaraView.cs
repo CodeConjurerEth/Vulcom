@@ -121,18 +121,13 @@ public class BaraView : MonoBehaviour
         if (!transform.GetChild(1).TryGetComponent(out _formaText)) {
             throw new Exception("Cannot find forma GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(2).TryGetComponent(out _diametruText)) {
-            throw new Exception("Cannot find diametru GameObject or TMP_Text Component");
-        }
-        if (!transform.GetChild(3).TryGetComponent(out _lungimeBaraText)) {
+        if (!transform.GetChild(2).TryGetComponent(out _lungimeBaraText)) {
             throw new Exception("Cannot find lungimeBara GameObject or TMP_Text Component");
         }
-        // else {
-        //     if (!transform.GetChild(3).GetChild(0).TryGetComponent(out _lungimeBaraInputField)) {
-        //         throw new Exception(
-        //             "Cannot find lungimeBaraInputField GameObject or TMP_Text Component on LungimeBara GameObject (found)");
-        //     }  
-        // }
+        //child 3 is inputfield, onclick listeners -- editor
+        if (!transform.GetChild(4).TryGetComponent(out _diametruText)) {
+            throw new Exception("Cannot find diametru GameObject or TMP_Text Component");
+        }
         if (!transform.GetChild(5).TryGetComponent(out _laturaSuprafataText)) {
             throw new Exception("Cannot find laturaSuprafata GameObject or TMP_Text Component");
         }

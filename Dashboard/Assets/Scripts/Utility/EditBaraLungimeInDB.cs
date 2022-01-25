@@ -9,6 +9,8 @@ using UnityEngine;
 public class EditBaraLungimeInDB : MonoBehaviour 
 {
     private BaraView _baraView;
+    [SerializeField] private TMP_Text lungimeBara;
+    [SerializeField] private TMP_InputField lungimeInputField;
     private void Awake()
     {
         if (!transform.parent.TryGetComponent(out _baraView)) { //TODO: hardcoded, change
@@ -29,9 +31,17 @@ public class EditBaraLungimeInDB : MonoBehaviour
             //refresh bara view
             var metalController = MetalController.Instance;
             await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
+            MetalView.Instance.InstantiateOpenBaraMenuBtn();
         }
         else {
-            throw new Exception("Add a value in Lungime TMP_InputField on" + this);
+            lungimeBara.gameObject.SetActive(true);
+            lungimeInputField.gameObject.SetActive(false);
         }
+    }
+
+    public void OnDeselect(string txt)
+    {
+        lungimeBara.gameObject.SetActive(true);
+        lungimeInputField.gameObject.SetActive(false);
     }
 }
