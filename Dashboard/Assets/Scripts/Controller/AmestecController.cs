@@ -82,6 +82,5 @@ public class AmestecController : MonoBehaviour
             DestroyImmediate(child.gameObject);
         }
     }
-    
 
 }

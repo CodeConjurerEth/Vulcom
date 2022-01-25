@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AddBaraPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AddBaraPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OpenAddBaraMenuBtn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OpenAddBaraMenuBtn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/AddAmestecBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraMenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardUML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/DashboardUML.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +142,7 @@
       <workItem from="1642587568290" duration="5044000" />
       <workItem from="1642675660642" duration="4843000" />
       <workItem from="1642683845684" duration="221000" />
-      <workItem from="1643096955338" duration="708000" />
+      <workItem from="1643096955338" duration="7048000" />
     </task>
     <servers />
   </component>

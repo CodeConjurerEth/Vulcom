@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Net;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class AddBaraMenuView : MonoBehaviour
     private TMP_InputField _lungimeSuprafInputField;
     private TMP_InputField _latimeSuprafInputField;
     private TMP_InputField _laturaHexagonInputField;
+    private TMP_Text _emptyInputFieldErrorText;
 
     public Button GetCloseBtn() { return closeButton; }
     public Button GetAddBaraBtn() { return addBaraButton; }
@@ -30,34 +32,72 @@ public class AddBaraMenuView : MonoBehaviour
         Dreptunghi = 2,
         Hexagon = 3
     }
-    
-    //TODO: add error when fields aren't completed
-    
+
     private void OnEnable()
     {
         AssignChildTextToPrivateFields(gridLayoutGroup.transform);
         disableFormaInputFields();
-        _diametruInputField.gameObject.SetActive(true); //default is cerc so have diametru field available as default
-        dropdownForma.onValueChanged.AddListener(changeInputFieldsByForma);
+        
+        //default is cerc so have diametru field available as default
+        _diametruInputField.gameObject.SetActive(true);
+        
+        dropdownForma.onValueChanged.AddListener(enableInputFieldsByForma);
         addBaraButton.onClick.AddListener(addOnClick);
     }
 
     private void OnDisable()
     {
         disableFormaInputFields();
-        dropdownForma.onValueChanged.RemoveListener(changeInputFieldsByForma);
+        dropdownForma.onValueChanged.RemoveListener(enableInputFieldsByForma);
         addBaraButton.onClick.RemoveListener(addOnClick);
     }
 
-    private async void addOnClick() // make TASK?
+    public bool areEmptyInputFields()
     {
-        addBaraToCurrentMetal();
-        
-        //refresh bara view
-        var metalController = MetalController.Instance;
-        await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
-        
-        MetalView.Instance.InstantiateOpenBaraMenuBtn();
+        if (string.IsNullOrEmpty(_nameInputField.text)
+            || string.IsNullOrEmpty(_lungimeBaraInputField.text))
+            return true;
+        switch (dropdownForma.value) {
+            case (int)FormaOrderDropdown.Cerc:
+                if (string.IsNullOrEmpty(_diametruInputField.text))
+                    return true;
+                break;
+
+            case (int)FormaOrderDropdown.Patrat:
+                if (string.IsNullOrEmpty(_laturaSuprafInputField.text))
+                    return true;
+                break;
+
+            case (int)FormaOrderDropdown.Dreptunghi:
+                if (string.IsNullOrEmpty(_lungimeSuprafInputField.text)
+                    || string.IsNullOrEmpty(_latimeSuprafInputField.text))
+                    return true;
+                break;
+
+            case (int)FormaOrderDropdown.Hexagon:
+                if (string.IsNullOrEmpty(_laturaHexagonInputField.text))
+                    return true;
+                break;
+        }
+        return false;
+    }
+
+    private async void addOnClick() // TASK?
+    {
+        if (!areEmptyInputFields()) {
+            addBaraToCurrentMetal();
+
+            //hide empty field error messages
+            _emptyInputFieldErrorText.gameObject.SetActive(false);
+            //refresh bara view
+            var metalController = MetalController.Instance;
+            await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
+
+            MetalView.Instance.InstantiateOpenBaraMenuBtn();
+        }
+        else {
+            _emptyInputFieldErrorText.gameObject.SetActive(true);
+        }
     }
 
     private void addBaraToCurrentMetal()  //add bara on metal we are currently on
@@ -108,12 +148,10 @@ public class AddBaraMenuView : MonoBehaviour
                     break;
             }
         }
-
-       
         
     }
     
-    private void changeInputFieldsByForma(int formaInt)
+    private void enableInputFieldsByForma(int formaInt)
     {
         if (dropdownForma.options.Count != 4)
             throw new Exception("Not enough forma options for bara dropdown menu, make sure you have Cerc, Patrat, Dreptunghi, Hexagon");
@@ -155,25 +193,28 @@ public class AddBaraMenuView : MonoBehaviour
     private void AssignChildTextToPrivateFields(Transform parent)
     {
         if (!parent.GetChild(0).TryGetComponent(out _nameInputField)) {
-            throw new Exception("Cannot find nameInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find nameInputField GameObject or TMP_InputField Component");
         }
         if (!parent.GetChild(1).TryGetComponent(out _lungimeBaraInputField)) {
-            throw new Exception("Cannot find lungimeBaraInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find lungimeBaraInputField GameObject or TMP_InputField Component");
         }
         if (!parent.GetChild(2).TryGetComponent(out _diametruInputField)) {
-            throw new Exception("Cannot find diametruInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find diametruInputField GameObject or TMP_InputField Component");
         }
         if (!parent.GetChild(3).TryGetComponent(out _laturaSuprafInputField)) {
-            throw new Exception("Cannot find laturaSuprafInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find laturaSuprafInputField GameObject or TMP_InputField Component");
         }
         if (!parent.GetChild(4).TryGetComponent(out _lungimeSuprafInputField)) {
-            throw new Exception("Cannot find lungimeSuprafInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find lungimeSuprafInputField GameObject or TMP_InputField Component");
         }
         if (!parent.GetChild(5).TryGetComponent(out _latimeSuprafInputField)) {
-            throw new Exception("Cannot find latimeSuprafInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find latimeSuprafInputField GameObject or TMP_InputField Component");
         }
         if (!parent.GetChild(6).TryGetComponent(out _laturaHexagonInputField)) {
-            throw new Exception("Cannot find laturaHexagonInputField GameObject or TMP_Text Component");
+            throw new Exception("Cannot find laturaHexagonInputField GameObject or TMP_InputField Component");
+        }
+        if (!parent.parent.GetChild(1).TryGetComponent(out _emptyInputFieldErrorText)) {
+            throw new Exception("Cannot find emptyInputFieldErrorText GameObject or TMP_Text Component");
         }
     }
 }

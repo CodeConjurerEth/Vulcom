@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class AddAmestecBtn : MonoBehaviour
 {
-    [SerializeField] private AmestecController _amestecController; //ADD SINGLETON?
     [SerializeField] private TMP_InputField nameInput;
     [SerializeField] private TMP_InputField cantitateKgInput;
+    [SerializeField] private GameObject addPanel;
+    [SerializeField] private Button plusBtn;
+    [SerializeField] private TMP_Text errorEmptyFieldText;
     private Button _thisBtn;
     
     private void Awake()
@@ -17,7 +19,7 @@ public class AddAmestecBtn : MonoBehaviour
             throw new Exception("this AddAmestecBtn is not attached to an Obj with a Button component!");
         }
         else {
-            _thisBtn.onClick.AddListener(SendAmestecToRealm);
+            _thisBtn.onClick.AddListener(AddOnClick);
         }
     }
 
@@ -30,8 +32,30 @@ public class AddAmestecBtn : MonoBehaviour
         else {
             Amestec amestec = new Amestec(nameInput.text, cantitateKg);
             RealmController.AddToDB(amestec);
-            await _amestecController.GenerateViewObjectsTask();
+            await AmestecController.Instance.GenerateViewObjectsTask();
         }
         
+    }
+
+    private void AddOnClick()
+    {
+        if (!areEmptyInputFields()) {
+            errorEmptyFieldText.gameObject.SetActive(false); //hide error
+            SendAmestecToRealm();
+            
+            addPanel.SetActive(false); //hide panel
+            plusBtn.gameObject.SetActive(true); //show plusBtn (to open add menu)
+        }
+        else {
+            errorEmptyFieldText.gameObject.SetActive(true); //show error
+        }
+    }
+
+    private bool areEmptyInputFields()
+    {
+        if (string.IsNullOrEmpty(nameInput.text)
+            || string.IsNullOrEmpty(cantitateKgInput.text))
+            return true;
+        return false;
     }
 }

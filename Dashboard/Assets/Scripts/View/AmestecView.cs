@@ -30,7 +30,8 @@ public class AmestecView : MonoBehaviour
 
     private void OnDisable()
     {
-        _deleteFromDBBtn.onClick.RemoveAllListeners();
+        _deleteFromDBBtn.onClick.RemoveListener(DeleteCurrentAmestecFromDB);
+        _deleteFromDBBtn.onClick.RemoveListener(AmestecController.Instance.GenerateViewObjects);
     }
 
     public void SetAmestecValuesInView(Amestec amestec)
@@ -45,7 +46,7 @@ public class AmestecView : MonoBehaviour
         _cantitateKgText.text = kgstring;
     }
 
-    public void DeleteCurrentAmestecFromDB()
+    private void DeleteCurrentAmestecFromDB()
     {
         RealmController.RemoveAmestecFromDB(_amestec.Id);
     }

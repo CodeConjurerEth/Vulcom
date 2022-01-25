@@ -73,6 +73,14 @@ public class MetalView : MonoBehaviour
         }
     }
     
+    private void InstantiateOpenBaraMenuBtnOnAdd()
+    {
+        if(!_addMenuObjInstance.GetComponent<AddBaraMenuView>().areEmptyInputFields())
+        {
+           InstantiateOpenBaraMenuBtn();
+        }
+    }
+    
     private void instantiateAddMenu()
     {
         var contentPanelTransform = BaraController.Instance.GetBaraViewParent().parent.parent; //TODO: careful with this
@@ -92,13 +100,16 @@ public class MetalView : MonoBehaviour
             //we add the Bara to DB in AddBaraMenuView
             var addBaraBtn = addBaraMenuView.GetAddBaraBtn();
             addBaraBtn.onClick.AddListener(destroyOpenAddMenu);
+            addBaraBtn.onClick.AddListener(InstantiateOpenBaraMenuBtnOnAdd);
         }
     }
 
     private void destroyOpenAddMenu()
     {
-        if (_addMenuObjInstance != null) {
-            Destroy(_addMenuObjInstance);
+        if(!_addMenuObjInstance.GetComponent<AddBaraMenuView>().areEmptyInputFields()){ //check that all inputfields are not empty
+            if (_addMenuObjInstance != null) {
+                Destroy(_addMenuObjInstance);
+            }
         }
     }
 
