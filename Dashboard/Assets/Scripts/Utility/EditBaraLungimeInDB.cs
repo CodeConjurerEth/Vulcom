@@ -6,7 +6,7 @@ using System.Threading;
 using TMPro;
 using UnityEngine;
 
-public class EditBaraLungimeInDB : MonoBehaviour //TODO: add this & EditAmestecLungimeInDB to UML
+public class EditBaraLungimeInDB : MonoBehaviour 
 {
     private BaraView _baraView;
     private void Awake()

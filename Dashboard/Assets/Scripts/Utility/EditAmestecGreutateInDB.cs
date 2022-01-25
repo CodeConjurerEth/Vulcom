@@ -5,7 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class EditAmestecGreutateInDB : MonoBehaviour //TODO: add this & EditBaraLungimeInDB in UML
+public class EditAmestecGreutateInDB : MonoBehaviour
 {
     private AmestecView _amestecView;
     private void Awake()
