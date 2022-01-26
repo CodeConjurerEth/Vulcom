@@ -34,10 +34,4 @@ public class EditBaraLungimeInDB : MonoBehaviour
             MetalView.Instance.InstantiateOpenBaraMenuBtn();
         }
     }
-
-    public void OnDeselect(string txt)
-    {
-        lungimeBara.gameObject.SetActive(true);
-        lungimeInputField.gameObject.SetActive(false);
-    }
 }

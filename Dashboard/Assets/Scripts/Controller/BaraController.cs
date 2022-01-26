@@ -45,7 +45,7 @@ public class BaraController : MonoBehaviour
         
         foreach (var currBara in bareFromMetal) {
             var newObj = Instantiate(baraViewPrefab, bareViewParentTransform); //instantiate as a child of _bareViewParentObj
-            newObj.transform.GetChild(0).GetComponent<BaraView>().SetValuesInView(currBara);;
+            newObj.transform.GetChild(1).GetComponent<BaraView>().SetValuesInView(currBara);;
         }
     }
 

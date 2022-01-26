@@ -10,7 +10,7 @@ public class BaraView : MonoBehaviour
 {
     [Header("ONLY ADD THIS TO PREFAB BARAVIEW")]
     private Bara _bara;
-    // private TMP_Text _idText;
+    private TMP_Text _dateTimeText;
     private TMP_Text _baraNameText;
     private TMP_Text _formaText;
     private TMP_Text _diametruText;
@@ -100,7 +100,7 @@ public class BaraView : MonoBehaviour
                 throw new Exception("Bara " + bara.Name + " does not have a Forma assigned");
         }
         
-        // _idText.text = bara.Id.ToString();
+        _dateTimeText.text = bara.Date;
         _baraNameText.SetText(bara.Name);
         _lungimeBaraText.SetText("lungimeBara: " + bara.LungimeBara.ToString());
         if (Math.Abs(aria - (-1d)) > 0.00000000001d) {              // 11 decimals
@@ -112,9 +112,6 @@ public class BaraView : MonoBehaviour
 
     private void AssignChildTextToPrivateFields()
     {
-        // if (!transform.GetChild(0).TryGetComponent(out _idText)) {
-        //     throw new Exception("Cannot find ID GameObject or TMP_Text Component");
-        // }
         if (!transform.GetChild(0).TryGetComponent(out _baraNameText)) {
             throw new Exception("Cannot find amestecName GameObject or TMP_Text Component");
         }
@@ -143,7 +140,11 @@ public class BaraView : MonoBehaviour
         if (!transform.GetChild(9).TryGetComponent(out _kgText)) {
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
-        if (!transform.parent.GetChild(1).TryGetComponent(out _deleteFromDBBtn)) {
+        //bros
+        if (!transform.parent.GetChild(0).TryGetComponent(out _dateTimeText)) {
+            throw new Exception("Cannot find dateTimeText GameObject or TMP_Text Component");
+        }
+        if (!transform.parent.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find deleteFromDBBtn GameObject or Button Component as the 2nd child of: " + transform.parent.ToString());
         }
     }

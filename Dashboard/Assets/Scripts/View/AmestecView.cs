@@ -10,7 +10,7 @@ public class AmestecView : MonoBehaviour
     
     [Header("ONLY ADD THIS TO PREFAB AMESTECVIEW")]
     private Amestec _amestec;
-    // private TMP_Text _idText;
+    private TMP_Text _dateTimeText;
     private TMP_Text _amestecNameText;
     private TMP_Text _cantitateKgText;
     private Button _deleteFromDBBtn;
@@ -38,7 +38,7 @@ public class AmestecView : MonoBehaviour
     {
         _amestec = amestec;
         
-        // _idText.text = amestec.Id.ToString();
+        _dateTimeText.text = amestec.Date;
         _amestecNameText.text = amestec.Name;
         var kgstring = "Kg: " + amestec.Kg.ToString();
         if (kgstring.Length > maxStringLength)
@@ -53,16 +53,16 @@ public class AmestecView : MonoBehaviour
 
     private void AssignChildTextToPrivateFields()
     {
-        // if (!transform.GetChild(0).TryGetComponent(out _idText)) {
-        //     throw new Exception("Cannot find ID GameObject or TMP_Text Component");
-        // }
-        if (!transform.GetChild(0).TryGetComponent(out _amestecNameText)) {
+        if(!transform.GetChild(0).TryGetComponent(out _dateTimeText)){
+            throw new Exception("Cannot find dateTime GameObject or TMP_Text Component");
+        }
+        if (!transform.GetChild(1).TryGetComponent(out _amestecNameText)) {
             throw new Exception("Cannot find amestecName GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(1).TryGetComponent(out _cantitateKgText)) {
+        if (!transform.GetChild(2).TryGetComponent(out _cantitateKgText)) {
             throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(3).TryGetComponent(out _deleteFromDBBtn)) {
+        if (!transform.GetChild(4).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find DeleteFromDBBtn GameObject or Button Component");
         }
     }
