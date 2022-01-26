@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
@@ -43,6 +44,9 @@ public class Bara : RealmObject
     [MapTo("Kg")]
     public double Kg { get; set; }
 
+    [MapTo("DateTime")]
+    public string Date { get; set; }
+    
    public enum Forme
     {
         Cerc = 0,
@@ -85,6 +89,7 @@ public class Bara : RealmObject
         TipMetal = tipMetal;
         Forma = forma;
         LungimeBara = lungimeBara;
+        Date = DateTime.Now.ToString();
     }
     
 }

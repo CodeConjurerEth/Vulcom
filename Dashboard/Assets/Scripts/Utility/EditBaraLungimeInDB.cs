@@ -33,10 +33,6 @@ public class EditBaraLungimeInDB : MonoBehaviour
             await BaraController.Instance.GenerateViewObjectsTask(metalController.Metale[metalController.IndexMetal]);
             MetalView.Instance.InstantiateOpenBaraMenuBtn();
         }
-        else {
-            lungimeBara.gameObject.SetActive(true);
-            lungimeInputField.gameObject.SetActive(false);
-        }
     }
 
     public void OnDeselect(string txt)

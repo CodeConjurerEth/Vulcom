@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 using Realms;
 public class Amestec : RealmObject
@@ -14,11 +15,15 @@ public class Amestec : RealmObject
     [MapTo("Kg")]
     public double Kg { get; set; }
 
+    [MapTo("DateTime")] 
+    public string Date { get; set; }
+
     public Amestec() { }
      
     public Amestec(string name, double kg)
     {
         Name = name;
         Kg = kg;
+        Date = DateTime.Now.ToString();
     }
 }

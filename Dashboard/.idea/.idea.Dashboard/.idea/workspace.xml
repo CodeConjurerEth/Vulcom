@@ -7,10 +7,10 @@
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AmestecView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AmestecView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bar View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bar View.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MetalView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +61,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -139,7 +140,8 @@
       <workItem from="1642587568290" duration="5044000" />
       <workItem from="1642675660642" duration="4843000" />
       <workItem from="1642683845684" duration="221000" />
-      <workItem from="1643096955338" duration="10172000" />
+      <workItem from="1643096955338" duration="10875000" />
+      <workItem from="1643187125820" duration="3945000" />
     </task>
     <servers />
   </component>

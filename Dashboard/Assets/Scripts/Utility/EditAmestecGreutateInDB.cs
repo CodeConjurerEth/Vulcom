@@ -17,17 +17,18 @@ public class EditAmestecGreutateInDB : MonoBehaviour
 
     public async void ChangeAmestecGreutateInDB(string txt)
     {
-        var realm = await RealmController.GetRealm(RealmController.SyncUser);
-        var currAmestec = _amestecView.GetAmestec(); 
-        
-        realm.Write(() =>
-        {
-            var amestec = realm.All<Amestec>().First(thisAmestec => thisAmestec.Id == currAmestec.Id);
-            amestec.Kg = Double.Parse(txt);
-        });
-        
-        //refresh amestec views
-        var amestecController = AmestecController.Instance;
-        await amestecController.GenerateViewObjectsTask();
+        if (!string.IsNullOrEmpty(txt)) {
+            var realm = await RealmController.GetRealm(RealmController.SyncUser);
+            var currAmestec = _amestecView.GetAmestec();
+
+            realm.Write(() => {
+                var amestec = realm.All<Amestec>().First(thisAmestec => thisAmestec.Id == currAmestec.Id);
+                amestec.Kg = Double.Parse(txt);
+            });
+
+            //refresh amestec views
+            var amestecController = AmestecController.Instance;
+            await amestecController.GenerateViewObjectsTask();
+        }
     }
 }
