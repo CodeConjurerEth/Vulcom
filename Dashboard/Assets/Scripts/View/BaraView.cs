@@ -141,10 +141,10 @@ public class BaraView : MonoBehaviour
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
         //bros
-        if (!transform.parent.GetChild(0).TryGetComponent(out _dateTimeText)) {
+        if (!transform.parent.parent.GetChild(0).TryGetComponent(out _dateTimeText)) {
             throw new Exception("Cannot find dateTimeText GameObject or TMP_Text Component");
         }
-        if (!transform.parent.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {
+        if (!transform.parent.GetChild(1).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find deleteFromDBBtn GameObject or Button Component as the 2nd child of: " + transform.parent.ToString());
         }
     }
