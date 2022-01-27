@@ -56,13 +56,17 @@ public class AmestecView : MonoBehaviour
         if(!transform.GetChild(0).TryGetComponent(out _dateTimeText)){
             throw new Exception("Cannot find dateTime GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(1).TryGetComponent(out _amestecNameText)) {
+        if (!transform.GetChild(1).TryGetComponent(out HorizontalLayoutGroup horizontalLayoutGroup)) {
+            throw new Exception("Cannot find HorizontalLayoutGroup GameObject or HorizontalLayoutGroup Component");
+        }
+        var horizontalLayoutGroupTransform = horizontalLayoutGroup.transform;
+        if (!horizontalLayoutGroupTransform.GetChild(0).TryGetComponent(out _amestecNameText)) {
             throw new Exception("Cannot find amestecName GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(2).TryGetComponent(out _cantitateKgText)) {
+        if (!horizontalLayoutGroupTransform.GetChild(1).TryGetComponent(out _cantitateKgText)) {
             throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(4).TryGetComponent(out _deleteFromDBBtn)) {
+        if (!horizontalLayoutGroupTransform.GetChild(3).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find DeleteFromDBBtn GameObject or Button Component");
         }
     }
