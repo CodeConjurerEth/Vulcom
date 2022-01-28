@@ -530,8 +530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703d7731b59182e4099f7e708ee57053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lungimeBara: {fileID: 6853054743140101929}
-  lungimeInputField: {fileID: 7870878397838321829}
 --- !u!1 &4742309830439967351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1304,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 720, y: 150}
+  m_SizeDelta: {x: 700, y: 150}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &9192336394480690253
 MonoBehaviour:
@@ -2392,7 +2390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 310, y: 0}
+  m_AnchoredPosition: {x: 315, y: 0}
   m_SizeDelta: {x: 620, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281421579546560712
@@ -2481,7 +2479,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 710, y: 135}
+  m_SizeDelta: {x: 700, y: 135}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &3047752594972755070
 MonoBehaviour:
@@ -2501,7 +2499,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 50
+  m_Spacing: 30
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

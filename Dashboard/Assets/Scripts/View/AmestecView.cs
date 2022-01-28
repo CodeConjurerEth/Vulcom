@@ -66,7 +66,7 @@ public class AmestecView : MonoBehaviour
         if (!horizontalLayoutGroupTransform.GetChild(1).TryGetComponent(out _cantitateKgText)) {
             throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
         }
-        if (!horizontalLayoutGroupTransform.GetChild(3).TryGetComponent(out _deleteFromDBBtn)) {
+        if (!horizontalLayoutGroupTransform.parent.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find DeleteFromDBBtn GameObject or Button Component");
         }
     }

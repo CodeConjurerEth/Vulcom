@@ -9,8 +9,6 @@ using UnityEngine;
 public class EditBaraLungimeInDB : MonoBehaviour 
 {
     private BaraView _baraView;
-    [SerializeField] private TMP_Text lungimeBara;
-    [SerializeField] private TMP_InputField lungimeInputField;
     private void Awake()
     {
         if (!transform.parent.TryGetComponent(out _baraView)) { //TODO: hardcoded, change
