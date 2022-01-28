@@ -10,7 +10,7 @@ public class EditAmestecGreutateInDB : MonoBehaviour
     private AmestecView _amestecView;
     private void Awake()
     {
-        if (!transform.parent.TryGetComponent(out _amestecView)) { //TODO: hardcoded, change
+        if (!transform.parent.parent.TryGetComponent(out _amestecView)) { //TODO: hardcoded, change
             throw new Exception(transform.parent + "does not have a AmestecView Component");
         }
     }

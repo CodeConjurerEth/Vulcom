@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MongoDB.Bson;
+using Newtonsoft.Json;
 using Realms;
 public class Amestec : RealmObject
 {
