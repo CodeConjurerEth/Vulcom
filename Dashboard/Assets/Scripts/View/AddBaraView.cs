@@ -151,7 +151,6 @@ public class AddBaraView : MonoBehaviour
                     break;
             }
         }
-        
     }
     
     private void enableInputFieldsByForma(int formaInt)

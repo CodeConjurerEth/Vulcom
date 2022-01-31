@@ -99,7 +99,6 @@ public class Bara : RealmObject
                break;
            default:
                throw new Exception("Cannot find Bara Forma and calculate its Arie");
-               break;
        }
        return aria;
    }
