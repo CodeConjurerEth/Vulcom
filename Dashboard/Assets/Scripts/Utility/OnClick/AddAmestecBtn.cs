@@ -25,10 +25,10 @@ public class AddAmestecBtn : MonoBehaviour
 
     private async void SendAmestecToRealm()
     {
-        float cantitateKg;
-        var parseOK = float.TryParse(cantitateKgInput.text, out cantitateKg);
-        if (!parseOK)
-            throw new Exception("Cannot parse cantitateKg: (InputField.text) to Float");
+        double cantitateKg;
+        var tryParseDouble = double.TryParse(cantitateKgInput.text, out cantitateKg);
+        if (!tryParseDouble)
+            throw new Exception("Cannot parse cantitateKg: (InputField.text) to Double.");
         else {
             Amestec amestec = new Amestec(nameInput.text, cantitateKg);
             RealmController.AddToDB(amestec);

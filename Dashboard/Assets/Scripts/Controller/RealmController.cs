@@ -123,7 +123,7 @@ public class RealmController
         _realm = await GetRealm(SyncUser); //sync 
         var metalList = new List<Metal>();
         
-        var metale = _realm.All<Metal>().OrderBy(metal => metal.Kg);
+        var metale = _realm.All<Metal>().OrderBy(metal => metal.Densitate);
         for (int index = 0; index < metale.Count(); index++) {
             metalList.Add(metale.ElementAt(index));
         }

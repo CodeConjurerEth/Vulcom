@@ -37,6 +37,8 @@ public class MetalController : MonoBehaviour
 
     private void OnDisable()
     {
+        backBtn.onClick.RemoveListener(BackBtnOnClick);
+        forwardBtn.onClick.RemoveListener(ForwardBtnOnClick);
         Instance = null;
     }
 
@@ -45,7 +47,11 @@ public class MetalController : MonoBehaviour
         // ClearExistingViewObj();
         backBtn.onClick.AddListener(BackBtnOnClick);
         forwardBtn.onClick.AddListener(ForwardBtnOnClick);
-        
+        await RefreshMetaleList();
+    }
+
+    public async Task RefreshMetaleList()
+    {
         Metale = await RealmController.GetMetalListFromDB();
         if (Metale.Count > 0) {
             IndexMetal = 0;
@@ -54,68 +60,34 @@ public class MetalController : MonoBehaviour
             backBtn.gameObject.SetActive(false); //disable back button
             if(Metale.Count - 1 == IndexMetal)
                 forwardBtn.gameObject.SetActive(false); //disable forward button
+            else {
+                forwardBtn.gameObject.SetActive(true);
+            }
         }
-
     }
 
     private void BackBtnOnClick()
     {
-        if (IndexMetal >= 1) {
+        if (IndexMetal > 0) {
             IndexMetal--;
             _metalView.SetMetalValuesInView(Metale[IndexMetal]);
-            
+            forwardBtn.gameObject.SetActive(true);
             if (IndexMetal == 0) {
-                forwardBtn.gameObject.SetActive(true);
                 backBtn.gameObject.SetActive(false);
             }
         }
-        
     }
 
     private void ForwardBtnOnClick()
     {
-
-        if (IndexMetal < Metale.Count - 2) {
+        if (IndexMetal < Metale.Count - 1) {
             IndexMetal++;
             _metalView.SetMetalValuesInView(Metale[IndexMetal]);
-
+            backBtn.gameObject.SetActive(true);
             if (IndexMetal == Metale.Count - 1) {
-                backBtn.gameObject.SetActive(true);
                 forwardBtn.gameObject.SetActive(false);
             }
         }
     }
-
-    /*
-
-    private void ClearExistingViewObj()
-    {
-        _metalViews.Clear();
-        ClearChildrenOf(metalElemParent);
-    }
-    
-    /*
-     
-    private void ClearChildrenOf(Transform parentObj)
-    {
-        int i = 0;
-        
-        //Array to hold all child obj
-        GameObject[] allChildren = new GameObject[parentObj.childCount];
-    
-        //Find all child obj and store to that array
-        foreach (Transform child in parentObj)
-        {
-            allChildren[i] = child.gameObject;
-            i += 1;
-        }
-    
-        //Now destroy them
-        foreach (GameObject child in allChildren)
-        {
-            DestroyImmediate(child.gameObject);
-        }
-    }
-     */
 
 }

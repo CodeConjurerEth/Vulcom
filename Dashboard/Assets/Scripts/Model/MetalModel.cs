@@ -24,10 +24,9 @@ public class Metal : RealmObject
     
     public Metal() { }
     
-    public Metal(string name, double densitate, double kg)
+    public Metal(string name, double densitate)
     {
         Name = name;
         Densitate = densitate;
-        Kg = kg;
     }
 }
