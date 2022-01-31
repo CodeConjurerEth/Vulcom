@@ -12,7 +12,7 @@ public class AmestecView : MonoBehaviour
     private Amestec _amestec;
     private TMP_Text _dateTimeText;
     private TMP_Text _amestecNameText;
-    private TMP_Text _cantitateKgText;
+    private TMP_Text _grameText;
     private Button _deleteFromDBBtn;
 
     private int maxStringLength = 9; //
@@ -40,10 +40,10 @@ public class AmestecView : MonoBehaviour
         
         _dateTimeText.text = amestec.Date;
         _amestecNameText.text = amestec.Name;
-        var kgstring = "Kg: " + amestec.Kg.ToString();
-        if (kgstring.Length > maxStringLength)
-            kgstring = kgstring.Substring(0, maxStringLength);
-        _cantitateKgText.text = kgstring;
+        var grameString = amestec.Grame.ToString() + " g";
+        if (grameString.Length > maxStringLength)
+            grameString = grameString.Substring(0, maxStringLength);
+        _grameText.text = grameString;
     }
 
     private void DeleteCurrentAmestecFromDB()
@@ -63,7 +63,7 @@ public class AmestecView : MonoBehaviour
         if (!horizontalLayoutGroupTransform.GetChild(0).TryGetComponent(out _amestecNameText)) {
             throw new Exception("Cannot find amestecName GameObject or TMP_Text Component");
         }
-        if (!horizontalLayoutGroupTransform.GetChild(1).TryGetComponent(out _cantitateKgText)) {
+        if (!horizontalLayoutGroupTransform.GetChild(1).TryGetComponent(out _grameText)) {
             throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
         }
         if (!horizontalLayoutGroupTransform.parent.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {

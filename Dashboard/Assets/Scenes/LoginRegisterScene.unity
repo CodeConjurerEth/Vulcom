@@ -1280,7 +1280,7 @@ GameObject:
   - component: {fileID: 388641213}
   - component: {fileID: 388641212}
   m_Layer: 5
-  m_Name: CantitateKg_InputField
+  m_Name: Grame_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3574,6 +3574,7 @@ GameObject:
   - component: {fileID: 850315186}
   - component: {fileID: 850315185}
   - component: {fileID: 850315184}
+  - component: {fileID: 850315187}
   m_Layer: 5
   m_Name: OpenAddMetalView
   m_TagString: Untagged
@@ -3683,6 +3684,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850315182}
   m_CullTransparentMesh: 1
+--- !u!114 &850315187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850315182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de79c6f026941b48294928638e4c181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addMetalPanelPrefab: {fileID: 6251676961405486094, guid: 40e1b4511f207fc428843315ae6fe7a9, type: 3}
+  metalContentPanel: {fileID: 1444955804}
 --- !u!1 &851797264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,7 +3846,7 @@ MonoBehaviour:
   addBaraPanelPrefab: {fileID: 3420239330206251720, guid: 2401ac6691ef30b47b1a5844c2eaa983, type: 3}
   metalNameText: {fileID: 1110237653}
   densitate: {fileID: 925811371}
-  kg: {fileID: 1644767861}
+  grame: {fileID: 1644767861}
 --- !u!1 &877552165
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,7 +6647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInput: {fileID: 497946718}
-  cantitateKgInput: {fileID: 388641212}
+  grameInput: {fileID: 388641212}
   addPanel: {fileID: 851797264}
   plusBtn: {fileID: 533143007}
   errorEmptyFieldText: {fileID: 2136808434}
@@ -6673,7 +6688,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00012207031}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -780, y: -422.1308}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517222096
 MonoBehaviour:
@@ -7169,7 +7184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1634896085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7243,7 +7258,7 @@ GameObject:
   - component: {fileID: 1644767862}
   - component: {fileID: 1644767861}
   m_Layer: 5
-  m_Name: KgTotal
+  m_Name: GrameTotal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8188,7 +8203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter cantitateKg...
+  m_text: Enter cantitate (g)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class AddBaraMenuView : MonoBehaviour
+public class AddBaraView : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown dropdownForma;
     [SerializeField] private GameObject gridLayoutGroup;
@@ -117,7 +117,7 @@ public class AddBaraMenuView : MonoBehaviour
                     var diametru = Double.Parse(_diametruInputField.text);
                     RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Cerc, lungimeBara){
                         Diametru = diametru,
-                        Kg = Bara.GetGreutate(Bara.GetAriaCerc(diametru/2), lungimeBara, metalBeingAddedTo.Densitate)
+                        Grame = Bara.GetGreutate(Bara.GetAriaCerc(diametru/2), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             
@@ -125,17 +125,20 @@ public class AddBaraMenuView : MonoBehaviour
                     var laturaSupraf = Double.Parse(_laturaSuprafInputField.text);
                     RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Patrat, lungimeBara){
                         LaturaSuprafataPatrat = laturaSupraf,
-                        Kg = Bara.GetGreutate(Bara.GetAriaPatrat(laturaSupraf), lungimeBara, metalBeingAddedTo.Densitate)
+                        Grame = Bara.GetGreutate(Bara.GetAriaPatrat(laturaSupraf), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             
                 case (int)FormaOrderDropdown.Dreptunghi:
                     var lungime = Double.Parse(_lungimeSuprafInputField.text);
                     var latime = Double.Parse(_latimeSuprafInputField.text);
+                    if (lungime < latime) {
+                        (lungime, latime) = (latime, lungime); //switch lungime & latime if latime is bigger
+                    }
                     RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Dreptunghi, lungimeBara){
                         LungimeSuprafata = lungime,
                         LatimeSuprafata = latime,
-                        Kg = Bara.GetGreutate(Bara.GetAriaDreptunghi(lungime, latime), lungimeBara, metalBeingAddedTo.Densitate)
+                        Grame = Bara.GetGreutate(Bara.GetAriaDreptunghi(lungime, latime), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             
@@ -143,7 +146,7 @@ public class AddBaraMenuView : MonoBehaviour
                     var laturaHexagon = Double.Parse(_laturaHexagonInputField.text);
                     RealmController.AddToDB(new Bara(name, metalBeingAddedTo, (int)Bara.Forme.Hexagon, lungimeBara){
                         LaturaHexagon = laturaHexagon,
-                        Kg = Bara.GetGreutate(Bara.GetAriaHexagon(laturaHexagon), lungimeBara, metalBeingAddedTo.Densitate)
+                        Grame = Bara.GetGreutate(Bara.GetAriaHexagon(laturaHexagon), lungimeBara, metalBeingAddedTo.Densitate)
                     });
                     break;
             }

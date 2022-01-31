@@ -19,7 +19,7 @@ public class BaraView : MonoBehaviour
     private TMP_Text _lungimeSuprafataText;
     private TMP_Text _latimeSuprafataText;
     private TMP_Text _laturaHexagonText;
-    private TMP_Text _kgText;
+    private TMP_Text _grameText;
     private Button _deleteFromDBBtn;
 
     public Bara GetBara() { return _bara; }
@@ -70,14 +70,14 @@ public class BaraView : MonoBehaviour
                 _formaText.text = "Cerc";
                 aria = Bara.GetAriaCerc(bara.Diametru / 2);
                 _diametruText.gameObject.SetActive(true);
-                _diametruText.SetText("diametru: " + bara.Diametru.ToString());
+                _diametruText.SetText("diametru: " + bara.Diametru.ToString() + " cm");
 
                 break;
             case (int)Bara.Forme.Patrat:
                 _formaText.text = "Patrat";
                 aria = Bara.GetAriaPatrat(bara.LaturaSuprafataPatrat);
                 _laturaSuprafataText.gameObject.SetActive(true);
-                _laturaSuprafataText.SetText("laturaSupraf: " + bara.LaturaSuprafataPatrat.ToString());
+                _laturaSuprafataText.SetText("laturaSectiune: " + bara.LaturaSuprafataPatrat.ToString() + " cm");
                 
                 break;
             case (int)Bara.Forme.Dreptunghi:
@@ -85,15 +85,15 @@ public class BaraView : MonoBehaviour
                 aria = Bara.GetAriaDreptunghi(bara.LungimeSuprafata, bara.LatimeSuprafata);
                 _lungimeSuprafataText.gameObject.SetActive(true);
                 _latimeSuprafataText.gameObject.SetActive(true);
-                _lungimeSuprafataText.SetText("lungimeSupraf: " + bara.LungimeSuprafata.ToString());
-                _latimeSuprafataText.SetText("latimeSupraf: " + bara.LatimeSuprafata.ToString());
+                _lungimeSuprafataText.SetText("lungimeSectiune: " + bara.LungimeSuprafata.ToString() + " cm");
+                _latimeSuprafataText.SetText("latimeSectiune: " + bara.LatimeSuprafata.ToString() + " cm");
                 
                 break;
             case (int)Bara.Forme.Hexagon:
                 _formaText.text = "Hexagon";
                 aria = Bara.GetAriaHexagon(bara.LaturaHexagon);
                 _laturaHexagonText.gameObject.SetActive(true);
-                _laturaHexagonText.SetText("laturaHexagon: " + bara.LaturaHexagon.ToString());
+                _laturaHexagonText.SetText("laturaHexagonSectiune: " + bara.LaturaHexagon.ToString()+ " cm");
                 
                 break;
             default:
@@ -102,10 +102,10 @@ public class BaraView : MonoBehaviour
         
         _dateTimeText.text = bara.Date;
         _baraNameText.SetText(bara.Name);
-        _lungimeBaraText.SetText("lungimeBara: " + bara.LungimeBara.ToString());
+        _lungimeBaraText.SetText("lungimeBara: " + bara.LungimeBara.ToString() + " cm");
         if (Math.Abs(aria - (-1d)) > 0.00000000001d) {              // 11 decimals
-            var kg = aria * bara.LungimeBara * bara.TipMetal.Densitate;
-            _kgText.SetText("Kg: " + kg.ToString("n2"));
+            var grame = aria * bara.LungimeBara * bara.TipMetal.Densitate;
+            _grameText.SetText(grame.ToString("n2") + " g"); //TODO: check format
         }
     }
     
@@ -137,7 +137,7 @@ public class BaraView : MonoBehaviour
         if (!transform.GetChild(8).TryGetComponent(out _laturaHexagonText)) {
             throw new Exception("Cannot find laturaHexagon GameObject or TMP_Text Component");
         }
-        if (!transform.GetChild(9).TryGetComponent(out _kgText)) {
+        if (!transform.GetChild(9).TryGetComponent(out _grameText)) {
             throw new Exception("Cannot find Kg GameObject or TMP_Text Component");
         }
         //bros

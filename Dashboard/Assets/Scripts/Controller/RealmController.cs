@@ -97,7 +97,7 @@ public class RealmController
         _realm = await GetRealm(SyncUser); //sync 
         var amestecList = new List<Amestec>();
         
-        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.Kg);
+        var amestecuri = _realm.All<Amestec>().OrderBy(amestec => amestec.Grame);
         for (int index = 0; index < amestecuri.Count(); index++) {
             amestecList.Add(amestecuri.ElementAt(index));
         }
@@ -110,7 +110,7 @@ public class RealmController
         _realm = await GetRealm(SyncUser); //sync 
         var baraList = new List<Bara>();
         
-        var bare = _realm.All<Bara>().OrderBy(bara => bara.Kg);
+        var bare = _realm.All<Bara>().OrderBy(bara => bara.Grame);
         for (int index = 0; index < bare.Count(); index++) {
             baraList.Add(bare.ElementAt(index));
         }

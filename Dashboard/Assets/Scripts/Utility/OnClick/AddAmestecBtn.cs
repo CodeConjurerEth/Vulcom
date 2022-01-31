@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class AddAmestecBtn : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInput;
-    [SerializeField] private TMP_InputField cantitateKgInput;
+    [SerializeField] private TMP_InputField grameInput;
     [SerializeField] private GameObject addPanel;
     [SerializeField] private Button plusBtn;
     [SerializeField] private TMP_Text errorEmptyFieldText;
@@ -25,12 +25,12 @@ public class AddAmestecBtn : MonoBehaviour
 
     private async void SendAmestecToRealm()
     {
-        double cantitateKg;
-        var tryParseDouble = double.TryParse(cantitateKgInput.text, out cantitateKg);
+        double grame;
+        var tryParseDouble = double.TryParse(grameInput.text, out grame);
         if (!tryParseDouble)
-            throw new Exception("Cannot parse cantitateKg: (InputField.text) to Double.");
+            throw new Exception("Cannot parse Cantitate(g): (InputField.text) to Double.");
         else {
-            Amestec amestec = new Amestec(nameInput.text, cantitateKg);
+            Amestec amestec = new Amestec(nameInput.text, grame);
             RealmController.AddToDB(amestec);
             await AmestecController.Instance.GenerateViewObjectsTask();
         }
@@ -54,7 +54,7 @@ public class AddAmestecBtn : MonoBehaviour
     private bool areEmptyInputFields()
     {
         if (string.IsNullOrEmpty(nameInput.text)
-            || string.IsNullOrEmpty(cantitateKgInput.text))
+            || string.IsNullOrEmpty(grameInput.text))
             return true;
         return false;
     }

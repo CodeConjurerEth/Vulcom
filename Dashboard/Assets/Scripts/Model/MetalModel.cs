@@ -19,8 +19,8 @@ public class Metal : RealmObject
     [MapTo("Densitate")]
     public double Densitate { get; set; }
     
-    [MapTo("Kg")]
-    public double Kg { get; set; }
+    [MapTo("Grame")]
+    public double Grame { get; set; }
     
     public Metal() { }
     

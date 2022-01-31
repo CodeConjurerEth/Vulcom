@@ -41,8 +41,8 @@ public class Bara : RealmObject
     [MapTo("LaturaHexagon")]
     public double LaturaHexagon { get; set; }
 
-    [MapTo("Kg")]
-    public double Kg { get; set; }
+    [MapTo("Grame")]
+    public double Grame { get; set; }
 
     [MapTo("DateTime")]
     public string Date { get; set; }
@@ -79,6 +79,29 @@ public class Bara : RealmObject
    public static double GetGreutate(double ariaSectiunii, double lungimeBara, double densitate)
    {
        return ariaSectiunii * lungimeBara * densitate;
+   }
+
+   public double GetAria()
+   {
+       var aria = -1d;
+       switch (Forma) {
+           case (int)Forme.Cerc:
+               aria = GetAriaCerc(Diametru / 2);
+               break;
+           case (int)Forme.Dreptunghi:
+               aria = GetAriaDreptunghi(LungimeSuprafata, LatimeSuprafata);
+               break;
+           case (int)Forme.Patrat:
+               aria = GetAriaPatrat(LaturaSuprafataPatrat);
+               break;
+           case (int)Forme.Hexagon:
+               aria = GetAriaHexagon(LaturaHexagon);
+               break;
+           default:
+               throw new Exception("Cannot find Bara Forma and calculate its Arie");
+               break;
+       }
+       return aria;
    }
    
     public Bara() { }

@@ -23,7 +23,7 @@ public class EditAmestecGreutateInDB : MonoBehaviour
 
             realm.Write(() => {
                 var amestec = realm.All<Amestec>().First(thisAmestec => thisAmestec.Id == currAmestec.Id);
-                amestec.Kg = Double.Parse(txt);
+                amestec.Grame = Double.Parse(txt);
             });
 
             //refresh amestec views

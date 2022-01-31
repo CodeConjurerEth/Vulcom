@@ -13,18 +13,18 @@ public class Amestec : RealmObject
     [Required]
     public string Name { get; set; }
     
-    [MapTo("Kg")]
-    public double Kg { get; set; }
+    [MapTo("Grame")]
+    public double Grame { get; set; }
 
     [MapTo("DateTime")] 
     public string Date { get; set; }
 
     public Amestec() { }
      
-    public Amestec(string name, double kg)
+    public Amestec(string name, double grame)
     {
         Name = name;
-        Kg = kg;
+        Grame = grame;
         Date = DateTime.Now.ToString();
     }
 }

@@ -15,7 +15,7 @@ public class MetalView : MonoBehaviour
     [SerializeField] private GameObject addBaraPanelPrefab;
     [SerializeField] private TMP_Text metalNameText;
     [SerializeField] private TMP_Text densitate;
-    [SerializeField] private TMP_Text kg;
+    [SerializeField] private TMP_Text grame;
 
     private GameObject _addMenuObjInstance; 
     private GameObject _addMenuBtnObjInstance;
@@ -33,13 +33,13 @@ public class MetalView : MonoBehaviour
     private void OnDisable()
     {
         
-        AddBaraMenuView addBaraMenuView;
-        if (!addBaraPanelPrefab.TryGetComponent(out addBaraMenuView)) {
+        AddBaraView addBaraView;
+        if (!addBaraPanelPrefab.TryGetComponent(out addBaraView)) {
             throw new Exception("No addBaraView on addPanelPrefab");
         }
         else {
-            var closeBtn = addBaraMenuView.GetCloseBtn();
-            var addBtn = addBaraMenuView.GetAddBaraBtn();
+            var closeBtn = addBaraView.GetCloseBtn();
+            var addBtn = addBaraView.GetAddBaraBtn();
             closeBtn.onClick.RemoveListener(destroyOpenAddMenu);
             closeBtn.onClick.RemoveListener(InstantiateOpenBaraMenuBtn);
             addBtn.onClick.RemoveListener(destroyOpenAddMenu);
@@ -75,7 +75,7 @@ public class MetalView : MonoBehaviour
     
     private void InstantiateOpenBaraMenuBtnOnAdd()
     {
-        if(!_addMenuObjInstance.GetComponent<AddBaraMenuView>().areEmptyInputFields())
+        if(!_addMenuObjInstance.GetComponent<AddBaraView>().areEmptyInputFields())
         {
            InstantiateOpenBaraMenuBtn();
         }
@@ -84,13 +84,13 @@ public class MetalView : MonoBehaviour
     private void instantiateAddMenu()
     {
         var contentPanelTransform = BaraController.Instance.GetBaraViewParent().parent.parent; //TODO: careful with this
-        AddBaraMenuView addBaraMenuViewTest;
-        if (!addBaraPanelPrefab.TryGetComponent(out addBaraMenuViewTest)) {
+        AddBaraView addBaraViewTest;
+        if (!addBaraPanelPrefab.TryGetComponent(out addBaraViewTest)) {
             throw new Exception("No addBaraView on addBaraPanelPrefab");
         }
         else {
             _addMenuObjInstance = Instantiate(addBaraPanelPrefab, contentPanelTransform);
-            var addBaraMenuView = _addMenuObjInstance.GetComponent<AddBaraMenuView>();
+            var addBaraMenuView = _addMenuObjInstance.GetComponent<AddBaraView>();
            
             var closeBtn = addBaraMenuView.GetCloseBtn();
             closeBtn.onClick.AddListener(destroyOpenAddMenu); //assign destroyAddMenu onclick close btn
@@ -106,7 +106,7 @@ public class MetalView : MonoBehaviour
 
     private void destroyOpenAddMenu()
     {
-        if(!_addMenuObjInstance.GetComponent<AddBaraMenuView>().areEmptyInputFields()){ //check that all inputfields are not empty
+        if(!_addMenuObjInstance.GetComponent<AddBaraView>().areEmptyInputFields()){ //check that all inputfields are not empty
             if (_addMenuObjInstance != null) {
                 Destroy(_addMenuObjInstance);
             }
@@ -124,9 +124,9 @@ public class MetalView : MonoBehaviour
     {
         metalNameText.text = metal.Name;
         var densitateTxt = "Densitate: " + metal.Densitate.ToString();
-        var kgTxt = "KG: " + metal.Kg.ToString();
+        var grameText = "g: " + metal.Grame.ToString();
 
         densitate.text = densitateTxt;
-        kg.text = kgTxt;
+        grame.text = grameText;
     }
 }
