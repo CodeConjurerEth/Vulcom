@@ -24,22 +24,22 @@ public class Bara : RealmObject
     public long Forma { get; set; } = -1;
     
     [MapTo("Diametru")]
-    public double Diametru { get; set; }
+    public double DiametruMM { get; set; }
     
     [MapTo("LungimeBara")] //TODO: add LungimeInitiala, data intrarii, fiecarei iesiri
-    public double LungimeBara { get; set; }
+    public double LungimeBaraCM { get; set; }
     
     [MapTo("LaturaSuprafataPatrat")]
-    public double LaturaSuprafataPatrat { get; set; }
+    public double LaturaSuprafataPatratMM { get; set; }
 
     [MapTo("LungimeSuprafata")]
-    public double LungimeSuprafata { get; set; }
+    public double LungimeSuprafataMM { get; set; }
     
     [MapTo("LatimeSuprafata")]
-    public double LatimeSuprafata { get; set; }
+    public double LatimeSuprafataMM { get; set; }
     
     [MapTo("LaturaHexagon")]
-    public double LaturaHexagon { get; set; }
+    public double LaturaHexagonMM { get; set; }
 
     [MapTo("Grame")]
     public double Grame { get; set; }
@@ -71,6 +71,16 @@ public class Bara : RealmObject
        return lungimeSuprafata * latimeSuprafata;
    }
 
+   public static double FromCmToMm(double cm)
+   {
+       return cm * 10d;
+   }
+
+   public static double FromMmToCm(double mm)
+   {
+       return mm / 10d;
+   }
+
    public static double GetAriaHexagon(double laturaHexagon)
    {
        return 3d * Mathf.Sqrt(3) / 2d * (laturaHexagon * laturaHexagon);
@@ -86,16 +96,16 @@ public class Bara : RealmObject
        var aria = -1d;
        switch (Forma) {
            case (int)Forme.Cerc:
-               aria = GetAriaCerc(Diametru / 2);
+               aria = GetAriaCerc(FromMmToCm(DiametruMM) / 2);
                break;
            case (int)Forme.Dreptunghi:
-               aria = GetAriaDreptunghi(LungimeSuprafata, LatimeSuprafata);
+               aria = GetAriaDreptunghi(FromMmToCm(LungimeSuprafataMM), FromMmToCm(LatimeSuprafataMM));
                break;
            case (int)Forme.Patrat:
-               aria = GetAriaPatrat(LaturaSuprafataPatrat);
+               aria = GetAriaPatrat(FromMmToCm(LaturaSuprafataPatratMM));
                break;
            case (int)Forme.Hexagon:
-               aria = GetAriaHexagon(LaturaHexagon);
+               aria = GetAriaHexagon(FromMmToCm(LaturaHexagonMM));
                break;
            default:
                throw new Exception("Cannot find Bara Forma and calculate its Arie");
@@ -105,12 +115,12 @@ public class Bara : RealmObject
    
     public Bara() { }
     
-    public Bara(string name, Metal tipMetal, long forma, double lungimeBara)
+    public Bara(string name, Metal tipMetal, long forma, double lungimeBaraCm)
     {
         Name = name;
         TipMetal = tipMetal;
         Forma = forma;
-        LungimeBara = lungimeBara;
+        LungimeBaraCM = lungimeBaraCm;
         Date = DateTime.Now.ToString();
     }
     

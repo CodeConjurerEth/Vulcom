@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AddBaraPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AddBaraPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bar View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bar View.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaraModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditBaraLungimeInDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AddBaraView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/BaraView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +147,8 @@
       <workItem from="1643372831816" duration="1160000" />
       <workItem from="1643376813991" duration="162000" />
       <workItem from="1643618710590" duration="10845000" />
+      <workItem from="1643702669336" duration="979000" />
+      <workItem from="1643879802972" duration="1942000" />
     </task>
     <servers />
   </component>

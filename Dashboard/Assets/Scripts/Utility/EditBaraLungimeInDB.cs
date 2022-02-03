@@ -23,8 +23,8 @@ public class EditBaraLungimeInDB : MonoBehaviour
             var currBara = _baraView.GetBara();
             realm.Write(() => {
                 var bara = realm.All<Bara>().First(thisbara => thisbara.Id == currBara.Id);
-                bara.LungimeBara = Double.Parse(txt);
-                bara.Grame = Bara.GetGreutate(bara.GetAria(), bara.LungimeBara, bara.TipMetal.Densitate);
+                bara.LungimeBaraCM = Double.Parse(txt);
+                bara.Grame = Bara.GetGreutate(bara.GetAria(), bara.LungimeBaraCM, bara.TipMetal.Densitate);
             });
 
             //refresh bara view
