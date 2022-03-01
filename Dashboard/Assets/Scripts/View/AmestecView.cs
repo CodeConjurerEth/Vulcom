@@ -38,7 +38,7 @@ public class AmestecView : MonoBehaviour
     {
         _amestec = amestec;
         
-        _dateTimeText.text = amestec.Date;
+        _dateTimeText.text = amestec.DataAchizitie;
         _amestecNameText.text = amestec.Name;
         var grameString = amestec.Grame.ToString() + " g";
         if (grameString.Length > maxStringLength)
