@@ -16,8 +16,11 @@ public class Amestec : RealmObject
     [MapTo("Grame")]
     public double Grame { get; set; }
     
-    // [MapTo("Lot")] 
-    // public string Lot { get; set; }
+    [MapTo("Lot")] 
+    public string Lot { get; set; }
+
+    [MapTo("Presa/Profil")]
+    public string PresaProfil { get; set; }
     
     [MapTo("CantitateInitiala")]
     public double CantitateInitiala { get; set; }
@@ -25,8 +28,8 @@ public class Amestec : RealmObject
     [MapTo("DataAchizitie")] 
     public string DataAchizitie { get; set; }
     
-    [MapTo("DataValabilitate")] 
-    public string DataValabilitate { get; set; }
+    [MapTo("DataExpirare")] 
+    public string DataExpirare { get; set; }
 
     [MapTo("Culoare")] 
     public string Culoare { get; set; }
@@ -37,11 +40,6 @@ public class Amestec : RealmObject
     {
         Name = name;
         Grame = grame;
-        
-        
-        //TODO: data from InputField
-        DataAchizitie = DateTime.Now.ToString(); 
-        // DataValabilitate  TODO: data from InputField
-        //Culoare 
+        CantitateInitiala = grame;
     }
 }

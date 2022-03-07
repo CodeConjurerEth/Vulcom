@@ -652,11 +652,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e396218e401a32b4d92f29532dda718e, type: 3}
---- !u!224 &184654922 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3297418652120750641, guid: e396218e401a32b4d92f29532dda718e, type: 3}
-  m_PrefabInstance: {fileID: 184654921}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &222246992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +3030,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 184654922}
+  - {fileID: 3297418651936097912}
   m_Father: {fileID: 796755210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5520,7 +5515,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00012207031}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -780, y: -456.62665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517222096
 MonoBehaviour:
@@ -6016,7 +6011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1634896085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12544,6 +12539,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!224 &3297418651936097912 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3297418652120750641, guid: e396218e401a32b4d92f29532dda718e, type: 3}
+  m_PrefabInstance: {fileID: 184654921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3307585292652036429
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16743,9 +16743,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInput: {fileID: 6684168253857484991}
+  duritateInput: {fileID: 2059693510116429900}
   grameInput: {fileID: 6684168253966283101}
+  culoareInput: {fileID: 8704359284003666975}
+  lotInput: {fileID: 4430715476938511021}
+  dropdownPresaProfil: {fileID: 6885561467686480204}
+  dropdownZiAchizitie: {fileID: 8562015175161253130}
+  dropdownLunaAchizitie: {fileID: 5568887040837748090}
+  dropdownAnAchizitie: {fileID: 2382413036974870954}
+  dropdownZiExpirare: {fileID: 7415907382158002627}
+  dropdownLunaExpirare: {fileID: 249275031742554048}
+  dropdownAnExpirare: {fileID: 6731551673708634064}
   addPanel: {fileID: 6684168254450378225}
-  plusBtn: {fileID: 0}
+  plusBtn: {fileID: 533143007}
   errorEmptyFieldText: {fileID: 6684168253300628243}
 --- !u!224 &6684168252860902442
 RectTransform:
