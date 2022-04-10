@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LoginRegisterScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Screens/LoginScene.unity
+    guid: 065867039ed711844a95963247b7874f
+  - enabled: 1
+    path: Assets/Scenes/Screens/AmestecScene.unity
+    guid: 7370c04cbc53ef241987149f77b4f229
+  - enabled: 1
+    path: Assets/Scenes/Screens/MenuScene.unity
+    guid: 1b47fabfebc10844ba731ca108503449
+  - enabled: 1
+    path: Assets/Scenes/Screens/MetaleScene.unity
+    guid: ad86b3583058eb740a401070d185c3b2
   m_configObjects: {}

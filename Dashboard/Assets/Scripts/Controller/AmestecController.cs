@@ -16,15 +16,20 @@ public class AmestecController : MonoBehaviour
     private List<AmestecView> _amestecViews; 
     private List<Amestec> _amestecuri;
 
-    private void OnEnable()
+    private void InitSingleton()
     {
-        _amestecViews = new List<AmestecView>(); 
         if (Instance != null && Instance != this) {
             Destroy(Instance);
             Debug.Log("Destroyed AmestecController Instance on:"+ Instance.gameObject.ToString() + ", there should only be ONE AmestecController in a scene!");
         }
         Instance = this;
-        GenerateViewObjects(); //generate the nr of amestecuri we get from realm
+    }
+    
+    private void Start()
+    {
+        _amestecViews = new List<AmestecView>(); 
+        InitSingleton();
+        RefreshViewObjects(); //generate the nr of amestecuri we get from realm
     }
 
     public async Task GenerateViewObjectsTask() 
@@ -33,7 +38,7 @@ public class AmestecController : MonoBehaviour
         await GenerateAmestecViews();
     }
     
-    public async void GenerateViewObjects() 
+    public async void RefreshViewObjects() 
     {
         ClearExistingViewObj();
         await GenerateAmestecViews();

@@ -7,6 +7,7 @@ using UnityEngine;
 using Realms;
 using Realms.Sync;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AuthenticationController  
@@ -15,12 +16,17 @@ public class AuthenticationController
     public static async void LoginUser(string _userInput, string _passInput)
     {
         try {
-            var uiController = UIController.Instance;
+            // legacy -> UIController
+            // var uiController = UIController.Instance;
+            
             var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
             if (currentUser != null) {
-                uiController.HideAuthenticationUIOnLogin();
-                uiController.ShowInventarPanel();
-                
+
+                SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+
+                // uiController.HideAuthenticationUIOnLogin();
+                // uiController.ShowInventarPanel();
+
                 /*
                 --------------------------------
                 
@@ -39,11 +45,15 @@ public class AuthenticationController
     {
         try
         {
-            var uiController = UIController.Instance;
+            //legacy -> UIController
+            // var uiController = UIController.Instance;
             var currentUser = await RealmController.OnPressRegister(_userInput, _passInput);
             if (currentUser != null) {
-                uiController.HideAuthenticationUIOnLogin();
-                uiController.ShowInventarPanel();
+
+                SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+                
+                // uiController.HideAuthenticationUIOnLogin();
+                // uiController.ShowInventarPanel();
             }
         }
         catch (Exception ex)

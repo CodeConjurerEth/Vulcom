@@ -19,23 +19,30 @@ public class AmestecView : MonoBehaviour
 
     public Amestec GetAmestec() { return _amestec; }
 
-    private void OnEnable()
+    private void Start()
     {
         AssignChildTextToPrivateFields();
+    }
+
+    private void OnEnable()
+    {
         if (_deleteFromDBBtn != null) {
             _deleteFromDBBtn.onClick.AddListener(DeleteCurrentAmestecFromDB);
-            _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.GenerateViewObjects);
+            //under bug
+           _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshViewObjects);
         }
+        
     }
 
     private void OnDisable()
     {
         _deleteFromDBBtn.onClick.RemoveListener(DeleteCurrentAmestecFromDB);
-        _deleteFromDBBtn.onClick.RemoveListener(AmestecController.Instance.GenerateViewObjects);
+        _deleteFromDBBtn.onClick.RemoveListener(AmestecController.Instance.RefreshViewObjects);
     }
 
     public void SetAmestecValuesInView(Amestec amestec)
     {
+        //TODO: set values forta noi (din model)
         _amestec = amestec;
         
         _dateTimeText.text = amestec.DataAchizitie;
@@ -49,6 +56,7 @@ public class AmestecView : MonoBehaviour
     private void DeleteCurrentAmestecFromDB()
     {
         RealmController.RemoveAmestecFromDB(_amestec.Id);
+        _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshViewObjects);
     }
 
     private void AssignChildTextToPrivateFields()
@@ -61,12 +69,12 @@ public class AmestecView : MonoBehaviour
         }
         var horizontalLayoutGroupTransform = horizontalLayoutGroup.transform;
         if (!horizontalLayoutGroupTransform.GetChild(0).TryGetComponent(out _amestecNameText)) {
-            throw new Exception("Cannot find amestecName GameObject or TMP_Text Component");
+            throw new Exception("Cannot find NumeAmestec GameObject or TMP_Text Component");
         }
         if (!horizontalLayoutGroupTransform.GetChild(1).TryGetComponent(out _grameText)) {
-            throw new Exception("Cannot find cantitateKg GameObject or TMP_Text Component");
+            throw new Exception("Cannot find Cantitate(g) GameObject or TMP_Text Component");
         }
-        if (!horizontalLayoutGroupTransform.parent.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {
+        if (!transform.GetChild(2).TryGetComponent(out _deleteFromDBBtn)) {
             throw new Exception("Cannot find DeleteFromDBBtn GameObject or Button Component");
         }
     }
