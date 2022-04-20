@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/MenuFunctionality.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/MenuFunctionality.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/LoginScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/LoginScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AuthenticationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/UIController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/UIController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DashboardUML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/DashboardUML.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +153,8 @@
       <workItem from="1646405194265" duration="26000" />
       <workItem from="1646639309312" duration="5583000" />
       <workItem from="1648663198964" duration="1231000" />
-      <workItem from="1649605445255" duration="7656000" />
+      <workItem from="1649605445255" duration="8510000" />
+      <workItem from="1650031884481" duration="1588000" />
     </task>
     <servers />
   </component>

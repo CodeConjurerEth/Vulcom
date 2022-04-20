@@ -10,16 +10,24 @@ public class AmestecView : MonoBehaviour
     
     [Header("ONLY ADD THIS TO PREFAB AMESTECVIEW")]
     private Amestec _amestec;
-    private TMP_Text _dateTimeText;
+    
     private TMP_Text _amestecNameText;
     private TMP_Text _grameText;
+    private TMP_Text _lotText;
+    private TMP_Text _presaProfilText;
+    private TMP_Text _cantitateInitiala;
+    private TMP_Text _dataAchizitie;
+    private TMP_Text _dataExpirare;
+    private TMP_Text _culoare;
+
+
     private Button _deleteFromDBBtn;
 
     private int maxStringLength = 9; //
 
     public Amestec GetAmestec() { return _amestec; }
 
-    private void Start()
+    private void Start() //TODO: REWORK AMESTEC UI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     {
         AssignChildTextToPrivateFields();
     }
@@ -28,8 +36,7 @@ public class AmestecView : MonoBehaviour
     {
         if (_deleteFromDBBtn != null) {
             _deleteFromDBBtn.onClick.AddListener(DeleteCurrentAmestecFromDB);
-            //under bug
-           _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshViewObjects);
+            _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshViewObjects);
         }
         
     }
@@ -45,12 +52,13 @@ public class AmestecView : MonoBehaviour
         //TODO: set values forta noi (din model)
         _amestec = amestec;
         
-        _dateTimeText.text = amestec.DataAchizitie;
         _amestecNameText.text = amestec.Name;
         var grameString = amestec.Grame.ToString() + " g";
         if (grameString.Length > maxStringLength)
             grameString = grameString.Substring(0, maxStringLength);
         _grameText.text = grameString;
+        
+        _dataAchizitie.text = amestec.DataAchizitie;
     }
 
     private void DeleteCurrentAmestecFromDB()
@@ -61,9 +69,9 @@ public class AmestecView : MonoBehaviour
 
     private void AssignChildTextToPrivateFields()
     {
-        if(!transform.GetChild(0).TryGetComponent(out _dateTimeText)){
-            throw new Exception("Cannot find dateTime GameObject or TMP_Text Component");
-        }
+        // if(!transform.GetChild(0).TryGetComponent(out _dataAchizitieText)){ 
+            // throw new Exception("Cannot find dateTime GameObject or TMP_Text Component");
+        // }
         if (!transform.GetChild(1).TryGetComponent(out HorizontalLayoutGroup horizontalLayoutGroup)) {
             throw new Exception("Cannot find HorizontalLayoutGroup GameObject or HorizontalLayoutGroup Component");
         }
