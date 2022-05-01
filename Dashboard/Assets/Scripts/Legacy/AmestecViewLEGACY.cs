@@ -5,20 +5,21 @@ using Realms;
 using Realms.Sync;
 using UnityEngine.UI;
 
-public class AmestecView : MonoBehaviour 
+public class AmestecViewLEGACY : MonoBehaviour 
 {
     
     [Header("ONLY ADD THIS TO PREFAB AMESTECVIEW")]
     private Amestec _amestec;
     
     private TMP_Text _amestecNameText;
-    private TMP_Text _grameText;
     private TMP_Text _lotText;
-    private TMP_Text _presaProfilText;
-    private TMP_Text _cantitateInitiala;
     private TMP_Text _dataAchizitie;
-    private TMP_Text _dataExpirare;
+    private TMP_Text _grameText;
     private TMP_Text _culoare;
+    private TMP_Text _presaProfilText;
+    
+    private TMP_Text _cantitateInitiala;
+    private TMP_Text _dataExpirare;
 
 
     private Button _deleteFromDBBtn;

@@ -91,6 +91,14 @@ public class RealmController
         });
     }
     //
+
+    // public static async Task<List<string>> GetAmestecNamesListFromDB()
+    // {
+    //     _realm = await GetRealm(SyncUser); //sync
+    //     var amestecNamesList = new List<string>();
+    //     
+    //     var amestecNames = _realm.All<Amestec>().OrderBy()
+    // }
     
     public static async Task<List<Amestec>> GetAmestecListFromDB()
     {

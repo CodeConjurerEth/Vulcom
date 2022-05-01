@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 3321645349774466277}
   - component: {fileID: 7132508344257247113}
   m_Layer: 5
-  m_Name: AmestecView
+  m_Name: AmestecViewLEGACY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

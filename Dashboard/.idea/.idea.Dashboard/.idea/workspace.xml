@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewLEGACY.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewLEGACY.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewName.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewName.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewName.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewData.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewData.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/AmestecScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/AmestecScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/AmestecViewLEGACY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/AmestecViewLEGACY.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +42,28 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599fd848fd9040f0a59e4106e4838256113400/0f/ab8f6ea6/SyncConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/View/AmestecViewName.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599fd848fd9040f0a59e4106e4838256113400/1a/9a348952/User.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/View/AmestecViewName.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599fd848fd9040f0a59e4106e4838256113400/0f/ab8f6ea6/SyncConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/View/AmestecViewName.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/miuvl/Vlad/Vulcom/Dashboard/Assets/Scripts/Controller/AmestecController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599fd848fd9040f0a59e4106e4838256113400/22/0adf19f9/App.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4c8a9874288b4fb78fa7fdbcd8065b00c5600/f2/d767c3a0/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -155,6 +189,7 @@
       <workItem from="1648663198964" duration="1231000" />
       <workItem from="1649605445255" duration="8510000" />
       <workItem from="1650031884481" duration="1588000" />
+      <workItem from="1651422384487" duration="7673000" />
     </task>
     <servers />
   </component>

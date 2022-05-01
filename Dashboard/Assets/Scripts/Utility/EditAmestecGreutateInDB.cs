@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class EditAmestecGreutateInDB : MonoBehaviour
 {
-    private AmestecView _amestecView;
+    private AmestecViewData _amestecViewData;
     private void Awake()
     {
-        if (!transform.parent.parent.TryGetComponent(out _amestecView)) { //TODO: hardcoded, change
+        if (!transform.parent.parent.TryGetComponent(out _amestecViewData)) { //TODO: hardcoded, change
             throw new Exception(transform.parent + "does not have a AmestecView Component");
         }
     }
@@ -19,7 +19,7 @@ public class EditAmestecGreutateInDB : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(txt)) {
             var realm = await RealmController.GetRealm(RealmController.SyncUser);
-            var currAmestec = _amestecView.GetAmestec();
+            var currAmestec = _amestecViewData.GetAmestec();
 
             realm.Write(() => {
                 var amestec = realm.All<Amestec>().First(thisAmestec => thisAmestec.Id == currAmestec.Id);

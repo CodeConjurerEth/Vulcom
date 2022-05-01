@@ -10,10 +10,13 @@ using TMPro;
 public class AmestecController : MonoBehaviour
 {
     public static AmestecController Instance;
-    [SerializeField] private GameObject amestecViewPrefab;
-    [SerializeField] private Transform amestecElemParent;
+    public AmestecViewData GetAmestecViewDataInstance() {return amestecViewDataInstance;}
     
-    private List<AmestecView> _amestecViews; 
+    [SerializeField] private GameObject amestecViewNamePrefab;
+    [SerializeField] private Transform amestecElemParent;
+    [SerializeField] private AmestecViewData amestecViewDataInstance;
+    
+    private List<AmestecViewName> _amestecViews; 
     private List<Amestec> _amestecuri;
 
     private void InitSingleton()
@@ -27,7 +30,7 @@ public class AmestecController : MonoBehaviour
     
     private void Start()
     {
-        _amestecViews = new List<AmestecView>(); 
+        _amestecViews = new List<AmestecViewName>(); 
         InitSingleton();
         RefreshViewObjects(); //generate the nr of amestecuri we get from realm
     }
@@ -50,17 +53,17 @@ public class AmestecController : MonoBehaviour
         _amestecuri = await RealmController.GetAmestecListFromDB();
         
         foreach(var currentAmestec in _amestecuri) {
-            var newPrefab = Instantiate(amestecViewPrefab, amestecElemParent);
-            AmestecView amestecView;
-            if (!newPrefab.TryGetComponent(out amestecView))
-                throw new Exception("No AmestecView Component is on the prefab GameObject");
+            var newPrefab = Instantiate(amestecViewNamePrefab, amestecElemParent);
+            AmestecViewName amestecViewName;
+            if (!newPrefab.TryGetComponent(out amestecViewName))
+                throw new Exception("No AmestecViewName Component is on the prefab GameObject");
             else {
-                amestecView.SetAmestecValuesInView(currentAmestec);
-                _amestecViews.Add(amestecView);
+                amestecViewName.SetAmestecValuesInView(currentAmestec);
+                _amestecViews.Add(amestecViewName);
             }
         }
-    } 
-    
+    }
+
     private void ClearExistingViewObj()
     {
         _amestecViews.Clear();
