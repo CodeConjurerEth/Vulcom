@@ -23,12 +23,12 @@ public class EditAmestecGreutateInDB : MonoBehaviour
 
             realm.Write(() => {
                 var amestec = realm.All<Amestec>().First(thisAmestec => thisAmestec.Id == currAmestec.Id);
-                amestec.Grame = Double.Parse(txt);
+                amestec.Grame = float.Parse(txt);
             });
 
             //refresh amestec views
             var amestecController = AmestecController.Instance;
-            await amestecController.GenerateViewObjectsTask();
+            await amestecController.GenerateViewNamesTask();
         }
     }
 }

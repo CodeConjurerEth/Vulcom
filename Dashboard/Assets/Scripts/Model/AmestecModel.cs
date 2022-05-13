@@ -16,6 +16,9 @@ public class Amestec : RealmObject
     [MapTo("Grame")]
     public double Grame { get; set; }
     
+    [MapTo("Duritate")]
+    public double Duritate { get; set; }
+    
     [MapTo("Lot")] 
     public string Lot { get; set; }
 
@@ -33,6 +36,9 @@ public class Amestec : RealmObject
 
     [MapTo("Culoare")] 
     public string Culoare { get; set; }
+    
+    [MapTo("IstorieCantitate")]
+    public string IstorieCantitate { get; set; }
 
     public Amestec() { }
      
@@ -41,5 +47,6 @@ public class Amestec : RealmObject
         Name = name;
         Grame = grame;
         CantitateInitiala = grame;
+        IstorieCantitate = grame.ToString();
     }
 }

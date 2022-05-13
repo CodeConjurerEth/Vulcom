@@ -36,7 +36,8 @@ public class AmestecViewName : MonoBehaviour
     private void OnClickAmestecName()
     {
         var currAmestec = GetAmestec();
-        AmestecController.Instance.GetAmestecViewDataInstance().SetAmestecValuesInView(currAmestec);
+        AmestecController.Instance.GetAmestecViewDataInstance().SetAmestecValuesInDataView(currAmestec);
+        AmestecController.Instance.GenerateSliderAndDataViews();
     }
     
     public void SetAmestecValuesInView(Amestec amestec)

@@ -52,14 +52,15 @@ public class AddAmestecBtn : MonoBehaviour
         RealmController.AddToDB(new Amestec(nameInput.text, grame){
           CantitateInitiala  = grame,
           Culoare = culoareInput.text,
+          Duritate = duritate,
           Lot = lotInput.text, 
           PresaProfil = dropdownPresaProfil.captionText.text,
           DataAchizitie = dataAchizitie,
           DataExpirare = dataExpirare
         });
 
-        await AmestecController.Instance.GenerateViewObjectsTask();
-        
+        await AmestecController.Instance.GenerateViewNamesTask();
+
     }
 
     private void AddOnClick()

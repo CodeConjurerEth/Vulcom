@@ -11,10 +11,13 @@ public class AmestecController : MonoBehaviour
 {
     public static AmestecController Instance;
     public AmestecViewData GetAmestecViewDataInstance() {return amestecViewDataInstance;}
+
+    public Transform GetBarsParent() { return sliderParent; }
     
     [SerializeField] private GameObject amestecViewNamePrefab;
     [SerializeField] private Transform amestecElemParent;
     [SerializeField] private AmestecViewData amestecViewDataInstance;
+    [SerializeField] private Transform sliderParent;
     
     private List<AmestecViewName> _amestecViews; 
     private List<Amestec> _amestecuri;
@@ -32,23 +35,35 @@ public class AmestecController : MonoBehaviour
     {
         _amestecViews = new List<AmestecViewName>(); 
         InitSingleton();
-        RefreshViewObjects(); //generate the nr of amestecuri we get from realm
+        RefreshViewNames(); //generate the nr of amestecuri we get from realm
     }
 
-    public async Task GenerateViewObjectsTask() 
+    public async Task GenerateViewNamesTask() 
     {
         ClearExistingViewObj();
-        await GenerateAmestecViews();
+        await GenerateAmestecViewNames();
     }
     
-    public async void RefreshViewObjects() 
+    public async void RefreshViewNames() 
     {
         ClearExistingViewObj();
-        await GenerateAmestecViews();
+        await GenerateAmestecViewNames();
+    }
+    public void ClearSliderParentView()
+    {
+        ClearChildrenOf(sliderParent);
+    }
+    
+    public void GenerateSliderAndDataViews()
+    {
+        //Refresh Sliders View
+        var amestecData = amestecViewDataInstance;
+        amestecData.SetAmestecValuesInDataView(amestecData.GetAmestec());
+        amestecData.SetAmestecSlidersView(amestecData.GetAmestec());
     }
 
     // Instantiate AmestecView prefab for each amestec from DB, as children of amestecElemParent
-    private async Task GenerateAmestecViews()
+    private async Task GenerateAmestecViewNames()
     {
         _amestecuri = await RealmController.GetAmestecListFromDB();
         
@@ -63,6 +78,7 @@ public class AmestecController : MonoBehaviour
             }
         }
     }
+
 
     private void ClearExistingViewObj()
     {
