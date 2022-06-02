@@ -1,3 +1,4 @@
+TODO: API SAGA, pot sa dau pull datelor? e pregatit programelul meu pt asa ceva?
 TODO:  Look at PO-xx-x && schemas, update my schema, make multiple schemas
 
 ce sunt SDV-urile? schema flux fila 4-A3.doc

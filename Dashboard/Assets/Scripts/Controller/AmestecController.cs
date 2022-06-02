@@ -20,8 +20,8 @@ public class AmestecController : MonoBehaviour
     [SerializeField] private AmestecViewData amestecViewDataInstance;
     [SerializeField] private Transform rightPanel;
     [SerializeField] private Transform sliderParent;
-    [SerializeField] private GameObject adaugaCantitateBtnGameObject;
-    [SerializeField] private GameObject scadeCantitateBtnGameObject;
+    [SerializeField] private GameObject adaugaCantitateBtnGameObj;
+    [SerializeField] private GameObject scadeCantitateBtnGameObj;
     
     private List<AmestecViewName> _amestecViews; 
     private List<Amestec> _amestecuri;
@@ -65,9 +65,9 @@ public class AmestecController : MonoBehaviour
     }
     
     public void SetActivePlusMinusBtns(bool active) {
-        if (adaugaCantitateBtnGameObject.activeSelf != active) {
-            adaugaCantitateBtnGameObject.SetActive(active);
-            scadeCantitateBtnGameObject.SetActive(active);
+        if (adaugaCantitateBtnGameObj.activeSelf != active) {
+            adaugaCantitateBtnGameObj.SetActive(active);
+            scadeCantitateBtnGameObj.SetActive(active);
         }
     }
 

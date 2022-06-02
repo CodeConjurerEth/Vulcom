@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class InstantiateAddCantitateMenu : MonoBehaviour
 {
-    public GameObject AddCantitateMenuPrefab;
-    public Transform ContentPanel;
+    [SerializeField]private GameObject AddCantitateMenuPrefab;
+    [SerializeField]private Transform ContentPanel;
     
     public void OnClickOpen()
     {

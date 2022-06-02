@@ -48,7 +48,7 @@ public class AmestecViewData : MonoBehaviour
         //     grameString = grameString.Substring(0, maxStringLength);
         _grameText.text = "Cantitate curenta: " + grameString;
 
-        _duritateText.text = "Duritate: " + amestec.Duritate.ToString() + "ShA";
+        _duritateText.text = "Duritate: " + amestec.Duritate.ToString() + " ShA";
         _culoareText.text = "Culoare: " + amestec.Culoare;
         _presaProfilText.text ="Presa/Profil: " + amestec.PresaProfil;
         _dataAchizitie.text ="DataAchizitie: " + amestec.DataAchizitie;
@@ -83,6 +83,7 @@ public class AmestecViewData : MonoBehaviour
             var data = currentCantitateDataList[1];
             
             //set slider value in view
+            //TODO: if cantitate > cantitateinitiala
             float fillSliderView = Mathf.Clamp(float.Parse(cantitate),0f, (float)_amestec.CantitateInitiala)
                                    / (float)_amestec.CantitateInitiala;
             amestecViewSlider.SetFillAmountWithPercentage(fillSliderView);
