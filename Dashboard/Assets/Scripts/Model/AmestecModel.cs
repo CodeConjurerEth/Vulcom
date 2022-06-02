@@ -38,15 +38,21 @@ public class Amestec : RealmObject
     public string Culoare { get; set; }
     
     [MapTo("IstorieCantitate")]
-    public string IstorieCantitate { get; set; }
+    public string IstorieCantitatiCuData { get; set; }
 
     public Amestec() { }
      
-    public Amestec(string name, double grame)
+    public Amestec(string name, double grame, string culoare, double duritate, string lot, string presaProfil, string dataAchizitie, string dataExpirare, string istorieCantitaticuData)
     {
         Name = name;
         Grame = grame;
         CantitateInitiala = grame;
-        IstorieCantitate = grame.ToString();
+        Culoare = culoare;
+        Duritate = duritate;
+        Lot = lot;
+        PresaProfil = presaProfil;
+        DataAchizitie = dataAchizitie;
+        DataExpirare = dataExpirare;
+        IstorieCantitatiCuData = istorieCantitaticuData;
     }
 }

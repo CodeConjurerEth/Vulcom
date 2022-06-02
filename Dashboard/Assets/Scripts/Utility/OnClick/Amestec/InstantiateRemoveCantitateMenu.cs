@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class OpenRemoveCantitateMenu : MonoBehaviour
+public class InstantiateRemoveCantitateMenu : MonoBehaviour
 {
     public GameObject RemoveCantitateMenuPrefab;
     public Transform ContentPanel;
@@ -8,10 +8,5 @@ public class OpenRemoveCantitateMenu : MonoBehaviour
     public void OnClickOpen()
     {
         Instantiate(RemoveCantitateMenuPrefab, ContentPanel);
-    }
-
-    public void DestroyRemoveMenu()
-    {
-        DestroyImmediate(RemoveCantitateMenuPrefab);
     }
 }

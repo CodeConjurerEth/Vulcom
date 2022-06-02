@@ -36,6 +36,7 @@ public class RealmController
     {
         await SyncUser.LogOutAsync();
         SyncUser = null;
+        _realm = null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
@@ -44,6 +45,13 @@ public class RealmController
         var syncConfiguration = new SyncConfiguration("UnityTutorialPartition", loggedInUser);
         return await Realm.GetInstanceAsync(syncConfiguration);
     }
+
+    // public static Task AddToDBTask(Amestec amestec)
+    // {
+    //      _realm.Write(() => {
+    //         _realm.Add(amestec);
+    //     });
+    // }
     
      public static void AddToDB(Amestec amestec)
     {

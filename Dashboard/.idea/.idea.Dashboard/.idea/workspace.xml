@@ -5,33 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AddCantitateMenu.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AddCantitateMenu.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewSlider.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewSlider.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AmestecCantitateAddRemove.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AmestecCantitateAddRemove.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenAddCantitateMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenAddCantitateMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenRemoveCantitateMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenRemoveCantitateMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewSlider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewSlider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewNameBtn.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewNameBtn.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AmestecPanelLegacy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AmestecPanelLegacy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AuthenticationPanelLegacy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AuthenticationPanelLegacy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/MetalPanelLegacy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/MetalPanelLegacy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/DestroyTargetGameObj.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/DestroyTargetGameObj.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/InstantiatePrefabToTargetParent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/InstantiatePrefabToTargetParent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewIstoricTxt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewIstoricTxt.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dashboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AddAmestecPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AddAmestecPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AddCantitateMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AddCantitateMenu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewData.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewData.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/SliderWithText.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/SliderWithText.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewName.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewName.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewSlider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/AmestecViewSlider.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Amestec/RemoveCantitateMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Amestec/RemoveCantitateMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OpenAddBaraMenuBtn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OpenAddBaraMenuBtn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AmestecPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AmestecPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AuthenticationPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/AuthenticationPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/MetalPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObj/MetalPanel.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/AmestecScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/AmestecScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/LoginScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/LoginScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/MenuScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/AmestecController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Legacy/AmestecViewLEGACY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/AmestecViewLEGACY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RealmController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AmestecModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AddAmestecBtn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/AddAmestecBtn.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AddAmestecBtn.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/EditAmestecGreutateInDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/EditAmestecGreutateInDB.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Legacy/EditAmestecGreutateInDB.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/MenuFunctionality.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/MenuFunctionality.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AddAmestecBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AddAmestecBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AmestecCantitateAddRemove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AmestecCantitateAddRemove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenAddCantitateMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/InstantiateAddCantitateMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenAddCantitateMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/InstantiateAddCantitateMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenRemoveCantitateMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/InstantiateRemoveCantitateMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/OpenRemoveCantitateMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/InstantiateRemoveCantitateMenu.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/AmestecViewSlider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,10 +129,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14776">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14776" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -203,6 +223,9 @@
       <workItem from="1651846101302" duration="7320000" />
       <workItem from="1652455732836" duration="1007000" />
       <workItem from="1652458272037" duration="9897000" />
+      <workItem from="1653984673289" duration="3422000" />
+      <workItem from="1654068987007" duration="7328000" />
+      <workItem from="1654153354716" duration="13317000" />
     </task>
     <servers />
   </component>

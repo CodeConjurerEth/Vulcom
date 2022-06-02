@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class OpenAddCantitateMenu : MonoBehaviour
+public class InstantiateAddCantitateMenu : MonoBehaviour
 {
     public GameObject AddCantitateMenuPrefab;
     public Transform ContentPanel;
@@ -9,10 +9,5 @@ public class OpenAddCantitateMenu : MonoBehaviour
     public void OnClickOpen()
     {
         Instantiate(AddCantitateMenuPrefab, ContentPanel);
-    }
-
-    public void DestroyAddMenu()
-    {
-        DestroyImmediate(AddCantitateMenuPrefab);
     }
 }

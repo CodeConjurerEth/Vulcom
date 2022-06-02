@@ -16,6 +16,11 @@ public class MenuFunctionality : MonoBehaviour
         Instance = this;
     }
 
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+    }
+    
     public void LoadAmestecuriScene()
     {
         SceneManager.LoadScene("AmestecScene", LoadSceneMode.Single);
@@ -33,6 +38,13 @@ public class MenuFunctionality : MonoBehaviour
 
             SceneManager.LoadScene("LoginScene", LoadSceneMode.Single);
         }
+    }
+
+    public void CloseApplication()
+    {
+        if (RealmController.SyncUser != null)
+            RealmController.LogOutBackend();
+        Application.Quit();
     }
 }
 

@@ -14,33 +14,41 @@ public class AmestecViewName : MonoBehaviour
     private TMP_Text _amestecNameText;
     private Button _thisBtn;
 
-    public Amestec GetAmestec() { return _amestec; }
+    public Amestec GetAmestec()
+    {
+        return _amestec;
+    }
 
     private void OnEnable()
     {
         AssignChildTextToPrivateFields();
         if (_thisBtn != null) {
             _thisBtn.onClick.AddListener(OnClickAmestecName);
+            _thisBtn.onClick.AddListener(delegate { AmestecController.Instance.SetActivePlusMinusBtns(true); });
         }
-
     }
 
     private void OnDisable()
     {
         if (_thisBtn != null) {
             _thisBtn.onClick.RemoveListener(OnClickAmestecName);
+            _thisBtn.onClick.RemoveListener(delegate { AmestecController.Instance.SetActivePlusMinusBtns(true); });
         }
-            
     }
 
     private void OnClickAmestecName()
     {
-        var currAmestec = GetAmestec();
-        AmestecController.Instance.GetAmestecViewDataInstance().SetAmestecValuesInDataView(currAmestec);
-        AmestecController.Instance.GenerateSliderAndDataViews();
-    }
-    
-    public void SetAmestecValuesInView(Amestec amestec)
+        var amestecController = AmestecController.Instance;
+        var thisAmestec = GetAmestec();
+        if (amestecController.CurrentAmestec != thisAmestec) {
+            amestecController.CurrentAmestec = thisAmestec;
+            amestecController.ClearSliderParentView();
+            amestecController.GetAmestecViewDataInstance().SetValuesInDataView(thisAmestec);
+            amestecController.GenerateDataAndSliderViews();
+        }
+}
+
+public void SetValuesInView(Amestec amestec)
     {
         _amestec = amestec;
         _amestecNameText.text = amestec.Name;
@@ -51,13 +59,7 @@ public class AmestecViewName : MonoBehaviour
         if (!transform.TryGetComponent(out _thisBtn)) {
             throw new Exception("Cannot Find Button Component on AmestecViewName Object");
         }
-        
-        if (!transform.GetChild(0).TryGetComponent(out VerticalLayoutGroup verticalLayoutGroup)) {
-            throw new Exception("Cannot find VerticalLayoutGroup GameObject or HorizontalLayoutGroup Component");
-        }
-        var verticalLayoutGroupTransform = verticalLayoutGroup.transform;
-        
-        if (!verticalLayoutGroupTransform.GetChild(0).TryGetComponent(out _amestecNameText)) {
+        if (!transform.GetChild(0).TryGetComponent(out _amestecNameText)) {
             throw new Exception("Cannot find AmestecName GameObject or HorizontalLayoutGroup Component");
         }
     }

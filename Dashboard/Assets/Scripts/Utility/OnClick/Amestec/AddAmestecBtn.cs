@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,8 +20,7 @@ public class AddAmestecBtn : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropdownLunaExpirare;
     [SerializeField] private TMP_Dropdown dropdownAnExpirare;
     [SerializeField] private GameObject addPanel;
-    [SerializeField] private Button plusBtn;
-    [SerializeField] private TMP_Text errorEmptyFieldText;
+    [SerializeField] private Button openThisMenuBtn;
     private Button _thisBtn;
     
     private void Awake()
@@ -33,54 +33,64 @@ public class AddAmestecBtn : MonoBehaviour
         }
     }
 
-    private async void SendAmestecToRealm()
-    {
+    private async Task SendAmestecToRealm()
+    {   
+        //save input
+        var name = nameInput.text;
         double grame;
-        var tryParseGrameDouble = double.TryParse(grameInput.text, out grame);
         double duritate;
+        
+        //parse text input
+        var tryParseGrameDouble = double.TryParse(grameInput.text, out grame);
         var tryParseDuritateDouble = double.TryParse(duritateInput.text, out duritate);
-
         if (!tryParseGrameDouble) 
             throw new Exception("Cannot parse Cantitate(g): (CantitateInputField.text) to Double.");
         if (!tryParseDuritateDouble)
             throw new Exception("Cannot parse Duritate: (DruitateInputField.Text) to Double.");
 
+        //save input
+        var culoare = culoareInput.text;
+        var lot = lotInput.text;
+        var presaProfil = dropdownPresaProfil.captionText.text;
+
         var dataAchizitie = dropdownZiAchizitie.captionText.text + "." + dropdownLunaAchizitie.captionText.text + "." +
                             dropdownAnAchizitie.captionText.text;
         var dataExpirare = dropdownZiExpirare.captionText.text + "." + dropdownLunaExpirare.captionText.text + "." +
                            dropdownAnExpirare.captionText.text;
-        RealmController.AddToDB(new Amestec(nameInput.text, grame){
-          CantitateInitiala  = grame,
-          Culoare = culoareInput.text,
-          Duritate = duritate,
-          Lot = lotInput.text, 
-          PresaProfil = dropdownPresaProfil.captionText.text,
-          DataAchizitie = dataAchizitie,
-          DataExpirare = dataExpirare
-        });
+        var istorieCantitaticuData = grame.ToString() + "|" + dataAchizitie;
 
+        //create new Amestec and AddToDB
+        var newAmestec = new Amestec(name, grame, culoare, duritate, lot, presaProfil,
+                        dataAchizitie, dataExpirare, istorieCantitaticuData); 
+        RealmController.AddToDB(newAmestec);
+
+        //refresh names view
         await AmestecController.Instance.GenerateViewNamesTask();
-
     }
 
-    private void AddOnClick()
+    private async void AddOnClick()
     {
+        TMP_Text errorText; 
+        if(!transform.GetChild(0).TryGetComponent(out errorText))
+            throw new Exception("TMP_Text Component cannot be found on child 0 of" + gameObject +" GameObject");
+
         if (!areEmptyInputFields()) {
-            errorEmptyFieldText.gameObject.SetActive(false); //hide error
-            SendAmestecToRealm();
+            errorText.color = Color.black; //turn add button text to black
+            await SendAmestecToRealm();
             
             addPanel.SetActive(false); //hide panel
-            plusBtn.gameObject.SetActive(true); //show plusBtn (to open add menu)
+            openThisMenuBtn.gameObject.SetActive(true); //show plusBtn (to open add menu)
         }
         else {
-            errorEmptyFieldText.gameObject.SetActive(true); //show error
+            errorText.color = Color.red; //turn add button text to red
         }
     }
 
     private bool areEmptyInputFields()
     {
         if (string.IsNullOrEmpty(nameInput.text)
-            || string.IsNullOrEmpty(grameInput.text) || string.IsNullOrEmpty(duritateInput.text) || string.IsNullOrEmpty(culoareInput.text) || string.IsNullOrEmpty(lotInput.text))
+            || string.IsNullOrEmpty(grameInput.text) || string.IsNullOrEmpty(duritateInput.text)
+            || string.IsNullOrEmpty(culoareInput.text) || string.IsNullOrEmpty(lotInput.text))
             return true;
         return false;
     }

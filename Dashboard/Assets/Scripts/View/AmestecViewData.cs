@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using Realms;
@@ -9,7 +10,8 @@ public class AmestecViewData : MonoBehaviour
 {
 
     [Header("ONLY ADD THIS TO PREFAB AMESTECVIEWDATA")] 
-    [SerializeField] private GameObject AmestecViewBaraPrefab;
+    [SerializeField] private GameObject AmestecViewSliderPrefab;
+    [SerializeField] private GameObject Tmp_Text_Prefab;
     
     private Amestec _amestec;
     
@@ -24,7 +26,7 @@ public class AmestecViewData : MonoBehaviour
     // private TMP_Text _cantitateInitiala;
     private TMP_Text _dataExpirare;
 
-    private int maxStringLength = 9; //
+    // private int maxStringLength = 9; //
 
     public Amestec GetAmestec() { return _amestec; }
 
@@ -33,55 +35,65 @@ public class AmestecViewData : MonoBehaviour
         AssignChildTextToPrivateFields();
     }
 
-    public void SetAmestecValuesInDataView(Amestec amestec)
+    public void SetValuesInDataView(Amestec amestec)
     {
         _amestec = amestec;
         
         _amestecNameText.text = amestec.Name;
-        _lotText.text = amestec.Lot;
+        _lotText.text ="Lot: " + amestec.Lot;
         
         var grameString = amestec.Grame.ToString() + " g";
-        if (grameString.Length > maxStringLength)
-            grameString = grameString.Substring(0, maxStringLength);
-        _grameText.text = grameString;
+        //check if string is too long
+        // if (grameString.Length > maxStringLength)   
+        //     grameString = grameString.Substring(0, maxStringLength);
+        _grameText.text = "Cantitate curenta: " + grameString;
 
-        _duritateText.text = amestec.Duritate.ToString();
-        _culoareText.text = amestec.Culoare;
-        _presaProfilText.text = amestec.PresaProfil;
-        _dataAchizitie.text = amestec.DataAchizitie;
-        _dataExpirare.text = amestec.DataExpirare;
+        _duritateText.text = "Duritate: " + amestec.Duritate.ToString() + "ShA";
+        _culoareText.text = "Culoare: " + amestec.Culoare;
+        _presaProfilText.text ="Presa/Profil: " + amestec.PresaProfil;
+        _dataAchizitie.text ="DataAchizitie: " + amestec.DataAchizitie;
+        _dataExpirare.text ="DataExpirare: " + amestec.DataExpirare;
     }
-
-    public void SetAmestecSlidersView(Amestec amestec)
+    
+    public void SetIstoricView(Amestec amestec)
     {
-        string istorieCantitate = amestec.IstorieCantitate;
-        var cantitateList = istorieCantitate.Split(char.Parse(","));
-       
-        //create a slider prefab for each obj in istorieCantitate
-        foreach (var cantitate in cantitateList) { 
-            //Debug
-            
-            Debug.Log(cantitate);
-            
-            ////////
-            var prefab = Instantiate(AmestecViewBaraPrefab, AmestecController.Instance.GetBarsParent());
-            AmestecViewSlider amestecViewSlider;
-            if(!prefab.TryGetComponent(out amestecViewSlider)) {
-                throw new Exception("Cannot Find AmestecViewBara Component on AmestecViewBara GameObject");
-            }
+        string istorieCantitateData = amestec.IstorieCantitatiCuData;
+        var cantitateData = istorieCantitateData.Split(char.Parse(","));
+     
+        
+        //instantiate prefab and find amestecViewSlider component
+        var prefab = Instantiate(AmestecViewSliderPrefab, AmestecController.Instance.GetRightPanel());
+        AmestecViewSlider amestecViewSlider;
+        if(!prefab.TryGetComponent(out amestecViewSlider)) {
+            throw new Exception("Cannot Find AmestecViewSlider Component on AmestecViewSlider GameObject");
+        }
 
-            //set slider values
-            double valueSliderView;
-            bool parseValueBool = double.TryParse(cantitate, out valueSliderView);
-           
-            //parse check
-            if (!parseValueBool)
-                throw new Exception("cannot parse cantitate in cantitateList[string]");
+        //create a TMP_text prefab for each obj in istorieCantitate
+        var barsParent = AmestecController.Instance.GetIstoricParent();
+        foreach (var cantitateSiData in cantitateData) {
             
-            //set values in view
+            //split string into cantitate & data
+            var currentCantitateDataList = cantitateSiData.Split(char.Parse("|"));
+            if (currentCantitateDataList.Length != 2) {
+                throw new Exception("istorieCantitateData cannot be Split properly");
+            }
+            
+            //split string into cantitate& data
+            var cantitate = currentCantitateDataList[0];
+            var data = currentCantitateDataList[1];
+            
+            //set slider value in view
             float fillSliderView = Mathf.Clamp(float.Parse(cantitate),0f, (float)_amestec.CantitateInitiala)
                                    / (float)_amestec.CantitateInitiala;
-            amestecViewSlider.SetValues(valueSliderView, fillSliderView);
+            amestecViewSlider.SetFillAmountWithPercentage(fillSliderView);
+             
+            //instantiate text prefab & set text value
+            var textPrefab = Instantiate(Tmp_Text_Prefab, barsParent);
+            TMP_Text tmpText;
+            if (!textPrefab.TryGetComponent(out tmpText)) {
+                throw new Exception("TMP_Text prefab does not have TMP_Text GameObject");
+            }
+            tmpText.text = data +"   "+ cantitate + "g";
         }
     }
 
@@ -100,16 +112,12 @@ public class AmestecViewData : MonoBehaviour
         if (!verticalLayoutGroupTransform.GetChild(2).TryGetComponent(out _grameText)) {
             throw new Exception("Cannot find Cantitate(g)_Curenta GameObject or TMP_Text Component");
         }
-        
         if (!verticalLayoutGroupTransform.GetChild(3).TryGetComponent(out _duritateText)) {
             throw new Exception("Cannot find Duritate GameObject or TMP_Text Component");
         }
-        
-        
         if (!verticalLayoutGroupTransform.GetChild(4).TryGetComponent(out _culoareText)) {
             throw new Exception("Cannot find Culoare GameObject or TMP_Text Component");
         }
-        
         if (!verticalLayoutGroupTransform.GetChild(5).TryGetComponent(out _presaProfilText)) {
             throw new Exception("Cannot find Presa/Profil GameObject or TMP_Text Component");
         }

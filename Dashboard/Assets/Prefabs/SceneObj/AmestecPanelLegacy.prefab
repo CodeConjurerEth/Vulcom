@@ -2956,7 +2956,7 @@ GameObject:
   - component: {fileID: 1952598384326029783}
   - component: {fileID: 1952598384326029776}
   m_Layer: 5
-  m_Name: AmestecPanel
+  m_Name: AmestecPanelLegacy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

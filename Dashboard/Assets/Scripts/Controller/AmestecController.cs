@@ -11,17 +11,22 @@ public class AmestecController : MonoBehaviour
 {
     public static AmestecController Instance;
     public AmestecViewData GetAmestecViewDataInstance() {return amestecViewDataInstance;}
-
-    public Transform GetBarsParent() { return sliderParent; }
+    public Transform GetIstoricParent() { return sliderParent; }
+    public Transform GetRightPanel() { return rightPanel; }
+    public Amestec CurrentAmestec { get; set; }
     
     [SerializeField] private GameObject amestecViewNamePrefab;
     [SerializeField] private Transform amestecElemParent;
     [SerializeField] private AmestecViewData amestecViewDataInstance;
+    [SerializeField] private Transform rightPanel;
     [SerializeField] private Transform sliderParent;
+    [SerializeField] private GameObject adaugaCantitateBtnGameObject;
+    [SerializeField] private GameObject scadeCantitateBtnGameObject;
     
     private List<AmestecViewName> _amestecViews; 
     private List<Amestec> _amestecuri;
-
+    private GameObject _slider;
+    
     private void InitSingleton()
     {
         if (Instance != null && Instance != this) {
@@ -35,31 +40,35 @@ public class AmestecController : MonoBehaviour
     {
         _amestecViews = new List<AmestecViewName>(); 
         InitSingleton();
+        SetActivePlusMinusBtns(false); //hide cantitate +- Btns
         RefreshViewNames(); //generate the nr of amestecuri we get from realm
     }
 
-    public async Task GenerateViewNamesTask() 
-    {
+    public async Task GenerateViewNamesTask() {
         ClearExistingViewObj();
         await GenerateAmestecViewNames();
     }
     
-    public async void RefreshViewNames() 
-    {
+    public async void RefreshViewNames() {
         ClearExistingViewObj();
         await GenerateAmestecViewNames();
     }
-    public void ClearSliderParentView()
-    {
+    public void ClearSliderParentView() {
         ClearChildrenOf(sliderParent);
     }
     
-    public void GenerateSliderAndDataViews()
-    {
+    public void GenerateDataAndSliderViews() {
         //Refresh Sliders View
         var amestecData = amestecViewDataInstance;
-        amestecData.SetAmestecValuesInDataView(amestecData.GetAmestec());
-        amestecData.SetAmestecSlidersView(amestecData.GetAmestec());
+        amestecData.SetValuesInDataView(amestecData.GetAmestec());
+        amestecData.SetIstoricView(amestecData.GetAmestec());
+    }
+    
+    public void SetActivePlusMinusBtns(bool active) {
+        if (adaugaCantitateBtnGameObject.activeSelf != active) {
+            adaugaCantitateBtnGameObject.SetActive(active);
+            scadeCantitateBtnGameObject.SetActive(active);
+        }
     }
 
     // Instantiate AmestecView prefab for each amestec from DB, as children of amestecElemParent
@@ -73,12 +82,11 @@ public class AmestecController : MonoBehaviour
             if (!newPrefab.TryGetComponent(out amestecViewName))
                 throw new Exception("No AmestecViewName Component is on the prefab GameObject");
             else {
-                amestecViewName.SetAmestecValuesInView(currentAmestec);
+                amestecViewName.SetValuesInView(currentAmestec);
                 _amestecViews.Add(amestecViewName);
             }
         }
     }
-
 
     private void ClearExistingViewObj()
     {

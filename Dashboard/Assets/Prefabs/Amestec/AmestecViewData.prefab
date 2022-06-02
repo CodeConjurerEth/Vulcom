@@ -779,7 +779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b19676348d46d59b4d62ff01ebbdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmestecViewBaraPrefab: {fileID: 7715816657288040574, guid: eed948eeb128dab46b274fd18a0de45a, type: 3}
+  AmestecViewSliderPrefab: {fileID: 7715816657288040574, guid: eed948eeb128dab46b274fd18a0de45a, type: 3}
+  Tmp_Text_Prefab: {fileID: 6959501635760063245, guid: f944182b323baac4c8b6769e8cac1f7e, type: 3}
 --- !u!1 &3375714028786869285
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Globalization;
 using Realms;
 using TMPro;
 using UnityEngine;
@@ -22,18 +23,15 @@ public class AmestecCantitateAddRemove : MonoBehaviour
     {
         double value = double.Parse(inputFieldAddOrRemove.text);
         var currAmestec = _amestecData.GetAmestec();
-        
-        
+
         var newGrame = currAmestec.Grame - value;
         _realm.Write(() => {
-            currAmestec.IstorieCantitate += "," + newGrame.ToString();
-            currAmestec.Grame -= newGrame;
+            currAmestec.IstorieCantitatiCuData += "," + newGrame.ToString() + "|" + DateTime.Now.ToString("d", new CultureInfo("ro-RO"));
+            currAmestec.Grame = newGrame; // remove cantitate grame
         });
 
         //refresh view data
-        AmestecController.Instance.ClearSliderParentView();
-        _amestecData.SetAmestecSlidersView(currAmestec);
-        _amestecData.SetAmestecValuesInDataView(currAmestec);
+        RefreshViewDataIsotric(currAmestec);    
         
         Destroy(gameObject);
     }
@@ -45,16 +43,22 @@ public class AmestecCantitateAddRemove : MonoBehaviour
 
         var newGrame = currAmestec.Grame + value;
         _realm.Write(() => {
-            currAmestec.IstorieCantitate +=  "," + newGrame.ToString();
-            currAmestec.Grame += newGrame;
+            currAmestec.IstorieCantitatiCuData +=  "," + newGrame.ToString() + "|" + DateTime.Now.ToString("d", new CultureInfo("ro-RO")) ;
+            currAmestec.Grame = newGrame; // add cantitate grame
         });
 
         //refresh view data
-        AmestecController.Instance.ClearSliderParentView();
-        _amestecData.SetAmestecSlidersView(currAmestec);
-        _amestecData.SetAmestecValuesInDataView(currAmestec);
+        RefreshViewDataIsotric(currAmestec);
         
         Destroy(gameObject);
+    }
+
+    private void RefreshViewDataIsotric(Amestec currAmestec)
+    {
+        AmestecController.Instance.ClearSliderParentView();
+        
+        _amestecData.SetValuesInDataView(currAmestec);
+        _amestecData.SetIstoricView(currAmestec);
     }
     
 }
