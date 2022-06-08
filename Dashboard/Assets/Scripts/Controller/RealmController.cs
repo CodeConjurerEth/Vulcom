@@ -13,6 +13,7 @@ public class RealmController
     public static User SyncUser;
     private static App realmApp = App.Create(Constants.Realm.AppId);
     private static Realm _realm;
+    private static SyncConfiguration _syncConfiguration;
 
     public static async Task<User> SetLoggedInUser(string userInput, string passInput)
     {
@@ -42,8 +43,8 @@ public class RealmController
     
     public static async Task<Realm> GetRealm(User loggedInUser)
     {
-        var syncConfiguration = new SyncConfiguration("UnityTutorialPartition", loggedInUser);
-        return await Realm.GetInstanceAsync(syncConfiguration);
+        _syncConfiguration = new SyncConfiguration("UnityTutorialPartition", loggedInUser);
+        return await Realm.GetInstanceAsync(_syncConfiguration);
     }
 
     // public static Task AddToDBTask(Amestec amestec)
@@ -77,10 +78,20 @@ public class RealmController
     
     public static void RemoveAmestecFromDB(ObjectId id)
     {
-        var amestec = _realm.Find<Amestec>(id);
-        _realm.Write(() => {
-            _realm.Remove(amestec);
-        });
+        var realm = Realm.GetInstance(_syncConfiguration);
+
+        var selectedAmestec = realm.All<Amestec>().FirstOrDefault(current => current.Id == id);
+        if(selectedAmestec == null)
+            return;
+        using (var transaction = realm.BeginWrite()) {
+            realm.Remove(selectedAmestec);
+            transaction.Commit();
+        }
+        
+        // var amestec = _realm.Find<Amestec>(id);
+        // _realm.Write(() => {
+        //     _realm.Remove(amestec);
+        // });
     }
     
     public static void RemoveBaraFromDB(ObjectId id)

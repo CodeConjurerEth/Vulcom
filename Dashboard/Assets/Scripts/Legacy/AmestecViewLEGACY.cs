@@ -37,7 +37,7 @@ public class AmestecViewLEGACY : MonoBehaviour
     {
         if (_deleteFromDBBtn != null) {
             _deleteFromDBBtn.onClick.AddListener(DeleteCurrentAmestecFromDB);
-            _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshViewNames);
+            _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshNamesView);
         }
         
     }
@@ -45,7 +45,7 @@ public class AmestecViewLEGACY : MonoBehaviour
     private void OnDisable()
     {
         _deleteFromDBBtn.onClick.RemoveListener(DeleteCurrentAmestecFromDB);
-        _deleteFromDBBtn.onClick.RemoveListener(AmestecController.Instance.RefreshViewNames);
+        _deleteFromDBBtn.onClick.RemoveListener(AmestecController.Instance.RefreshNamesView);
     }
 
     public void SetAmestecValuesInView(Amestec amestec)
@@ -65,7 +65,7 @@ public class AmestecViewLEGACY : MonoBehaviour
     private void DeleteCurrentAmestecFromDB()
     {
         RealmController.RemoveAmestecFromDB(_amestec.Id);
-        _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshViewNames);
+        _deleteFromDBBtn.onClick.AddListener(AmestecController.Instance.RefreshNamesView);
     }
 
     private void AssignChildTextToPrivateFields()

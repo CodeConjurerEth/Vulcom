@@ -105,7 +105,7 @@ public class BaraView : MonoBehaviour
         _lungimeBaraTextInCM.SetText("lungimeBara: " + bara.LungimeBaraCM.ToString() + " cm");
         if (Math.Abs(ariaMM - (-1d)) > 0.00000000001d) {              // 11 decimals
             var grame = Bara.FromMmToCm(ariaMM) * bara.LungimeBaraCM * bara.TipMetal.Densitate;
-            _grameText.SetText(grame.ToString("n2") + " g"); //TODO: check format
+            _grameText.SetText(grame.ToString("n2") + " g");
         }
     }
     

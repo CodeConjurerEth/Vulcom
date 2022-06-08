@@ -10,10 +10,10 @@ public class AmestecViewName : MonoBehaviour
 {
     [Header("ONLY ADD THIS TO PREFAB AMESTECVIEWNAME")]
     private Amestec _amestec;
-
     private TMP_Text _amestecNameText;
     private Button _thisBtn;
-
+    private Button _deleteBtn;
+    
     public Amestec GetAmestec()
     {
         return _amestec;
@@ -24,7 +24,7 @@ public class AmestecViewName : MonoBehaviour
         AssignChildTextToPrivateFields();
         if (_thisBtn != null) {
             _thisBtn.onClick.AddListener(OnClickAmestecName);
-            _thisBtn.onClick.AddListener(delegate { AmestecController.Instance.SetActivePlusMinusBtns(true); });
+            _thisBtn.onClick.AddListener(delegate { AmestecController.Instance.SetActiveBtns(true); });
         }
     }
 
@@ -32,7 +32,7 @@ public class AmestecViewName : MonoBehaviour
     {
         if (_thisBtn != null) {
             _thisBtn.onClick.RemoveListener(OnClickAmestecName);
-            _thisBtn.onClick.RemoveListener(delegate { AmestecController.Instance.SetActivePlusMinusBtns(true); });
+            _thisBtn.onClick.RemoveListener(delegate { AmestecController.Instance.SetActiveBtns(true); });
         }
     }
 
@@ -46,9 +46,9 @@ public class AmestecViewName : MonoBehaviour
             amestecController.GetAmestecViewDataInstance().SetValuesInDataView(thisAmestec);
             amestecController.GenerateDataAndSliderViews();
         }
-}
+    }
 
-public void SetValuesInView(Amestec amestec)
+    public void SetValuesInView(Amestec amestec)
     {
         _amestec = amestec;
         _amestecNameText.text = amestec.Name;

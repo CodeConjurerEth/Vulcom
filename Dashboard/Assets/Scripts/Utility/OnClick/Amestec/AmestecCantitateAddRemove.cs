@@ -58,7 +58,7 @@ public class AmestecCantitateAddRemove : MonoBehaviour
         AmestecController.Instance.ClearSliderParentView();
         
         _amestecData.SetValuesInDataView(currAmestec);
-        _amestecData.SetIstoricView(currAmestec);
+        AmestecController.Instance.GenerateIstoricView(currAmestec);
     }
     
 }

@@ -129,7 +129,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -124.05838, y: 0, z: -125.22882, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -184,10 +184,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 22}
+  m_AnchorMin: {x: 0.28444073, y: 0.9883946}
+  m_AnchorMax: {x: 0.72, y: 1}
+  m_AnchoredPosition: {x: -1, y: 0}
+  m_SizeDelta: {x: -2, y: 16}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3321645349774466277
 CanvasRenderer:
@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9f677a230d498091a8b2eec674f351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deleteBtnPrefab: {fileID: 7073346687257052424, guid: 363f1e424d5e7fa40b7181fc5586a869, type: 3}
 --- !u!114 &994019772655227073
 MonoBehaviour:
   m_ObjectHideFlags: 0

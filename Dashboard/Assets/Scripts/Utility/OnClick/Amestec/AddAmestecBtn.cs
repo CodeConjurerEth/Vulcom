@@ -59,15 +59,13 @@ public class AddAmestecBtn : MonoBehaviour
                            dropdownAnExpirare.captionText.text;
         var istorieCantitaticuData = grame.ToString() + "|" + dataAchizitie;
 
-        //TODO: if(grame > cantitateInitiala(pull) AICI!)
-        
         //create new Amestec and AddToDB
         var newAmestec = new Amestec(name, grame, culoare, duritate, lot, presaProfil,
                         dataAchizitie, dataExpirare, istorieCantitaticuData); 
         RealmController.AddToDB(newAmestec);
 
         //refresh names view
-        await AmestecController.Instance.GenerateViewNamesTask();
+        await AmestecController.Instance.RefreshNamesViewTask();
     }
 
     private async void AddOnClick()

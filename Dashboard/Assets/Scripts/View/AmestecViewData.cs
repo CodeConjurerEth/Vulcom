@@ -42,7 +42,7 @@ public class AmestecViewData : MonoBehaviour
         _amestecNameText.text = amestec.Name;
         _lotText.text ="Lot: " + amestec.Lot;
         
-        var grameString = amestec.Grame.ToString() + " g";
+        var grameString = amestec.Grame.ToString("n2") + " g";
         //check if string is too long
         // if (grameString.Length > maxStringLength)   
         //     grameString = grameString.Substring(0, maxStringLength);
@@ -50,52 +50,23 @@ public class AmestecViewData : MonoBehaviour
 
         _duritateText.text = "Duritate: " + amestec.Duritate.ToString() + " ShA";
         _culoareText.text = "Culoare: " + amestec.Culoare;
-        _presaProfilText.text ="Presa/Profil: " + amestec.PresaProfil;
-        _dataAchizitie.text ="DataAchizitie: " + amestec.DataAchizitie;
-        _dataExpirare.text ="DataExpirare: " + amestec.DataExpirare;
+        _presaProfilText.text = "Presa/Profil: " + amestec.PresaProfil;
+        _dataAchizitie.text = "DataAchizitie: " + amestec.DataAchizitie;
+        _dataExpirare.text = "DataExpirare: " + amestec.DataExpirare;
     }
-    
-    public void SetIstoricView(Amestec amestec)
-    {
-        string istorieCantitateData = amestec.IstorieCantitatiCuData;
-        var cantitateData = istorieCantitateData.Split(char.Parse(","));
-     
-        
-        //instantiate prefab and find amestecViewSlider component
-        var prefab = Instantiate(AmestecViewSliderPrefab, AmestecController.Instance.GetRightPanel());
-        AmestecViewSlider amestecViewSlider;
-        if(!prefab.TryGetComponent(out amestecViewSlider)) {
-            throw new Exception("Cannot Find AmestecViewSlider Component on AmestecViewSlider GameObject");
-        }
 
-        //create a TMP_text prefab for each obj in istorieCantitate
-        var barsParent = AmestecController.Instance.GetIstoricParent();
-        foreach (var cantitateSiData in cantitateData) {
-            
-            //split string into cantitate & data
-            var currentCantitateDataList = cantitateSiData.Split(char.Parse("|"));
-            if (currentCantitateDataList.Length != 2) {
-                throw new Exception("istorieCantitateData cannot be Split properly");
-            }
-            
-            //split string into cantitate& data
-            var cantitate = currentCantitateDataList[0];
-            var data = currentCantitateDataList[1];
-            
-            //set slider value in view
-            //TODO: if cantitate > cantitateinitiala
-            float fillSliderView = Mathf.Clamp(float.Parse(cantitate),0f, (float)_amestec.CantitateInitiala)
-                                   / (float)_amestec.CantitateInitiala;
-            amestecViewSlider.SetFillAmountWithPercentage(fillSliderView);
-             
-            //instantiate text prefab & set text value
-            var textPrefab = Instantiate(Tmp_Text_Prefab, barsParent);
-            TMP_Text tmpText;
-            if (!textPrefab.TryGetComponent(out tmpText)) {
-                throw new Exception("TMP_Text prefab does not have TMP_Text GameObject");
-            }
-            tmpText.text = data +"   "+ cantitate + "g";
-        }
+    public void ResetFieldsNull()
+    {
+        _amestec = null;
+
+        _amestecNameText.text = "Nume";
+        _lotText.text = "Lot";
+        _grameText.text = "Cantitate curenta";
+        _duritateText.text = "Duritate";
+        _culoareText.text = "Culoare";
+        _presaProfilText.text = "Presa/Profil";
+        _dataAchizitie.text = "DataAchizitie";
+        _dataExpirare.text = "DataExpirare";
     }
 
     private void AssignChildTextToPrivateFields()

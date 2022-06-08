@@ -13,13 +13,13 @@ using UnityEngine.UI;
 public class AuthenticationController  
 {
 
-    public static async void LoginUser(string _userInput, string _passInput)
+    public static async void LoginUser(string userInput, string passInput)
     {
         try {
             // legacy -> UIController
             // var uiController = UIController.Instance;
             
-            var currentUser = await RealmController.SetLoggedInUser(_userInput, _passInput);
+            var currentUser = await RealmController.SetLoggedInUser(userInput, passInput);
             if (currentUser != null) {
 
                 SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
@@ -41,13 +41,13 @@ public class AuthenticationController
         }
     }
     
-    public static async void RegisterUser(string _userInput, string _passInput)
+    public static async void RegisterUser(string userInput, string passInput)
     {
         try
         {
             //legacy -> UIController
             // var uiController = UIController.Instance;
-            var currentUser = await RealmController.OnPressRegister(_userInput, _passInput);
+            var currentUser = await RealmController.OnPressRegister(userInput, passInput);
             if (currentUser != null) {
 
                 SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);

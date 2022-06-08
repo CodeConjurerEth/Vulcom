@@ -28,7 +28,7 @@ public class EditAmestecGreutateInDB : MonoBehaviour
 
             //refresh amestec views
             var amestecController = AmestecController.Instance;
-            await amestecController.GenerateViewNamesTask();
+            await amestecController.RefreshNamesViewTask();
         }
     }
 }

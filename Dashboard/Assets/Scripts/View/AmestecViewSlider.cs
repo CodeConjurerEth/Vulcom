@@ -7,10 +7,18 @@ using UnityEngine.UI;
 public class AmestecViewSlider : MonoBehaviour
 {
     [SerializeField] private Image _sliderMaskFill;
-    [SerializeField] private TMP_Text procentajText;
-    public void SetFillAmountWithPercentage(float fillAmount) {
-        //TODO: din % in grame ex: 100g/500g
+    [SerializeField] private TMP_Text barText;
+    public void SetFillAmountWithText(float cantitate, double cantitateInitiala) {
+        float fillAmount = Mathf.Clamp(cantitate,0f, (float)cantitateInitiala)
+                               / (float)cantitateInitiala;
+        
         _sliderMaskFill.fillAmount = fillAmount;
-        procentajText.text = (fillAmount * 100).ToString() + "%";
+        barText.text = cantitate.ToString("n2") + " g / " + cantitateInitiala.ToString("n2") + " g"  ;
+    }
+
+    public void RefreshSliderView()
+    {
+        _sliderMaskFill.fillAmount = 1;
+        barText.text = "";
     }
 }
