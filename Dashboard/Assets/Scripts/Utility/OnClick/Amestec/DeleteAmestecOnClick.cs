@@ -25,6 +25,8 @@ public class DeleteAmestecOnClick : MonoBehaviour
         var currentAmestec = amestecController.CurrentAmestec;
         if (currentAmestec != null) {
             RealmController.RemoveAmestecFromDB(currentAmestec.Id);
+            amestecController.CurrentAmestec = null;
+            
             amestecController.RefreshNamesView();
             amestecController.GetAmestecViewDataInstance().ResetFieldsNull();
             amestecController.ClearIstoricView();
