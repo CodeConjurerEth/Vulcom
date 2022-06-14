@@ -23,15 +23,11 @@ public class DeleteAmestecOnClick : MonoBehaviour
     {
         var amestecController = AmestecController.Instance;
         var currentAmestec = amestecController.CurrentAmestec;
-        if (currentAmestec != null) {
+        if ((object) currentAmestec != null) {
             RealmController.RemoveAmestecFromDB(currentAmestec.Id);
             amestecController.CurrentAmestec = null;
             
-            amestecController.RefreshNamesView();
-            amestecController.GetAmestecViewDataInstance().ResetFieldsNull();
-            amestecController.ClearIstoricView();
-            amestecController.SetActiveBtns(false);
-            amestecController.GetSliderInstance().GetComponent<AmestecViewSlider>().RefreshSliderView();
+            amestecController.RefreshAllViews();
         }
     } 
 }

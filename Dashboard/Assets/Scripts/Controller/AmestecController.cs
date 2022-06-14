@@ -107,6 +107,14 @@ public class AmestecController : MonoBehaviour
         }
     }
 
+    public void RefreshAllViews(){
+        RefreshNamesView();
+        GetAmestecViewDataInstance().ResetFieldsNull();
+        ClearIstoricView();
+        SetActiveBtns(false);
+        GetSliderInstance().GetComponent<AmestecViewSlider>().RefreshSliderView();
+    }
+
     public void GenerateDataAndSliderViews() {
         //Refresh Sliders View
         var amestecData = amestecViewDataInstance;
