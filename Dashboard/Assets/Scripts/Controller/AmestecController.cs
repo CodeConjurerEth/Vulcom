@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Realms;
-using Realms.Sync;
+//using Realms;
+//using Realms.Sync;
 using UnityEngine;
 using TMPro;
 using UnityEditor.SearchService;
@@ -105,6 +105,14 @@ public class AmestecController : MonoBehaviour
             }
             tmpText.text = data +"   "+ cantitate + "g";
         }
+    }
+
+    public void RefreshAllViews(){
+        RefreshNamesView();
+        GetAmestecViewDataInstance().ResetFieldsNull();
+        ClearIstoricView();
+        SetActiveBtns(false);
+        GetSliderInstance().GetComponent<AmestecViewSlider>().RefreshSliderView();
     }
 
     public void GenerateDataAndSliderViews() {
