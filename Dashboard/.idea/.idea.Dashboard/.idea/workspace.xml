@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc16985e-e710-457f-9eb7-33fbadf71d03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AmestecCantitateAddRemove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/OnClick/Amestec/AmestecCantitateAddRemove.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Screens/AmestecScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Screens/AmestecScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/refresh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/refresh.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/refresh.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
