@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Screens/MenuScene.unity
     guid: 1b47fabfebc10844ba731ca108503449
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Screens/MetaleScene.unity
     guid: ad86b3583058eb740a401070d185c3b2
   m_configObjects: {}
