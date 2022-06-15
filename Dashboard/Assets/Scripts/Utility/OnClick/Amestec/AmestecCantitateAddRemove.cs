@@ -24,11 +24,14 @@ public class AmestecCantitateAddRemove : MonoBehaviour
         double value = double.Parse(inputFieldAddOrRemove.text);
         var currAmestec = _amestecData.GetAmestec();
 
-        var newGrame = currAmestec.Grame - value;
-        _realm.Write(() => {
-            currAmestec.IstorieCantitatiCuData += "," + newGrame.ToString() + "|" + DateTime.Now.ToString("d", new CultureInfo("ro-RO"));
-            currAmestec.Grame = newGrame; // remove cantitate grame
-        });
+        if (currAmestec != null) {
+            var newGrame = currAmestec.Grame - value;
+            _realm.Write(() => {
+                currAmestec.IstorieCantitatiCuData += "," + newGrame.ToString() + "|" +
+                                                      DateTime.Now.ToString("d", new CultureInfo("ro-RO"));
+                currAmestec.Grame = newGrame; // remove cantitate grame
+            });
+        }
 
         //refresh view data
         RefreshViewDataIsotric(currAmestec);    
@@ -41,11 +44,14 @@ public class AmestecCantitateAddRemove : MonoBehaviour
         double value = double.Parse(inputFieldAddOrRemove.text);
         var currAmestec = _amestecData.GetAmestec();
 
-        var newGrame = currAmestec.Grame + value;
-        _realm.Write(() => {
-            currAmestec.IstorieCantitatiCuData +=  "," + newGrame.ToString() + "|" + DateTime.Now.ToString("d", new CultureInfo("ro-RO")) ;
-            currAmestec.Grame = newGrame; // add cantitate grame
-        });
+        if (currAmestec != null) {
+            var newGrame = currAmestec.Grame + value;
+            _realm.Write(() => {
+                currAmestec.IstorieCantitatiCuData += "," + newGrame.ToString() + "|" +
+                                                      DateTime.Now.ToString("d", new CultureInfo("ro-RO"));
+                currAmestec.Grame = newGrame; // add cantitate grame
+            });
+        }
 
         //refresh view data
         RefreshViewDataIsotric(currAmestec);
